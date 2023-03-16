@@ -1,1 +1,10 @@
 Nome ristorante: Coppa Cicuti
+
+
+Secondi Piatti:
+
+1) Triglia in crosta di pane allo zafferano;
+2) Wellington di pesce spada;
+3) Fanbacchiotti al Commit di Mare;
+4) Bubagnaccoli alla Spanzella;
+5) Vitello Panellato;
