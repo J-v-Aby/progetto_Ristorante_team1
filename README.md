@@ -1,9 +1,9 @@
 # ristorante_team1_java12
 
-# Team leader:
+## Team leader:
 Claudio Caldarella - claudiocldr
 
-# Developers:
+## Developers:
 
 Raimondo Rodriguez - RayRod7
 
