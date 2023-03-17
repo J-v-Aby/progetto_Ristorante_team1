@@ -1,5 +1,12 @@
 Nome ristorante: Coppa Cicuti
 
+Primi Piatti:
+
+1) Risotto all’anguilla affumicata, aglio, limone e prezzemolo;
+2) Lasagna in crema di latte con prosciutto affumicato;
+3) Cappelletti in brodo di cappone;
+4) Spaghetto di grano duro con ostriche, cipollotto grigliato, guanciale, menta e limone candito;
+5) Ravioli Vecchia Zena alle erbe dell' orto;
 
 Secondi Piatti:
 
