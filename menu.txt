@@ -8,3 +8,9 @@ Secondi Piatti:
 3) Fanbacchiotti al Commit di Mare;
 4) Bubagnaccoli alla Spanzella;
 5) Vitello Panellato;
+
+Bevande:
+
+1) Acqua naturale;
+2) Acqua frizzante;
+3) Coca-cola | Fanta | Sprite;
