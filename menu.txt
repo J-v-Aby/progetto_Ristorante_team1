@@ -1,19 +1,27 @@
 Nome ristorante: Coppa Cicuti
 
+Antipasti:
+
+1) Parfait di foie gras con cuore di aceto balsamico;
+2) Insalata liquida di scarola, stracciatella di bufala;
+3) Crostini di pollo in gelatina di limone;
+4) Lumache lardellate con crema di cavolfiori;
+5) Agnello mantecato con chips di polenta;
+
 Primi Piatti:
 
-1) Risotto all’anguilla affumicata, aglio, limone e prezzemolo;
+1) Tagliatelle al ragù alla Bolognese;
 2) Lasagna in crema di latte con prosciutto affumicato;
 3) Cappelletti in brodo di cappone;
-4) Spaghetto di grano duro con ostriche, cipollotto grigliato, guanciale, menta e limone candito;
-5) Ravioli Vecchia Zena alle erbe dell' orto;
+4) Spaghetti alla glassa;
+5) Ravioli prosciutto crudo alle erbe dell' orto;
 
 Secondi Piatti:
 
-1) Triglia in crosta di pane allo zafferano;
-2) Wellington di pesce spada;
-3) Fanbacchiotti al Commit di Mare;
-4) Bubagnaccoli alla Spanzella;
+1) Agnello in crosta di pane allo zafferano;
+2) Filetto alla Wellington;
+3) Fanbacchiotti al Commit di Montagna;
+4) Bistecca alla tartara;
 5) Vitello Panellato;
 
 Dessert:
