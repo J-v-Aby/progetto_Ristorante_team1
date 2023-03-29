@@ -6,6 +6,8 @@ public class Ristorante {
         primiPiatti();
         creazioneBevande();
         dessert();
+        antipasti();
+
     }
 
     public static void creazioneBevande() {
@@ -65,5 +67,15 @@ public class Ristorante {
                 "\n" + primiPiatti3.getNome()+ " " +primiPiatti3.getPrezzo()+ "€"+
                 "\n" + primiPiatti4.getNome()+ " " +primiPiatti4.getPrezzo()+ "€"+
                 "\n" + primiPiatti5.getNome()+ " " +primiPiatti5.getPrezzo()+ "€");
+    }
+    public static void antipasti(){
+        Antipasti antipasto1 = new Antipasti ("Parfait di foie gras con cuore di aceto balsamico", 7.50f);
+        Antipasti antipasto2 = new Antipasti ("Insalata liquida di scarola, stracciatella di bufala", 6.50f);
+        Antipasti antipasto3 = new Antipasti ("Crostini di pollo in gelatina di limone",9.00f);
+        Antipasti antipasto4 = new Antipasti ("Lumache lardellate con crema di cavolfiori", 11.75f);
+        Antipasti antipasto5 = new Antipasti ("Agnello mantecato con chips di polenta", 8.00f);
+
+
+        System.out.println("" + antipasto1 + antipasto2 + antipasto3 + antipasto4 + antipasto5);
     }
 }
