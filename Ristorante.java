@@ -3,7 +3,7 @@ import java.util.List;
 public class Ristorante {
     public static void main(String[] args) {
         testSecondiPiatti();
-
+        primiPiatti();
         creazioneBevande();
         dessert();
     }
@@ -52,5 +52,18 @@ public class Ristorante {
         System.out.println("\n\t"+ tarTare.getNome().toUpperCase()+"\t"+tarTare.getPrezzo()+" € \n\t" + tarTare.getIngredienti() + "\n" );
         System.out.println("\n\t"+ spezzaVitello.getNome().toUpperCase()+"\t"+spezzaVitello.getPrezzo()+" € \n\t" + spezzaVitello.getIngredienti() + "\n" );
     }
+    private static void primiPiatti(){
+        PrimiPiatti primiPiatti1 = new PrimiPiatti("Tagliatelle alla Bolognese",13F);
+        PrimiPiatti primiPiatti2 = new PrimiPiatti("Lasagna in crema con prosciutto affumicato", 16.50F);
+        PrimiPiatti primiPiatti3 = new PrimiPiatti("Cappelletti in brodo di cappone",15F);
+        PrimiPiatti primiPiatti4 = new PrimiPiatti("Spaghetti alla glassa",13.50F);
+        PrimiPiatti primiPiatti5 = new PrimiPiatti("Ravioli prosciutto crudo alle erbe",15F);
 
+        System.out.println("Primi Piatti" +
+                "\n" + primiPiatti1.getNome()+ " " +primiPiatti1.getPrezzo()+ "€"+
+                "\n" + primiPiatti2.getNome()+ " " +primiPiatti2.getPrezzo()+ "€"+
+                "\n" + primiPiatti3.getNome()+ " " +primiPiatti3.getPrezzo()+ "€"+
+                "\n" + primiPiatti4.getNome()+ " " +primiPiatti4.getPrezzo()+ "€"+
+                "\n" + primiPiatti5.getNome()+ " " +primiPiatti5.getPrezzo()+ "€");
+    }
 }
