@@ -2,11 +2,12 @@ import java.util.List;
 
 public class Ristorante {
     public static void main(String[] args) {
-        testSecondiPiatti();
-        primiPiatti();
-        creazioneBevande();
-        dessert();
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\tCOPPA CICUTI\n");
         antipasti();
+        primiPiatti();
+        testSecondiPiatti();
+        dessert();
+        creazioneBevande();
 
     }
 
@@ -61,7 +62,7 @@ public class Ristorante {
         PrimiPiatti primiPiatti4 = new PrimiPiatti("Spaghetti alla glassa", 13.50F);
         PrimiPiatti primiPiatti5 = new PrimiPiatti("Ravioli prosciutto crudo alle erbe", 15F);
 
-        System.out.println("Primi Piatti:" +
+        System.out.println("\nPrimi Piatti:" +
                 "\n" + primiPiatti1.getNome() + " " + primiPiatti1.getPrezzo() + "€" +
                 "\n" + primiPiatti2.getNome() + " " + primiPiatti2.getPrezzo() + "€" +
                 "\n" + primiPiatti3.getNome() + " " + primiPiatti3.getPrezzo() + "€" +
