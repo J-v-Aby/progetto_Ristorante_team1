@@ -1,5 +1,6 @@
 public class Antipasti {
 
+    //TODO ampliare le funzionalità delle classi
     private String nome;
     private float prezzo;
 
@@ -23,6 +24,12 @@ public class Antipasti {
 
     public void setPrezzo(float prezzo) {
         this.prezzo = prezzo;
+    }
+
+    //TODO dov'è il metodo per stampare
+    public void print(){
+
+        System.out.println("stampare qua");
     }
 
 }

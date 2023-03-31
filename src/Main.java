@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Ristorante {
+public class Main {
     public static void main(String[] args) {
         System.out.println("\t\t\t\t\t\t\t\t\t\t\t\tCOPPA CICUTI\n");
         antipasti();
@@ -78,11 +78,14 @@ public class Ristorante {
         Antipasti antipasto5 = new Antipasti("Agnello mantecato con chips di polenta", 8.00f);
 
 
+
         System.out.println("\nAntipasti: " +
                 "\n" + antipasto1.getNome() + " " + antipasto1.getPrezzo() + "€" +
                 "\n" + antipasto2.getNome() + " " + antipasto2.getPrezzo() + "€" +
                 "\n" + antipasto3.getNome() + " " + antipasto3.getPrezzo() + "€" +
                 "\n" + antipasto4.getNome() + " " + antipasto4.getPrezzo() + "€" +
                 "\n" + antipasto5.getNome() + " " + antipasto5.getPrezzo() + "€");
+
+        antipasto1.print();
     }
 }

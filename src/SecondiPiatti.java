@@ -3,6 +3,8 @@ import java.util.List;
 
 public class SecondiPiatti {
     private String nome;
+
+    //TODO standardizzare la struttura
     private int prezzo;
     private String ingredienti;
 
