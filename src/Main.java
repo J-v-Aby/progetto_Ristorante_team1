@@ -12,17 +12,22 @@ public class Main {
     }
 
     public static void creazioneBevande() {
-        Bevande acqua = new Bevande("Acqua", 1.00F);
-        Bevande acquaFrizzante = new Bevande("Acqua frizzante", 1.00F);
-        Bevande cocaCola = new Bevande("Coca Cola", 2.00F);
-        Bevande sprite = new Bevande("Sprite", 2.00F);
-        Bevande fanta = new Bevande("Fanta", 2.00F);
-        System.out.println("\nBevande:"
-                + "\n" + acqua.getNome() + " " + acqua.getPrezzo() + "€"
-                + "\n" + acquaFrizzante.getNome() + " " + acquaFrizzante.getPrezzo() + "€"
-                + "\n" + cocaCola.getNome() + " " + cocaCola.getPrezzo() + "€"
-                + "\n" + sprite.getNome() + " " + sprite.getPrezzo() + "€"
-                + "\n" + fanta.getNome() + " " + fanta.getPrezzo() + "€");
+        Bevande acqua = new Bevande("Acqua", 1.50, false);
+        Bevande acquaFrizzante = new Bevande("Acqua frizzante", 1.00, false);
+        Bevande cocaCola = new Bevande("Coca Cola", 2.00, false);
+        Bevande sprite = new Bevande("Sprite", 2.00, false);
+        Bevande fanta = new Bevande("Fanta", 2.00, false);
+        Bevande birraBionda = new Bevande("Birra bionda 0.5cl", 4.00, true);
+        Bevande birraRossa = new Bevande("Birra rossa 0.5cl", 4.00, true);
+
+        System.out.println("\nBevande:");
+        acqua.printBevanda();
+        acquaFrizzante.printBevanda();
+        cocaCola.printBevanda();
+        sprite.printBevanda();
+        fanta.printBevanda();
+        birraBionda.printBevanda();
+        birraRossa.printBevanda();
     }
 
     private static void dessert() {
