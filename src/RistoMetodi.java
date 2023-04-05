@@ -36,6 +36,37 @@ public class RistoMetodi {
             ListeMenu.getDolciList().add(portata);
         }
     }
+    public static void aggiuntaPrimi(){
+        PrimiPiatti primiPiatti1 = new PrimiPiatti("Cannelloni alla genovese e sedano ", 13.0,"cannelloni ripieni di carne e sedano croccante, gratinati al forno ",1);
+        Menu cannelloni = new Menu(primiPiatti1);
+        PrimiPiatti primiPiatti2 = new PrimiPiatti("Ravioli di coniglio ", 16.5,"ravioli ripieni di coniglio e aromi, conditi con burro e salvia",1);
+        Menu ravioliC = new Menu(primiPiatti2);
+        PrimiPiatti primiPiatti3 = new PrimiPiatti("Risotto d’autunno ", 15.0,"risotto con castagne, mele e capocollo, profumato con rosmarino ",1);
+        Menu risottoA = new Menu(primiPiatti3);
+        PrimiPiatti primiPiatti4 = new PrimiPiatti("Risotto all’onda con velo di gamberi crudi", 13.5,"risotto cremoso con gamberi crudi e zafferano ",2);
+        Menu risottoO = new Menu(primiPiatti4);
+        PrimiPiatti primiPiatti5 = new PrimiPiatti("Paccheri, anelli di calamari, pomodoro pachino e salicornia", 15.0,"paccheri con calamari, pomodoro e salicornia, conditi con olio extravergine d’oliva ",2);
+        Menu paccheri = new Menu(primiPiatti5);
+        PrimiPiatti primiPiatti6 = new PrimiPiatti("Linguine con capesante, tartufo bianco e basilico",14.0,"linguine con capesante, tartufo bianco e basilico, conditi con olio extravergine d’oliva ",2);
+        Menu linguine = new Menu(primiPiatti6);
+        PrimiPiatti primiPiatti7 = new PrimiPiatti("Ravioli vegani di barbabietole con mele e noci",12.5,"ravioli vegani ripieni di barbabietole, mele e noci, conditi con burro e salvia ",3);
+        Menu ravioliV = new Menu(primiPiatti7);
+        PrimiPiatti primiPiatti8 = new PrimiPiatti("Spaghetti al pesto di avocado, basilico e pinoli",13.0,"spaghetti al pesto di avocado, basilico e pinoli, conditi con olio extravergine d’oliva ",3);
+        Menu spaghetti = new Menu(primiPiatti8);
+        PrimiPiatti primiPiatti9 = new PrimiPiatti("Conchiglioni con broccoli e mandorle",14.5,"conchiglioni ripieni di broccoli e mandorle, gratinati al forno ",3);
+        Menu conchiglioni = new Menu(primiPiatti9);
+
+        addPortataToMenu(cannelloni);
+        addPortataToMenu(ravioliC);
+        addPortataToMenu(risottoA);
+        addPortataToMenu(risottoO);
+        addPortataToMenu(paccheri);
+        addPortataToMenu(linguine);
+        addPortataToMenu(ravioliV);
+        addPortataToMenu(spaghetti);
+        addPortataToMenu(conchiglioni);
+
+    }
 
     public static void aggiuntaSecondi(){
         // Carne

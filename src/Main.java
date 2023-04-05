@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("\t\t\t\t\t\t\t\t\t\t\t\tCOPPA CICUTI\n");
         antipasti();
-        primiPiatti();
+        RistoMetodi.aggiuntaPrimi();
         RistoMetodi.aggiuntaSecondi();
         dessert();
         creazioneBevande();
@@ -46,20 +46,7 @@ public class Main {
     }
 
 
-    private static void primiPiatti() {
-        PrimiPiatti primiPiatti1 = new PrimiPiatti("Tagliatelle alla Bolognese", 13F);
-        PrimiPiatti primiPiatti2 = new PrimiPiatti("Lasagna in crema con prosciutto affumicato", 16.50F);
-        PrimiPiatti primiPiatti3 = new PrimiPiatti("Cappelletti in brodo di cappone", 15F);
-        PrimiPiatti primiPiatti4 = new PrimiPiatti("Spaghetti alla glassa", 13.50F);
-        PrimiPiatti primiPiatti5 = new PrimiPiatti("Ravioli prosciutto crudo alle erbe", 15F);
 
-        System.out.println("\nPrimi Piatti:" +
-                "\n" + primiPiatti1.getNome() + " " + primiPiatti1.getPrezzo() + "€" +
-                "\n" + primiPiatti2.getNome() + " " + primiPiatti2.getPrezzo() + "€" +
-                "\n" + primiPiatti3.getNome() + " " + primiPiatti3.getPrezzo() + "€" +
-                "\n" + primiPiatti4.getNome() + " " + primiPiatti4.getPrezzo() + "€" +
-                "\n" + primiPiatti5.getNome() + " " + primiPiatti5.getPrezzo() + "€");
-    }
 
     public static void antipasti() {
         Antipasti antipasto1 = new Antipasti("Parfait di foie gras con cuore di aceto balsamico", 7.50f);
