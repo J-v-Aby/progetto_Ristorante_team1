@@ -144,4 +144,48 @@ public class RistoMetodi {
         addPortataToMenu(gelo);
 
     }
+    public static void aggiuntaBevande() {
+        Bevande acqua = new Bevande("Acqua naturale 0.5l", 1.00, "Acqua naturale 0.5l", 4);
+        Menu acqua1 = new Menu(acqua);
+        Bevande acquaG = new Bevande("Acqua naturale 1l", 2.00, "Acqua naturale 1l in vetro", 4);
+        Menu acqua1G = new Menu(acquaG);
+        Bevande acquaFrizzante = new Bevande("Acqua frizzante 0.5l", 1.00, "Acqua frizzante 0.5l", 4);
+        Menu acquaFrizzante1 = new Menu(acquaFrizzante);
+        Bevande acquaFrizzanteG = new Bevande("Acqua frizzante 1l ", 2.00, "Acqua frizzante 1l in vetro", 4);
+        Menu acquaFrizzante1G = new Menu(acquaFrizzanteG);
+        Bevande cocaColaL = new Bevande("Coca Cola 33cl ", 2.00, "Coca Cola in lattina ", 4);
+        Menu cocaColaL1 = new Menu(cocaColaL);
+        Bevande cocaColaB = new Bevande("Coca Cola 1.5l ", 4.00, "Coca Cola in bottiglia da 1.5lt", 4);
+        Menu cocaColaB1 = new Menu(cocaColaB);
+        Bevande sprite = new Bevande("Sprite 33cl", 2.00, "Sprite in lattina", 4);
+        Menu sprite1 = new Menu(sprite);
+        Bevande fanta = new Bevande("Fanta 33cl", 2.00, "Fanta in lattina", 4);
+        Menu fanta1 = new Menu(fanta);
+        Bevande birraBionda = new Bevande("Birra bionda 0.25 cl", 4.00, "Castello Lager Premium", 4);
+        Menu birraBionda1 = new Menu(birraBionda);
+        Bevande birraBiondaG = new Bevande("Birra bionda 0.50 cl", 5.00, "Menabrea Bionda Premium Lager", 4);
+        Menu birraBiondaG1 = new Menu(birraBiondaG);
+        Bevande birraRossa = new Bevande("Birra rossa 0.25cl", 4.00, "Leffe Rouge", 4);
+        Menu birraRossa1 = new Menu(birraRossa);
+        Bevande birraRossaG = new Bevande("Birra rossa 0.5cl", 5.00, "Peroni Birra Gran Riserva Rossa", 4);
+        Menu birraRossaG1 = new Menu(birraRossaG);
+
+        addPortataToMenu(acqua1);
+        addPortataToMenu(acqua1G);
+        addPortataToMenu(acquaFrizzante1);
+        addPortataToMenu(acquaFrizzante1G);
+        addPortataToMenu(cocaColaL1);
+        addPortataToMenu(cocaColaB1);
+        addPortataToMenu(sprite1);
+        addPortataToMenu(fanta1);
+        addPortataToMenu(birraBionda1);
+        addPortataToMenu(birraBiondaG1);
+        addPortataToMenu(birraRossa1);
+        addPortataToMenu(birraRossaG1);
+
+
+
+
+
+    }
 }

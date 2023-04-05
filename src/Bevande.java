@@ -42,11 +42,4 @@ public class Bevande {
     public void setCheckTipoMenu(Integer checkTipoMenu) {
         this.checkTipoMenu = checkTipoMenu;
     }
-
-    public void printBevanda() { if(getAlcolico()) {
-        System.out.println(getNome() + " " + getPrezzo() + "€" + " contiene alcool");
-
-    } else {
-        System.out.println(getNome() + " " + getPrezzo() + "€");}
-    }
 }
