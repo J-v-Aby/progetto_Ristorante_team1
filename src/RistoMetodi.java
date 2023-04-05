@@ -113,5 +113,35 @@ public class RistoMetodi {
         addPortataToMenu(tofu);
         addPortataToMenu(seitan);
 
+
+
+    }
+
+    public static void aggiuntaDessert (){
+        Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "è una crema formata da una base di crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", 5 );
+        Menu crema= new Menu(dessert1);
+
+        Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "è un dolce freddo composto da una base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco, zuccherato e trattato con altri ingredienti.", 5);
+        Menu albicocca= new Menu(dessert2);
+
+        Dessert dessert6 = new Dessert("Cheesecake al cioccolato", 5.90,"è un dolce freddo composto da una base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco, zuccherato e trattato con altri ingredienti.",5);
+        Menu cioccolato= new Menu(dessert6);
+
+        Dessert dessert3 = new Dessert("Torta setteveli", 7.40, "Questa torta è composta da una base di pan di Spagna (senza farina) di mandorle pugliesi, mousse di nocciole del Piemonte, cioccolato Madagascar e un fondo di gianduia croccante ai cereali",5);
+        Menu veli= new Menu(dessert3);
+
+        Dessert dessert4 = new Dessert("Strudel di mele", 6.38,"è un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.", 5);
+        Menu mele= new Menu(dessert4);
+
+        Dessert dessert5 = new Dessert("Gelo di Anguria", 3.99, " Il gelo di mellone (gelu di muluni in siciliano), anche detto gelo d'anguria, è un tipico dolce al cucchiaio siciliano, tradizionalmente preparato a Ferragosto ", 5);
+        Menu gelo= new Menu(dessert5);
+
+        addPortataToMenu(crema);
+        addPortataToMenu(albicocca);
+        addPortataToMenu(cioccolato);
+        addPortataToMenu(veli);
+        addPortataToMenu(mele);
+        addPortataToMenu(gelo);
+
     }
 }

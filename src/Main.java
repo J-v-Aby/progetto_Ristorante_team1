@@ -6,7 +6,7 @@ public class Main {
         antipasti();
         RistoMetodi.aggiuntaPrimi();
         RistoMetodi.aggiuntaSecondi();
-        dessert();
+        RistoMetodi.aggiuntaDessert();
         creazioneBevande();
 
     }
@@ -29,33 +29,12 @@ public class Main {
         birraBionda.printBevanda();
         birraRossa.printBevanda();
     }
-
-    private static void dessert() {
-        Dessert dessert1 = new Dessert("Creme Brulee", 2.50f);
-        Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 6.00f);
-        Dessert dessert3 = new Dessert("Coppette agli amaretti", 7.50f);
-        Dessert dessert4 = new Dessert("Sfoglia con Ananas sciroppata", 6.5f);
-        Dessert dessert5 = new Dessert("Macedonia di Anguria", 4.00f);
-
-        System.out.println("\nDessert:");
-        System.out.println(dessert1.getNome() + " " + dessert1.getPrezzo() + "€");
-        System.out.println(dessert2.getNome() + " " + dessert2.getPrezzo() + "€");
-        System.out.println(dessert3.getNome() + " " + dessert3.getPrezzo() + "€");
-        System.out.println(dessert4.getNome() + " " + dessert4.getPrezzo() + "€");
-        System.out.println(dessert5.getNome() + " " + dessert5.getPrezzo() + "€");
-    }
-
-
-
-
     public static void antipasti() {
         Antipasti antipasto1 = new Antipasti("Parfait di foie gras con cuore di aceto balsamico", 7.50f);
         Antipasti antipasto2 = new Antipasti("Insalata liquida di scarola, stracciatella di bufala", 6.50f);
         Antipasti antipasto3 = new Antipasti("Crostini di pollo in gelatina di limone", 9.00f);
         Antipasti antipasto4 = new Antipasti("Lumache lardellate con crema di cavolfiori", 12.00f);
         Antipasti antipasto5 = new Antipasti("Agnello mantecato con chips di polenta", 8.00f);
-
-
 
         System.out.println("\nAntipasti: " +
                 "\n" + antipasto1.getNome() + " " + antipasto1.getPrezzo() + "€" +
