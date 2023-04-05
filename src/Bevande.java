@@ -1,12 +1,14 @@
 public class Bevande {
     private String nome;
     private Double prezzo;
-    private Boolean alcolico;
+    private String descrizione;
+    private Integer checkTipoMenu;
 
-    Bevande(String nome, Double prezzo, Boolean alcolico) {
+    public Bevande(String nome, Double prezzo, String descrizione, Integer checkTipoMenu) {
         this.nome = nome;
         this.prezzo = prezzo;
-        this.alcolico = alcolico;
+        this.descrizione = descrizione;
+        this.checkTipoMenu = checkTipoMenu;
     }
 
     public String getNome() {
@@ -25,13 +27,22 @@ public class Bevande {
         this.prezzo = prezzo;
     }
 
-    public Boolean getAlcolico() {
-        return alcolico;
+    public String getDescrizione() {
+        return descrizione;
     }
 
-    public void setAlcolico(Boolean alcolico) {
-        this.alcolico = alcolico;
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
     }
+
+    public Integer getCheckTipoMenu() {
+        return checkTipoMenu;
+    }
+
+    public void setCheckTipoMenu(Integer checkTipoMenu) {
+        this.checkTipoMenu = checkTipoMenu;
+    }
+
     public void printBevanda() { if(getAlcolico()) {
         System.out.println(getNome() + " " + getPrezzo() + "€" + " contiene alcool");
 

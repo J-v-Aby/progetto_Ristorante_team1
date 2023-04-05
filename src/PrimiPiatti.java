@@ -1,13 +1,14 @@
 public class PrimiPiatti {
     private String nome;
-    private float prezzo;
+    private Double prezzo;
+    private String descrizione;
+    private Integer checkTipoMenu;
 
-
-
-
-    public PrimiPiatti(String nome, float prezzo){
+    public PrimiPiatti(String nome, Double prezzo, String descrizione, Integer checkTipoMenu) {
         this.nome = nome;
         this.prezzo = prezzo;
+        this.descrizione = descrizione;
+        this.checkTipoMenu = checkTipoMenu;
     }
 
     public String getNome() {
@@ -18,14 +19,27 @@ public class PrimiPiatti {
         this.nome = nome;
     }
 
-    public float getPrezzo() {
+    public Double getPrezzo() {
         return prezzo;
     }
 
-    public void setPrezzo(float prezzo) {
+    public void setPrezzo(Double prezzo) {
         this.prezzo = prezzo;
     }
 
+    public String getDescrizione() {
+        return descrizione;
+    }
 
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
+    }
 
+    public Integer getCheckTipoMenu() {
+        return checkTipoMenu;
+    }
+
+    public void setCheckTipoMenu(Integer checkTipoMenu) {
+        this.checkTipoMenu = checkTipoMenu;
+    }
 }
