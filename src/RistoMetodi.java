@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.awt.Color;
 
 public class RistoMetodi {
     public static void aggiuntaAntipasti() {
@@ -128,22 +129,22 @@ public class RistoMetodi {
     }
 
     public static void aggiuntaDessert() {
-        Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "è una crema formata da una base di crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", 5);
+        Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "Crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", 5);
         Menu crema = new Menu(dessert1);
 
-        Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "è un dolce freddo composto da una base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco, zuccherato e trattato con altri ingredienti.", 5);
+        Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "Base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco con topping alle albicocche.", 5);
         Menu albicocca = new Menu(dessert2);
 
-        Dessert dessert6 = new Dessert("Cheesecake al cioccolato", 5.90, "è un dolce freddo composto da una base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco, zuccherato e trattato con altri ingredienti.", 5);
+        Dessert dessert6 = new Dessert("Cheesecake al cioccolato", 5.90, "Base di biscotto su cui poggia un alto strato di crema di formaggio fresco con topping al cioccolato.", 5);
         Menu cioccolato = new Menu(dessert6);
 
-        Dessert dessert3 = new Dessert("Torta setteveli", 7.40, "Questa torta è composta da una base di pan di Spagna (senza farina) di mandorle pugliesi, mousse di nocciole del Piemonte, cioccolato Madagascar e un fondo di gianduia croccante ai cereali", 5);
+        Dessert dessert3 = new Dessert("Torta setteveli", 7.40, "Pan di Spagna (senza farina) di mandorle pugliesi, mousse di nocciole del Piemonte, \ncioccolato Madagascar e un fondo di gianduia croccante ai cereali", 5);
         Menu veli = new Menu(dessert3);
 
-        Dessert dessert4 = new Dessert("Strudel di mele", 6.38, "è un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.", 5);
+        Dessert dessert4 = new Dessert("Strudel di mele", 6.38, "Un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.", 5);
         Menu mele = new Menu(dessert4);
 
-        Dessert dessert5 = new Dessert("Gelo di Anguria", 3.99, " Il gelo di mellone (gelu di muluni in siciliano), anche detto gelo d'anguria, è un tipico dolce al cucchiaio siciliano, tradizionalmente preparato a Ferragosto ", 5);
+        Dessert dessert5 = new Dessert("Gelo di Anguria", 3.99, "Il gelo di mellone (gelu di muluni in siciliano), anche detto gelo d'anguria, \nè un tipico dolce al cucchiaio siciliano, tradizionalmente preparato a Ferragosto", 5);
         Menu gelo = new Menu(dessert5);
 
         addPortataToMenu(crema);
@@ -156,29 +157,29 @@ public class RistoMetodi {
     }
 
     public static void aggiuntaBevande() {
-        Bevande acqua = new Bevande("Acqua naturale 0.5l", 1.00, "Acqua naturale 0.5l", 4);
+        Bevande acqua = new Bevande("Acqua naturale 0.5l", 1.00, 4);
         Menu acqua1 = new Menu(acqua);
-        Bevande acquaG = new Bevande("Acqua naturale 1l", 2.00, "Acqua naturale 1l in vetro", 4);
+        Bevande acquaG = new Bevande("Acqua naturale 1l", 2.00, 4);
         Menu acqua1G = new Menu(acquaG);
-        Bevande acquaFrizzante = new Bevande("Acqua frizzante 0.5l", 1.00, "Acqua frizzante 0.5l", 4);
+        Bevande acquaFrizzante = new Bevande("Acqua frizzante 0.5l", 1.00, 4);
         Menu acquaFrizzante1 = new Menu(acquaFrizzante);
-        Bevande acquaFrizzanteG = new Bevande("Acqua frizzante 1l ", 2.00, "Acqua frizzante 1l in vetro", 4);
+        Bevande acquaFrizzanteG = new Bevande("Acqua frizzante 1l ", 2.00, 4);
         Menu acquaFrizzante1G = new Menu(acquaFrizzanteG);
-        Bevande cocaColaL = new Bevande("Coca Cola 33cl ", 2.00, "Coca Cola in lattina ", 4);
+        Bevande cocaColaL = new Bevande("Coca Cola 33cl ", 2.00, 4);
         Menu cocaColaL1 = new Menu(cocaColaL);
-        Bevande cocaColaB = new Bevande("Coca Cola 1.5l ", 4.00, "Coca Cola in bottiglia da 1.5lt", 4);
+        Bevande cocaColaB = new Bevande("Coca Cola 1.5l ", 4.00, 4);
         Menu cocaColaB1 = new Menu(cocaColaB);
-        Bevande sprite = new Bevande("Sprite 33cl", 2.00, "Sprite in lattina", 4);
+        Bevande sprite = new Bevande("Sprite 33cl", 2.00, 4);
         Menu sprite1 = new Menu(sprite);
-        Bevande fanta = new Bevande("Fanta 33cl", 2.00, "Fanta in lattina", 4);
+        Bevande fanta = new Bevande("Fanta 33cl", 2.00, 4);
         Menu fanta1 = new Menu(fanta);
-        Bevande birraBionda = new Bevande("Birra bionda 0.25 cl", 4.00, "Castello Lager Premium", 4);
+        Bevande birraBionda = new Bevande("Birra bionda 0.25 cl", 4.00, 4);
         Menu birraBionda1 = new Menu(birraBionda);
-        Bevande birraBiondaG = new Bevande("Birra bionda 0.50 cl", 5.00, "Menabrea Bionda Premium Lager", 4);
+        Bevande birraBiondaG = new Bevande("Birra bionda 0.50 cl", 5.00, 4);
         Menu birraBiondaG1 = new Menu(birraBiondaG);
-        Bevande birraRossa = new Bevande("Birra rossa 0.25cl", 4.00, "Leffe Rouge", 4);
+        Bevande birraRossa = new Bevande("Birra rossa 0.25cl", 4.00, 4);
         Menu birraRossa1 = new Menu(birraRossa);
-        Bevande birraRossaG = new Bevande("Birra rossa 0.5cl", 5.00, "Peroni Birra Gran Riserva Rossa", 4);
+        Bevande birraRossaG = new Bevande("Birra rossa 0.5cl", 5.00, 4);
         Menu birraRossaG1 = new Menu(birraRossaG);
 
         addPortataToMenu(acqua1);
@@ -201,8 +202,8 @@ public class RistoMetodi {
      * Metodo che, verificando la tipologia di portata,
      * l'aggiunge nella lista corrispondente
      *
-     * @checkTipoMenu 1 carne, 2 pesce, 3 vegan, 4 bevande, 5 dolci
      * @param portata
+     * @checkTipoMenu 1 carne, 2 pesce, 3 vegan, 4 bevande, 5 dolci
      */
     public static void addPortataToMenu(Menu portata) {
 
@@ -234,49 +235,51 @@ public class RistoMetodi {
         }
     }
 
-
     /**
      * Metodo che accetta una List<Menu> e stampa tutti i
      * piatti contenuti in essa, le bevande e i dolci.
+     *
      * @param listaSceltaMenu
      */
     public static void printMenuSpecifico(List<Menu> listaSceltaMenu) {
-        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\n\nCOPPA CICUTI");
-        System.out.println("\n\n\nAntipasti:\n");
+        System.out.println("\n\n\n\t\t" + "\033[0;30;43m" + "\033[1m" + "  C O P P A  C I C U T I  " + "\033[0m" + "\n");
+        System.out.println("Prezzo medio:  50 €\t\t" + "Valutazione: ⭐⭐⭐⭐⭐");
+        System.out.println("\n\n\n\033[0;1m" + "Antipasti:" + "\033[0m\n");
         for (Menu m : listaSceltaMenu) {
             Antipasti antipasti = m.getAntipasti();
             if (antipasti != null) {
-                System.out.println(antipasti);
+                antipasti.printAntipasti();
             }
         }
-        System.out.println("\n\n\nPrimi Piatti:\n");
+        System.out.println("\n\n\n\033[0;1m" + "Primi piatti:" + "\033[0m\n");
         for (Menu m : listaSceltaMenu) {
             PrimiPiatti primipiatti = m.getPrimiPiatti();
             if (primipiatti != null) {
-                System.out.println(primipiatti);
+                primipiatti.printPrimi();
             }
         }
-        System.out.println("\n\n\nSecondi Piatti:\n");
+        System.out.println("\n\n\n\033[0;1m" + "Secondi piatti:" + "\033[0m\n");
         for (Menu m : listaSceltaMenu) {
             SecondiPiatti secondiPiatti = m.getSecondiPiatti();
             if (secondiPiatti != null) {
-                System.out.println(secondiPiatti);
+                secondiPiatti.printSecondi();
             }
         }
-        System.out.println("\n\n\nBevande:\n");
+        System.out.println("\n\n\n\033[0;1m" + "Bevande:" + "\033[0m\n");
         for (Menu m : ListeMenu.getBevandeList()) {
             Bevande bevande = m.getBevande();
             if (bevande != null) {
-                System.out.println(bevande);
+                bevande.printBevande();
             }
         }
-        System.out.println("\n\n\nDessert:\n");
+        System.out.println("\n\n\n\033[0;1m" + "Dessert:" + "\033[0m\n");
         for (Menu m : ListeMenu.getDolciList()) {
             Dessert dessert = m.getDessert();
             if (dessert != null) {
-                System.out.println(dessert);
+                dessert.printDessert();
             }
         }
+        System.out.println("\n\n\n\n\n\n\n");
     }
 //    public static void mapping() {
 //        // macromappa per menù completo

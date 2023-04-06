@@ -42,9 +42,9 @@ public class Dessert {
     public void setCheckTipoMenu(Integer checkTipoMenu) {
         this.checkTipoMenu = checkTipoMenu;
     }
-    @Override
-    public String toString() {
-        return "\n" + nome +"\t\t\t\t\t\t" + prezzo +"\n" + descrizione;
+
+    public void printDessert() {
+        System.out.println("\n" + "\033[0;1m" + nome + "\033[0m" + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
     }
 }
 
