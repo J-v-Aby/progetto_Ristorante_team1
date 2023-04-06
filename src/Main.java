@@ -3,22 +3,25 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        // NON TOCCARE ☠️ metodi per aggiungere i piatti nelle liste
         RistoMetodi.aggiuntaAntipasti();
         RistoMetodi.aggiuntaPrimi();
         RistoMetodi.aggiuntaSecondi();
         RistoMetodi.aggiuntaDessert();
         RistoMetodi.aggiuntaBevande();
 
-        // test per stampare menù CARNE, bevande e dolci;
-        RistoMetodi.printMenuSpecifico(ListeMenu.getCarneList());
 
-        // test per stampare menù PESCE, bevande e dolci;
+
+        //TODO per Michele: decommenta il tipo di menù che vuoi mandare in stampo
+
+        // menù CARNE, bevande e dolci;
+//        RistoMetodi.printMenuSpecifico(ListeMenu.getCarneList());
+
+        // menù PESCE, bevande e dolci;
 //        RistoMetodi.printMenuSpecifico(ListeMenu.getPesceList());
 
-        // test per stampare menù VEGAN, bevande e dolci;
+        // menù VEGAN, bevande e dolci;
 //        RistoMetodi.printMenuSpecifico(ListeMenu.getVeganList());
-
-//      RistoMetodi.mapping();
 
     }
 }

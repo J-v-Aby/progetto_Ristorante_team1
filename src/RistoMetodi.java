@@ -238,41 +238,69 @@ public class RistoMetodi {
     /**
      * Metodo che accetta una List<Menu> e stampa tutti i
      * piatti contenuti in essa, le bevande e i dolci.
+     * Inoltre, applica il colore del momento del pasto in base al tipo di lista!
      *
      * @param listaSceltaMenu
      */
     public static void printMenuSpecifico(List<Menu> listaSceltaMenu) {
         System.out.println("\n\n\n\t\t" + "\033[0;30;43m" + "\033[1m" + "  C O P P A  C I C U T I  " + "\033[0m" + "\n");
         System.out.println("Prezzo medio:  50 €\t\t" + "Valutazione: ⭐⭐⭐⭐⭐");
-        System.out.println("\n\n\n\033[0;1m" + "Antipasti:" + "\033[0m\n");
+        if (listaSceltaMenu.equals(ListeMenu.getCarneList())) {
+            System.out.println("\n\n\n\t\t\t\t\033[0;33m" + "MENU  C A R N E" + "\033[0m");
+            System.out.println("\n\n\033[0;33m" + "Antipasti:" + "\033[0m\n");
+        }
+        if (listaSceltaMenu.equals(ListeMenu.getPesceList())) {
+            System.out.println("\n\n\n\t\t\t\t\033[0;36m" + "MENU  P E S C E" + "\033[0m");
+            System.out.println("\n\n\033[0;36m" + "Antipasti:" + "\033[0m\n");
+        }
+        if (listaSceltaMenu.equals(ListeMenu.getVeganList())) {
+            System.out.println("\n\n\n\t\t\t\t\033[0;32m" + "MENU  V E G A N" + "\033[0m");
+            System.out.println("\n\n\033[0;32m" + "Antipasti:" + "\033[0m\n");
+        }
         for (Menu m : listaSceltaMenu) {
             Antipasti antipasti = m.getAntipasti();
             if (antipasti != null) {
                 antipasti.printAntipasti();
             }
         }
-        System.out.println("\n\n\n\033[0;1m" + "Primi piatti:" + "\033[0m\n");
+        if (listaSceltaMenu.equals(ListeMenu.getCarneList())) {
+            System.out.println("\n\n\033[0;33m" + "Primi piatti:" + "\033[0m\n");
+        }
+        if (listaSceltaMenu.equals(ListeMenu.getPesceList())) {
+            System.out.println("\n\n\033[0;36m" + "Primi Piatti:" + "\033[0m\n");
+        }
+        if (listaSceltaMenu.equals(ListeMenu.getVeganList())) {
+            System.out.println("\n\n\033[0;32m" + "Primi Piatti:" + "\033[0m\n");
+        }
         for (Menu m : listaSceltaMenu) {
             PrimiPiatti primipiatti = m.getPrimiPiatti();
             if (primipiatti != null) {
                 primipiatti.printPrimi();
             }
         }
-        System.out.println("\n\n\n\033[0;1m" + "Secondi piatti:" + "\033[0m\n");
+        if (listaSceltaMenu.equals(ListeMenu.getCarneList())) {
+            System.out.println("\n\n\033[0;33m" + "Secondi Piatti:" + "\033[0m\n");
+        }
+        if (listaSceltaMenu.equals(ListeMenu.getPesceList())) {
+            System.out.println("\n\n\033[0;36m" + "Secondi Piatti:" + "\033[0m\n");
+        }
+        if (listaSceltaMenu.equals(ListeMenu.getVeganList())) {
+            System.out.println("\n\n\033[0;32m" + "Secondi Piatti:" + "\033[0m\n");
+        }
         for (Menu m : listaSceltaMenu) {
             SecondiPiatti secondiPiatti = m.getSecondiPiatti();
             if (secondiPiatti != null) {
                 secondiPiatti.printSecondi();
             }
         }
-        System.out.println("\n\n\n\033[0;1m" + "Bevande:" + "\033[0m\n");
+        System.out.println("\n\n\033[0;35m" + "Bevande:" + "\033[0m\n");
         for (Menu m : ListeMenu.getBevandeList()) {
             Bevande bevande = m.getBevande();
             if (bevande != null) {
                 bevande.printBevande();
             }
         }
-        System.out.println("\n\n\n\033[0;1m" + "Dessert:" + "\033[0m\n");
+        System.out.println("\n\n\033[0;31m" + "Dessert:" + "\033[0m\n");
         for (Menu m : ListeMenu.getDolciList()) {
             Dessert dessert = m.getDessert();
             if (dessert != null) {
@@ -281,28 +309,4 @@ public class RistoMetodi {
         }
         System.out.println("\n\n\n\n\n\n\n");
     }
-//    public static void mapping() {
-//        // macromappa per menù completo
-//        HashMap<String, Map<String, List<Menu>>> menuCompleto = new HashMap<>();
-//
-//        // minimappa con chiave tipo menù e valore lista carne pesce ecc.
-//        HashMap<String, List<Menu>> menDiviso = new HashMap<>();
-//
-//        // put delle liste nella minimappa
-//        menDiviso.put("Carne", ListeMenu.getCarneList());
-//        menDiviso.put("Pesce", ListeMenu.getPesceList());
-//        menDiviso.put("Vegan", ListeMenu.getCarneList());
-//        menDiviso.put("Bevande", ListeMenu.getBevandeList());
-//        menDiviso.put("Dessert", ListeMenu.getDolciList());
-//
-//        //put per stringhe
-//
-//
-//        // put della minimappa come value nella macromappa
-//        menuCompleto.put("Menu", menDiviso);
-//
-//        menuCompleto.get("Menu").get("Carne");
-//
-//
-//    }
 }
