@@ -1,59 +1,33 @@
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class RistoMetodi {
-
-
-    /**
-     * Metodo che, verificando la tipologia di portata,
-     * l'aggiunge nella lista corrispondente
-     *
-     * @param portata
-     */
-    public static void addPortataToMenu(Menu portata) {
-
-        // controllo se la portata è di CARNE;
-        if (portata.getAntipasti() != null && portata.getAntipasti().getCheckTipoMenu() == 1
-                || portata.getPrimiPiatti() != null && portata.getPrimiPiatti().getCheckTipoMenu() == 1
-                || portata.getSecondiPiatti() != null && portata.getSecondiPiatti().getCheckTipoMenu() == 1) {
-            ListeMenu.getCarneList().add(portata);
-        }
-        // controllo se la portata è di PESCE;
-        if (portata.getAntipasti() != null && portata.getAntipasti().getCheckTipoMenu() == 2
-                || portata.getPrimiPiatti() != null && portata.getPrimiPiatti().getCheckTipoMenu() == 2
-                || portata.getSecondiPiatti() != null && portata.getSecondiPiatti().getCheckTipoMenu() == 2) {
-            ListeMenu.getPesceList().add(portata);
-        }
-        // controllo se la portata è VEGAN;
-        if (portata.getAntipasti() != null && portata.getAntipasti().getCheckTipoMenu() == 3
-                || portata.getPrimiPiatti() != null && portata.getPrimiPiatti().getCheckTipoMenu() == 3
-                || portata.getSecondiPiatti() != null && portata.getSecondiPiatti().getCheckTipoMenu() == 3) {
-            ListeMenu.getVeganList().add(portata);
-        }
-        // controllo se la portata è una BEVANDA;
-        if (portata.getBevande() != null && portata.getBevande().getCheckTipoMenu() == 4) {
-            ListeMenu.getBevandeList().add(portata);
-        }
-        // controllo se la portata è un DOLCE;
-        if (portata.getDessert() != null && portata.getDessert().getCheckTipoMenu() == 5) {
-            ListeMenu.getDolciList().add(portata);
-        }
+    public static void aggiuntaAntipasti() {
+        // utilizzando questo iter, aggiunti tutti i piatti;
+        Antipasti anti1 = new Antipasti("Nome Piatto", 7.50, "Descrizione Piatto", 1);
+        Menu antiastoCarne1 = new Menu(anti1);
+        addPortataToMenu(antiastoCarne1);
     }
-    public static void aggiuntaPrimi(){
-        PrimiPiatti primiPiatti1 = new PrimiPiatti("Cannelloni alla genovese e sedano ", 13.0,"cannelloni ripieni di carne e sedano croccante, gratinati al forno ",1);
+
+    public static void aggiuntaPrimi() {
+        PrimiPiatti primiPiatti1 = new PrimiPiatti("Cannelloni alla genovese e sedano ", 13.0, "cannelloni ripieni di carne e sedano croccante, gratinati al forno ", 1);
         Menu cannelloni = new Menu(primiPiatti1);
-        PrimiPiatti primiPiatti2 = new PrimiPiatti("Ravioli di coniglio ", 16.5,"ravioli ripieni di coniglio e aromi, conditi con burro e salvia",1);
+        PrimiPiatti primiPiatti2 = new PrimiPiatti("Ravioli di coniglio ", 16.5, "ravioli ripieni di coniglio e aromi, conditi con burro e salvia", 1);
         Menu ravioliC = new Menu(primiPiatti2);
-        PrimiPiatti primiPiatti3 = new PrimiPiatti("Risotto d’autunno ", 15.0,"risotto con castagne, mele e capocollo, profumato con rosmarino ",1);
+        PrimiPiatti primiPiatti3 = new PrimiPiatti("Risotto d’autunno ", 15.0, "risotto con castagne, mele e capocollo, profumato con rosmarino ", 1);
         Menu risottoA = new Menu(primiPiatti3);
-        PrimiPiatti primiPiatti4 = new PrimiPiatti("Risotto all’onda con velo di gamberi crudi", 13.5,"risotto cremoso con gamberi crudi e zafferano ",2);
+        PrimiPiatti primiPiatti4 = new PrimiPiatti("Risotto all’onda con velo di gamberi crudi", 13.5, "risotto cremoso con gamberi crudi e zafferano ", 2);
         Menu risottoO = new Menu(primiPiatti4);
-        PrimiPiatti primiPiatti5 = new PrimiPiatti("Paccheri, anelli di calamari, pomodoro pachino e salicornia", 15.0,"paccheri con calamari, pomodoro e salicornia, conditi con olio extravergine d’oliva ",2);
+        PrimiPiatti primiPiatti5 = new PrimiPiatti("Paccheri, anelli di calamari, pomodoro pachino e salicornia", 15.0, "paccheri con calamari, pomodoro e salicornia, conditi con olio extravergine d’oliva ", 2);
         Menu paccheri = new Menu(primiPiatti5);
-        PrimiPiatti primiPiatti6 = new PrimiPiatti("Linguine con capesante, tartufo bianco e basilico",14.0,"linguine con capesante, tartufo bianco e basilico, conditi con olio extravergine d’oliva ",2);
+        PrimiPiatti primiPiatti6 = new PrimiPiatti("Linguine con capesante, tartufo bianco e basilico", 14.0, "linguine con capesante, tartufo bianco e basilico, conditi con olio extravergine d’oliva ", 2);
         Menu linguine = new Menu(primiPiatti6);
-        PrimiPiatti primiPiatti7 = new PrimiPiatti("Ravioli vegani di barbabietole con mele e noci",12.5,"ravioli vegani ripieni di barbabietole, mele e noci, conditi con burro e salvia ",3);
+        PrimiPiatti primiPiatti7 = new PrimiPiatti("Ravioli vegani di barbabietole con mele e noci", 12.5, "ravioli vegani ripieni di barbabietole, mele e noci, conditi con burro e salvia ", 3);
         Menu ravioliV = new Menu(primiPiatti7);
-        PrimiPiatti primiPiatti8 = new PrimiPiatti("Spaghetti al pesto di avocado, basilico e pinoli",13.0,"spaghetti al pesto di avocado, basilico e pinoli, conditi con olio extravergine d’oliva ",3);
+        PrimiPiatti primiPiatti8 = new PrimiPiatti("Spaghetti al pesto di avocado, basilico e pinoli", 13.0, "spaghetti al pesto di avocado, basilico e pinoli, conditi con olio extravergine d’oliva ", 3);
         Menu spaghetti = new Menu(primiPiatti8);
-        PrimiPiatti primiPiatti9 = new PrimiPiatti("Conchiglioni con broccoli e mandorle",14.5,"conchiglioni ripieni di broccoli e mandorle, gratinati al forno ",3);
+        PrimiPiatti primiPiatti9 = new PrimiPiatti("Conchiglioni con broccoli e mandorle", 14.5, "conchiglioni ripieni di broccoli e mandorle, gratinati al forno ", 3);
         Menu conchiglioni = new Menu(primiPiatti9);
 
         addPortataToMenu(cannelloni);
@@ -68,12 +42,12 @@ public class RistoMetodi {
 
     }
 
-    public static void aggiuntaSecondi(){
+    public static void aggiuntaSecondi() {
         // Carne
         SecondiPiatti arrosto0 = new SecondiPiatti("Arrosto di Maiale al latte", 13.0, "morbido arrosto di maiale avvolto in una vellutata di latte e aromi", 1);
         Menu arrosto = new Menu(arrosto0);
 
-        SecondiPiatti manzo1 = new SecondiPiatti("Manzo alla Stroganoff", 14.0, "straccetti di manzo cotti in una salsa di panna acida, senape e funghi",  1);
+        SecondiPiatti manzo1 = new SecondiPiatti("Manzo alla Stroganoff", 14.0, "straccetti di manzo cotti in una salsa di panna acida, senape e funghi", 1);
         Menu manzo = new Menu(manzo1);
 
         SecondiPiatti pollo0 = new SecondiPiatti("Pollo al curry", 9.0, "bocconcini di pollo in una salsa esotica di yogurt, curry e pomodoro", 1);
@@ -114,27 +88,26 @@ public class RistoMetodi {
         addPortataToMenu(seitan);
 
 
-
     }
 
-    public static void aggiuntaDessert (){
-        Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "è una crema formata da una base di crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", 5 );
-        Menu crema= new Menu(dessert1);
+    public static void aggiuntaDessert() {
+        Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "è una crema formata da una base di crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", 5);
+        Menu crema = new Menu(dessert1);
 
         Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "è un dolce freddo composto da una base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco, zuccherato e trattato con altri ingredienti.", 5);
-        Menu albicocca= new Menu(dessert2);
+        Menu albicocca = new Menu(dessert2);
 
-        Dessert dessert6 = new Dessert("Cheesecake al cioccolato", 5.90,"è un dolce freddo composto da una base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco, zuccherato e trattato con altri ingredienti.",5);
-        Menu cioccolato= new Menu(dessert6);
+        Dessert dessert6 = new Dessert("Cheesecake al cioccolato", 5.90, "è un dolce freddo composto da una base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco, zuccherato e trattato con altri ingredienti.", 5);
+        Menu cioccolato = new Menu(dessert6);
 
-        Dessert dessert3 = new Dessert("Torta setteveli", 7.40, "Questa torta è composta da una base di pan di Spagna (senza farina) di mandorle pugliesi, mousse di nocciole del Piemonte, cioccolato Madagascar e un fondo di gianduia croccante ai cereali",5);
-        Menu veli= new Menu(dessert3);
+        Dessert dessert3 = new Dessert("Torta setteveli", 7.40, "Questa torta è composta da una base di pan di Spagna (senza farina) di mandorle pugliesi, mousse di nocciole del Piemonte, cioccolato Madagascar e un fondo di gianduia croccante ai cereali", 5);
+        Menu veli = new Menu(dessert3);
 
-        Dessert dessert4 = new Dessert("Strudel di mele", 6.38,"è un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.", 5);
-        Menu mele= new Menu(dessert4);
+        Dessert dessert4 = new Dessert("Strudel di mele", 6.38, "è un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.", 5);
+        Menu mele = new Menu(dessert4);
 
         Dessert dessert5 = new Dessert("Gelo di Anguria", 3.99, " Il gelo di mellone (gelu di muluni in siciliano), anche detto gelo d'anguria, è un tipico dolce al cucchiaio siciliano, tradizionalmente preparato a Ferragosto ", 5);
-        Menu gelo= new Menu(dessert5);
+        Menu gelo = new Menu(dessert5);
 
         addPortataToMenu(crema);
         addPortataToMenu(albicocca);
@@ -144,6 +117,7 @@ public class RistoMetodi {
         addPortataToMenu(gelo);
 
     }
+
     public static void aggiuntaBevande() {
         Bevande acqua = new Bevande("Acqua naturale 0.5l", 1.00, "Acqua naturale 0.5l", 4);
         Menu acqua1 = new Menu(acqua);
@@ -184,8 +158,111 @@ public class RistoMetodi {
         addPortataToMenu(birraRossaG1);
 
 
-
-
-
     }
+
+    /**
+     * Metodo che, verificando la tipologia di portata,
+     * l'aggiunge nella lista corrispondente
+     *
+     * @checkTipoMenu 1 carne, 2 pesce, 3 vegan, 4 bevande, 5 dolci
+     * @param portata
+     */
+    public static void addPortataToMenu(Menu portata) {
+
+        // controllo se la portata è di CARNE;
+        if (portata.getAntipasti() != null && portata.getAntipasti().getCheckTipoMenu() == 1
+                || portata.getPrimiPiatti() != null && portata.getPrimiPiatti().getCheckTipoMenu() == 1
+                || portata.getSecondiPiatti() != null && portata.getSecondiPiatti().getCheckTipoMenu() == 1) {
+            ListeMenu.getCarneList().add(portata);
+        }
+        // controllo se la portata è di PESCE;
+        if (portata.getAntipasti() != null && portata.getAntipasti().getCheckTipoMenu() == 2
+                || portata.getPrimiPiatti() != null && portata.getPrimiPiatti().getCheckTipoMenu() == 2
+                || portata.getSecondiPiatti() != null && portata.getSecondiPiatti().getCheckTipoMenu() == 2) {
+            ListeMenu.getPesceList().add(portata);
+        }
+        // controllo se la portata è VEGAN;
+        if (portata.getAntipasti() != null && portata.getAntipasti().getCheckTipoMenu() == 3
+                || portata.getPrimiPiatti() != null && portata.getPrimiPiatti().getCheckTipoMenu() == 3
+                || portata.getSecondiPiatti() != null && portata.getSecondiPiatti().getCheckTipoMenu() == 3) {
+            ListeMenu.getVeganList().add(portata);
+        }
+        // controllo se la portata è una BEVANDA;
+        if (portata.getBevande() != null && portata.getBevande().getCheckTipoMenu() == 4) {
+            ListeMenu.getBevandeList().add(portata);
+        }
+        // controllo se la portata è un DOLCE;
+        if (portata.getDessert() != null && portata.getDessert().getCheckTipoMenu() == 5) {
+            ListeMenu.getDolciList().add(portata);
+        }
+    }
+
+
+    /**
+     * Metodo che accetta una List<Menu> e stampa tutti i
+     * piatti contenuti in essa, le bevande e i dolci.
+     * @param listaSceltaMenu
+     */
+    public static void printMenuSpecifico(List<Menu> listaSceltaMenu) {
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\n\nCOPPA CICUTI");
+        System.out.println("\n\n\nAntipasti:\n");
+        for (Menu m : listaSceltaMenu) {
+            Antipasti antipasti = m.getAntipasti();
+            if (antipasti != null) {
+                System.out.println(antipasti);
+            }
+        }
+        System.out.println("\n\n\nPrimi Piatti:\n");
+        for (Menu m : listaSceltaMenu) {
+            PrimiPiatti primipiatti = m.getPrimiPiatti();
+            if (primipiatti != null) {
+                System.out.println(primipiatti);
+            }
+        }
+        System.out.println("\n\n\nSecondi Piatti:\n");
+        for (Menu m : listaSceltaMenu) {
+            SecondiPiatti secondiPiatti = m.getSecondiPiatti();
+            if (secondiPiatti != null) {
+                System.out.println(secondiPiatti);
+            }
+        }
+        System.out.println("\n\n\nBevande:\n");
+        for (Menu m : ListeMenu.getBevandeList()) {
+            Bevande bevande = m.getBevande();
+            if (bevande != null) {
+                System.out.println(bevande);
+            }
+        }
+        System.out.println("\n\n\nDessert:\n");
+        for (Menu m : ListeMenu.getDolciList()) {
+            Dessert dessert = m.getDessert();
+            if (dessert != null) {
+                System.out.println(dessert);
+            }
+        }
+    }
+//    public static void mapping() {
+//        // macromappa per menù completo
+//        HashMap<String, Map<String, List<Menu>>> menuCompleto = new HashMap<>();
+//
+//        // minimappa con chiave tipo menù e valore lista carne pesce ecc.
+//        HashMap<String, List<Menu>> menDiviso = new HashMap<>();
+//
+//        // put delle liste nella minimappa
+//        menDiviso.put("Carne", ListeMenu.getCarneList());
+//        menDiviso.put("Pesce", ListeMenu.getPesceList());
+//        menDiviso.put("Vegan", ListeMenu.getCarneList());
+//        menDiviso.put("Bevande", ListeMenu.getBevandeList());
+//        menDiviso.put("Dessert", ListeMenu.getDolciList());
+//
+//        //put per stringhe
+//
+//
+//        // put della minimappa come value nella macromappa
+//        menuCompleto.put("Menu", menDiviso);
+//
+//        menuCompleto.get("Menu").get("Carne");
+//
+//
+//    }
 }

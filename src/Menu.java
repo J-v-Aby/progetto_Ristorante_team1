@@ -66,4 +66,15 @@ public class Menu {
     public void setBevande(Bevande bevande) {
         this.bevande = bevande;
     }
+
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "antipasti=" + antipasti +
+                ", primiPiatti=" + primiPiatti +
+                ", secondiPiatti=" + secondiPiatti +
+                ", dessert=" + dessert +
+                ", bevande=" + bevande +
+                '}';
+    }
 }

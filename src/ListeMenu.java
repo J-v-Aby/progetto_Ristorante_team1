@@ -51,5 +51,4 @@ public class ListeMenu {
     public static void setDolciList(List<Menu> dolciList) {
         ListeMenu.dolciList = dolciList;
     }
-
 }

@@ -1,6 +1,4 @@
 public class Antipasti {
-
-    //TODO ampliare le funzionalità delle classi
     private String nome;
     private Double prezzo;
     private String descrizione;
@@ -45,10 +43,9 @@ public class Antipasti {
         this.checkTipoMenu = checkTipoMenu;
     }
 
-    //TODO dov'è il metodo per stampare
-    public void print(){
-
-        System.out.println("stampare qua");
+    @Override
+    public String toString() {
+        return "\n" + nome +"\t\t\t\t\t\t" + prezzo +"\n" + descrizione;
     }
 
 }

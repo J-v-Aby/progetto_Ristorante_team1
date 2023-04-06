@@ -42,4 +42,8 @@ public class Bevande {
     public void setCheckTipoMenu(Integer checkTipoMenu) {
         this.checkTipoMenu = checkTipoMenu;
     }
+    @Override
+    public String toString() {
+        return "\n" + nome +"\t\t\t\t\t\t" + prezzo +"\n" + descrizione;
+    }
 }
