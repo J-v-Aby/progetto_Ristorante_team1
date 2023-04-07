@@ -67,14 +67,4 @@ public class Menu {
         this.bevande = bevande;
     }
 
-    @Override
-    public String toString() {
-        return "Menu{" +
-                "antipasti=" + antipasti +
-                ", primiPiatti=" + primiPiatti +
-                ", secondiPiatti=" + secondiPiatti +
-                ", dessert=" + dessert +
-                ", bevande=" + bevande +
-                '}';
-    }
 }
