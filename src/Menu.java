@@ -1,70 +1,33 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Menu {
-    private Antipasti antipasti;
-    private PrimiPiatti primiPiatti;
-    private SecondiPiatti secondiPiatti;
-    private Dessert dessert;
-    private Bevande bevande;
 
-    public Menu(Antipasti antipasti) {
-        this.antipasti = antipasti;
+    private String nome;
+    private String tipo;
+
+    private ArrayList<Antipasti> antipastiList;
+
+    public Menu(String nome, String tipo) {
+        this.nome = nome;
+        this.tipo = tipo;
+        this.antipastiList= new ArrayList<>();
     }
 
-    public Menu(PrimiPiatti primiPiatti) {
-        this.primiPiatti = primiPiatti;
+    public void addAntipasti(Antipasti antipasti){
+        antipastiList.add(antipasti);
     }
 
-    public Menu(SecondiPiatti secondiPiatti) {
-        this.secondiPiatti = secondiPiatti;
+    public void removeAntipasti(Antipasti antipasti){
+        antipastiList.remove(antipasti);
     }
 
-    public Menu(Dessert dessert) {
-        this.dessert = dessert;
-    }
+    public void printAntipasti(){
+        for (Antipasti antipasti : antipastiList) {
+            antipasti.printAntipasti();
+        }
 
-    public Menu(Bevande bevande) {
-        this.bevande = bevande;
-    }
-
-    public Antipasti getAntipasti() {
-        return antipasti;
-    }
-
-    public void setAntipasti(Antipasti antipasti) {
-        this.antipasti = antipasti;
-    }
-
-    public PrimiPiatti getPrimiPiatti() {
-        return primiPiatti;
-    }
-
-    public void setPrimiPiatti(PrimiPiatti primiPiatti) {
-        this.primiPiatti = primiPiatti;
-    }
-
-    public SecondiPiatti getSecondiPiatti() {
-        return secondiPiatti;
-    }
-
-    public void setSecondiPiatti(SecondiPiatti secondiPiatti) {
-        this.secondiPiatti = secondiPiatti;
-    }
-
-    public Dessert getDessert() {
-        return dessert;
-    }
-
-    public void setDessert(Dessert dessert) {
-        this.dessert = dessert;
-    }
-
-    public Bevande getBevande() {
-        return bevande;
-    }
-
-    public void setBevande(Bevande bevande) {
-        this.bevande = bevande;
     }
 
 }

@@ -2,6 +2,8 @@ public class Antipasti {
     private String nome;
     private Double prezzo;
     private String descrizione;
+
+    //TODO inserire enumerati
     private Integer checkTipoMenu;
 
     public Antipasti(String nome, Double prezzo, String descrizione, Integer checkTipoMenu) {
@@ -43,7 +45,9 @@ public class Antipasti {
         this.checkTipoMenu = checkTipoMenu;
     }
 
+    //TODO inserire una classe utility con i colori
     public void printAntipasti() {
+
         System.out.println("\n" + "\033[0;1m" + nome + "\033[0m" + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
     }
 
