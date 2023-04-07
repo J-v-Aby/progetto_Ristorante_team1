@@ -43,7 +43,7 @@ public class PrimiPiatti {
         this.checkTipoMenu = checkTipoMenu;
     }
 
-    public void printPrimi() {
+    public void print() {
         System.out.println("\n" + "\033[0;1m" + nome + "\033[0m" + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
     }
 }

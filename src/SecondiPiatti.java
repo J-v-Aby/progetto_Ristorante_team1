@@ -5,13 +5,13 @@ public class SecondiPiatti {
     private String nome;
     private Double prezzo;
     private String descrizione;
-    private Integer checkTipoMenu;
+    private TipoMenu tipoSecondo;
 
-    public SecondiPiatti(String nome, Double prezzo, String descrizione, Integer checkTipoMenu) {
+    public SecondiPiatti(String nome, Double prezzo, String descrizione, TipoMenu tipoSecondo) {
         this.nome = nome;
         this.prezzo = prezzo;
         this.descrizione = descrizione;
-        this.checkTipoMenu = checkTipoMenu;
+        this.tipoSecondo = tipoSecondo;
     }
 
     public String getNome() {
@@ -38,15 +38,15 @@ public class SecondiPiatti {
         this.descrizione = descrizione;
     }
 
-    public Integer getCheckTipoMenu() {
-        return checkTipoMenu;
+    public TipoMenu getTipoSecondo() {
+        return tipoSecondo;
     }
 
-    public void setCheckTipoMenu(Integer checkTipoMenu) {
-        this.checkTipoMenu = checkTipoMenu;
+    public void setTipoSecondo(TipoMenu tipoSecondo) {
+        this.tipoSecondo = tipoSecondo;
     }
 
-    public void printSecondi() {
+    public void print() {
         System.out.println("\n" + "\033[0;1m" + nome + "\033[0m" + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
     }
 }
