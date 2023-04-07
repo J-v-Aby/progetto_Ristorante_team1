@@ -3,15 +3,15 @@ import java.util.List;
 
 public class SecondiPiatti {
     private String nome;
+    private Double prezzo;
+    private String descrizione;
+    private Integer checkTipoMenu;
 
-    //TODO standardizzare la struttura
-    private int prezzo;
-    private String ingredienti;
-
-    public SecondiPiatti(String nome, int prezzo, String ingredienti) {
+    public SecondiPiatti(String nome, Double prezzo, String descrizione, Integer checkTipoMenu) {
         this.nome = nome;
         this.prezzo = prezzo;
-        this.ingredienti = ingredienti;
+        this.descrizione = descrizione;
+        this.checkTipoMenu = checkTipoMenu;
     }
 
     public String getNome() {
@@ -22,20 +22,31 @@ public class SecondiPiatti {
         this.nome = nome;
     }
 
-    public int getPrezzo() {
+    public Double getPrezzo() {
         return prezzo;
     }
 
-    public void setPrezzo(int prezzo) {
+    public void setPrezzo(Double prezzo) {
         this.prezzo = prezzo;
     }
 
-    public String getIngredienti() {
-        return ingredienti;
+    public String getDescrizione() {
+        return descrizione;
     }
 
-    public void setIngredienti(String ingredienti) {
-        this.ingredienti = ingredienti;
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
     }
 
+    public Integer getCheckTipoMenu() {
+        return checkTipoMenu;
+    }
+
+    public void setCheckTipoMenu(Integer checkTipoMenu) {
+        this.checkTipoMenu = checkTipoMenu;
+    }
+
+    public void printSecondi() {
+        System.out.println("\n" + "\033[0;1m" + nome + "\033[0m" + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+    }
 }

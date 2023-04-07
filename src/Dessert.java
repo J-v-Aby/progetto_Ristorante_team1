@@ -1,13 +1,14 @@
 public class Dessert {
     private String nome;
-   private Float prezzo;
+    private Double prezzo;
+    private String descrizione;
+    private Integer checkTipoMenu;
 
-
-
-    public Dessert(String nome, Float prezzo) {
+    public Dessert(String nome, Double prezzo, String descrizione, Integer checkTipoMenu) {
         this.nome = nome;
         this.prezzo = prezzo;
-
+        this.descrizione = descrizione;
+        this.checkTipoMenu = checkTipoMenu;
     }
 
     public String getNome() {
@@ -18,16 +19,33 @@ public class Dessert {
         this.nome = nome;
     }
 
-    public Float getPrezzo() {
+    public Double getPrezzo() {
         return prezzo;
     }
 
-    public void setPrezzo(Float prezzo) {
+    public void setPrezzo(Double prezzo) {
         this.prezzo = prezzo;
     }
 
+    public String getDescrizione() {
+        return descrizione;
+    }
 
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
+    }
 
+    public Integer getCheckTipoMenu() {
+        return checkTipoMenu;
+    }
+
+    public void setCheckTipoMenu(Integer checkTipoMenu) {
+        this.checkTipoMenu = checkTipoMenu;
+    }
+
+    public void printDessert() {
+        System.out.println("\n" + "\033[0;1m" + nome + "\033[0m" + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+    }
 }
 
 
