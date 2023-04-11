@@ -47,6 +47,14 @@ public class SecondiPiatti {
     }
 
     public void print() {
-        System.out.println("\n" + "\033[0;1m" + nome + "\033[0m" + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+        if (tipoSecondo.equals(TipoMenu.CARNE)){
+        System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_YELLOW+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+        }
+        if (tipoSecondo.equals(TipoMenu.PESCE)){
+        System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_BLUE+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+        }
+        if (tipoSecondo.equals(TipoMenu.VEGAN)){
+        System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_GREEN+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+        }
     }
 }

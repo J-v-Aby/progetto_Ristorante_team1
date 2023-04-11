@@ -2,6 +2,11 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        // HEADER
+        System.out.println("\n\n\t\t\t" + UtilityColor.ANSI_YELLOW_BACKGROUND + UtilityColor.ANSI_BLACK + "  C O P P A  C I C U T I  " + UtilityColor.ANSI_RESET+ "\n");
+        System.out.println("\n\t" + "Prezzo Medio: 50€\t" + "Recensioni: ⭐⭐⭐⭐⭐");
+        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "A N T I P A S T I" + UtilityColor.ANSI_RESET + "\n");
+
         Antipasti anti1 = new Antipasti("Carpaccio di manzo", 10.50, "Fettina di manzo crudo condita con succo di limone, servita con rucola e scaglie di parmigiano.", 1);
         Antipasti anti2 = new Antipasti("Polpettine di carne al sugo", 12.00, "Polpettine di carne mista (manzo e maiale) in un sugo di pomodoro.", 1);
         Antipasti anti3 = new Antipasti("Involtini di carne con verdure", 15.00, "Fettine di carne ripiene di verdure (carote, zucchine, peperoni) cotte in padella.", 1);
@@ -23,8 +28,8 @@ public class Main {
         menu.printAnti();
 
 
-
-                    // SECONDI
+        // SECONDI
+        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "S E C O N D I" + UtilityColor.ANSI_RESET + "\n");
         // Carne
         SecondiPiatti arrosto = new SecondiPiatti("Arrosto di Maiale al latte", 13.0, "morbido arrosto di maiale avvolto in una vellutata di latte e aromi", TipoMenu.CARNE);
         SecondiPiatti manzo = new SecondiPiatti("Manzo alla Stroganoff", 14.0, "straccetti di manzo cotti in una salsa di panna acida, senape e funghi", TipoMenu.CARNE);
@@ -36,7 +41,7 @@ public class Main {
         // Vegan
         SecondiPiatti polpette = new SecondiPiatti("Polpette di lenticchie", 8.0, "polpette di lenticchie al forno o in padella con pane, aglio e prezzemolo", TipoMenu.VEGAN);
         SecondiPiatti tofu = new SecondiPiatti("Tofu e verdure alla piastra", 9.0, "fette di tofu alla piastra con paprika e verdure croccanti", TipoMenu.VEGAN);
-        SecondiPiatti seitan = new SecondiPiatti("Seitan e funghi stufati", 10.0, "seitan stufato con funghi porcini, vino rosso, cipolla e rosmarino", TipoMenu.CARNE);
+        SecondiPiatti seitan = new SecondiPiatti("Seitan e funghi stufati", 10.0, "seitan stufato con funghi porcini, vino rosso, cipolla e rosmarino", TipoMenu.VEGAN);
 
         menu.addSecondiPiatti(arrosto);
         menu.addSecondiPiatti(manzo);
