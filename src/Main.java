@@ -68,12 +68,13 @@ public class Main {
         menuCarne.printSecondi();
 
         System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "D E S S E R T" + UtilityColor.ANSI_RESET + "\n");
-        Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "Crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", TipoMenu.CARNE);
-        Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "Base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco con topping alle albicocche.", TipoMenu.CARNE);
-        Dessert dessert3 = new Dessert("Cheesecake al cioccolato", 5.90, "Base di biscotto su cui poggia un alto strato di crema di formaggio fresco con topping al cioccolato.", TipoMenu.CARNE);
-        Dessert dessert4 = new Dessert("Torta setteveli", 7.40, "Pan di Spagna (senza farina) di mandorle pugliesi, mousse di nocciole del Piemonte, \ncioccolato Madagascar e un fondo di gianduia croccante ai cereali", TipoMenu.CARNE);
-        Dessert dessert5 = new Dessert("Strudel di mele", 6.38, "Un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.", TipoMenu.VEGAN);
-        Dessert dessert6 = new Dessert("Gelo di Anguria", 3.99, "Il gelo di mellone (gelu di muluni in siciliano), anche detto gelo d'anguria, \nè un tipico dolce al cucchiaio siciliano, tradizionalmente preparato a Ferragosto", TipoMenu.VEGAN);
+        Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "Crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", TipoMenu.CARNE, ChefStellati.Mario_Parmeggiani);
+        Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "Base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco con topping alle albicocche.", TipoMenu.CARNE, ChefStellati.Mario_Parmeggiani);
+        Dessert dessert3 = new Dessert("Cheesecake al cioccolato", 5.90, "Base di biscotto su cui poggia un alto strato di crema di formaggio fresco con topping al cioccolato.", TipoMenu.CARNE, ChefStellati.Marcus_Samuelsson);
+        Dessert dessert4 = new Dessert("Torta setteveli", 7.40, "Pan di Spagna (senza farina) di mandorle pugliesi, mousse di nocciole del Piemonte, \ncioccolato Madagascar e un fondo di gianduia croccante ai cereali", TipoMenu.CARNE,ChefStellati.Marcus_Samuelsson);
+        Dessert dessert5 = new Dessert("Strudel di mele", 6.38, "Un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.", TipoMenu.VEGAN,ChefStellati.Vicky_Lau);
+        Dessert dessert6 = new Dessert("Gelo di Anguria", 3.99, "Il gelo di mellone (gelu di muluni in siciliano), anche detto gelo d'anguria, \nè un tipico dolce al cucchiaio siciliano, tradizionalmente preparato a Ferragosto", TipoMenu.VEGAN, ChefStellati.Vicky_Lau);
+
         menuCarne.addDessert(dessert1);
         menuCarne.addDessert(dessert2);
         menuCarne.addDessert(dessert3);
@@ -81,6 +82,9 @@ public class Main {
         menuVegan.addDessert(dessert5);
         menuVegan.addDessert(dessert6);
         menuCarne.printDessert();
+
+
+
 
     }
 

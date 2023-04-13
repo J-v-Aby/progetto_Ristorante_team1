@@ -3,10 +3,13 @@ public class Dessert {
     private Double prezzo;
     private String descrizione;
     private TipoMenu tipoDessert;
+    private ChefStellati chef;
+    private String igrdienti;
 
-    public Dessert(String nome, Double prezzo, String descrizione, TipoMenu tipoDessert) {
+    public Dessert(String nome, Double prezzo, String descrizione, TipoMenu tipoDessert, ChefStellati chef) {
         this.nome = nome;
         this.prezzo = prezzo;
+        this.chef = chef;
         this.descrizione = descrizione;
         this.tipoDessert = tipoDessert;
     }
@@ -45,13 +48,13 @@ public class Dessert {
 
     public void print() {
         if (tipoDessert.equals(TipoMenu.CARNE)){
-            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_YELLOW+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_YELLOW+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione+ "\n" + " piatto preparato da " + chef.nomeChef);
         }
         if (tipoDessert.equals(TipoMenu.PESCE)){
-            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_BLUE+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_BLUE+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione+ "\n" +" piatto preparato da " + chef.nomeChef);
         }
         if (tipoDessert.equals(TipoMenu.VEGAN)){
-            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_GREEN+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_GREEN+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione+ "\n" +"piatto preparato da " + chef.nomeChef);
         }
     }
 }
