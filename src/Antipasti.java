@@ -4,13 +4,13 @@ public class Antipasti {
     private String descrizione;
 
     //TODO inserire enumerati
-    private Integer checkTipoMenu;
+    private TipoMenu tipoAnti;
 
-    public Antipasti(String nome, Double prezzo, String descrizione, Integer checkTipoMenu) {
+    public Antipasti(String nome, Double prezzo, String descrizione, TipoMenu tipoAnti) {
         this.nome = nome;
         this.prezzo = prezzo;
         this.descrizione = descrizione;
-        this.checkTipoMenu = checkTipoMenu;
+        this.tipoAnti = tipoAnti;
     }
 
     public String getNome() {
@@ -37,18 +37,26 @@ public class Antipasti {
         this.descrizione = descrizione;
     }
 
-    public Integer getCheckTipoMenu() {
-        return checkTipoMenu;
+    public TipoMenu getTipoMenu() {
+        return tipoAnti;
     }
 
-    public void setCheckTipoMenu(Integer checkTipoMenu) {
-        this.checkTipoMenu = checkTipoMenu;
+    public void setTipoMenu(TipoMenu tipoAnti) {
+        this.tipoAnti = tipoAnti;
     }
 
     //TODO inserire una classe utility con i colori
     public void print() {
 
-        System.out.println("\n" + "\033[0;1m" + nome + "\033[0m" + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+        if (tipoAnti.equals(TipoMenu.CARNE)){
+            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_YELLOW+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+        }
+        if (tipoAnti.equals(TipoMenu.PESCE)){
+            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_BLUE+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+        }
+        if (tipoAnti.equals(TipoMenu.VEGAN)){
+            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_GREEN+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+        }
     }
 
 }

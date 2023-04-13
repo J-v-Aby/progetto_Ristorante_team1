@@ -6,26 +6,39 @@ public class Main {
         System.out.println("\n\n\t\t\t" + UtilityColor.ANSI_YELLOW_BACKGROUND + UtilityColor.ANSI_BLACK + "  C O P P A  C I C U T I  " + UtilityColor.ANSI_RESET+ "\n");
         System.out.println("\n\t" + "Prezzo Medio: 50€\t" + "Recensioni: ⭐⭐⭐⭐⭐");
         System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "A N T I P A S T I" + UtilityColor.ANSI_RESET + "\n");
+        Menu menuCarne = new Menu("Carne", TipoMenu.CARNE);
+        Menu menuPesce = new Menu("Pesce", TipoMenu.PESCE);
+        Menu menuVegan = new Menu("Vegan", TipoMenu.VEGAN);
 
-        Antipasti anti1 = new Antipasti("Carpaccio di manzo", 10.50, "Fettina di manzo crudo condita con succo di limone, servita con rucola e scaglie di parmigiano.", 1);
-        Antipasti anti2 = new Antipasti("Polpettine di carne al sugo", 12.00, "Polpettine di carne mista (manzo e maiale) in un sugo di pomodoro.", 1);
-        Antipasti anti3 = new Antipasti("Involtini di carne con verdure", 15.00, "Fettine di carne ripiene di verdure (carote, zucchine, peperoni) cotte in padella.", 1);
+
+        Antipasti anti1 = new Antipasti("Carpaccio di manzo", 10.50, "Fettina di manzo crudo condita con succo di limone, servita con rucola e scaglie di parmigiano.", TipoMenu.CARNE);
+        Antipasti anti2 = new Antipasti("Polpettine di carne al sugo", 12.00, "Polpettine di carne mista (manzo e maiale) in un sugo di pomodoro.", TipoMenu.CARNE);
+        Antipasti anti3 = new Antipasti("Involtini di carne con verdure", 15.00, "Fettine di carne ripiene di verdure (carote, zucchine, peperoni) cotte in padella.", TipoMenu.CARNE);
         //pesce
-        Antipasti anti4 = new Antipasti("Tartare di tonno", 18.50, "Tartare di tonno crudo condita con olio evo, succo di lime, sale e pepe, servita con avocado a cubetti.", 2);
-        Antipasti anti5 = new Antipasti("Crostini con salmone affumicato e formaggio", 20.50, "Crostini di pane tostato con salmone, formaggio fresco cremoso, erba cipollina e pepe.", 2);
-        Antipasti anti6 = new Antipasti("Gamberetti in salsa rosa", 22.00, "Gamberetti lessati serviti con salsa rosa (salsa a base di maionese, ketchup, brandy).", 2);
+        Antipasti anti4 = new Antipasti("Tartare di tonno", 18.50, "Tartare di tonno crudo condita con olio evo, succo di lime, sale e pepe, servita con avocado a cubetti.", TipoMenu.PESCE);
+        Antipasti anti5 = new Antipasti("Crostini con salmone affumicato e formaggio", 20.50, "Crostini di pane tostato con salmone, formaggio fresco cremoso, erba cipollina e pepe.", TipoMenu.PESCE);
+        Antipasti anti6 = new Antipasti("Gamberetti in salsa rosa", 22.00, "Gamberetti lessati serviti con salsa rosa (salsa a base di maionese, ketchup, brandy).", TipoMenu.PESCE);
         //vegan
-        Antipasti anti7 = new Antipasti("Crostini con hummus e verdure grigliate", 8.50, "Crostini di pane tostato spalmati con hummus di ceci e verdure di stagione grigliate.", 3);
-        Antipasti anti8 = new Antipasti("Frittelle di zucchine e patate e salsa yogurt", 10.00, "Frittelle di zucchine e patate, servite con salsa allo yogurt vegetale (yogurt vegetale a base di soia o mandorle).", 3);
-        Antipasti anti9 = new Antipasti("Involtini di melanzane con cous cous e verdure", 12.00, " Fettine di melanzane grigliate ripiene di cous cous con verdure di stagione cotte in padella.", 3);
+        Antipasti anti7 = new Antipasti("Crostini con hummus e verdure grigliate", 8.50, "Crostini di pane tostato spalmati con hummus di ceci e verdure di stagione grigliate.", TipoMenu.VEGAN);
+        Antipasti anti8 = new Antipasti("Frittelle di zucchine e patate e salsa yogurt", 10.00, "Frittelle di zucchine e patate, servite con salsa allo yogurt vegetale (yogurt vegetale a base di soia o mandorle).", TipoMenu.VEGAN);
+        Antipasti anti9 = new Antipasti("Involtini di melanzane con cous cous e verdure", 12.00, " Fettine di melanzane grigliate ripiene di cous cous con verdure di stagione cotte in padella.", TipoMenu.VEGAN);
 
-        Menu menu = new Menu("Menu CARNE", TipoMenu.CARNE);
+        menuCarne.addAntipasti(anti1);
+        menuCarne.addAntipasti(anti2);
+        menuCarne.addAntipasti(anti3);
+        menuPesce.addAntipasti(anti4);
+        menuPesce.addAntipasti(anti5);
+        menuPesce.addAntipasti(anti6);
+        menuVegan.addAntipasti(anti7);
+        menuVegan.addAntipasti(anti8);
+        menuVegan.addAntipasti(anti9);
+        menuCarne.printAnti();
 
-        menu.addAntipasti(anti1);
-        menu.addAntipasti(anti9);
-        menu.addAntipasti(anti3);
 
-        menu.printAnti();
+
+
+
+
 
 
         // SECONDI
@@ -43,17 +56,32 @@ public class Main {
         SecondiPiatti tofu = new SecondiPiatti("Tofu e verdure alla piastra", 9.0, "fette di tofu alla piastra con paprika e verdure croccanti", TipoMenu.VEGAN);
         SecondiPiatti seitan = new SecondiPiatti("Seitan e funghi stufati", 10.0, "seitan stufato con funghi porcini, vino rosso, cipolla e rosmarino", TipoMenu.VEGAN);
 
-        menu.addSecondiPiatti(arrosto);
-        menu.addSecondiPiatti(manzo);
-        menu.addSecondiPiatti(pollo);
-        menu.addSecondiPiatti(salmone);
-        menu.addSecondiPiatti(gamberi);
-        menu.addSecondiPiatti(orata);
-        menu.addSecondiPiatti(polpette);
-        menu.addSecondiPiatti(tofu);
-        menu.addSecondiPiatti(seitan);
+        menuCarne.addSecondiPiatti(arrosto);
+        menuCarne.addSecondiPiatti(manzo);
+        menuCarne.addSecondiPiatti(pollo);
+        menuPesce.addSecondiPiatti(salmone);
+        menuPesce.addSecondiPiatti(gamberi);
+        menuPesce.addSecondiPiatti(orata);
+        menuVegan.addSecondiPiatti(polpette);
+        menuVegan.addSecondiPiatti(tofu);
+        menuVegan.addSecondiPiatti(seitan);
+        menuCarne.printSecondi();
 
-        menu.printSecondi();
+        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "D E S S E R T" + UtilityColor.ANSI_RESET + "\n");
+        Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "Crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", TipoMenu.CARNE);
+        Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "Base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco con topping alle albicocche.", TipoMenu.CARNE);
+        Dessert dessert3 = new Dessert("Cheesecake al cioccolato", 5.90, "Base di biscotto su cui poggia un alto strato di crema di formaggio fresco con topping al cioccolato.", TipoMenu.CARNE);
+        Dessert dessert4 = new Dessert("Torta setteveli", 7.40, "Pan di Spagna (senza farina) di mandorle pugliesi, mousse di nocciole del Piemonte, \ncioccolato Madagascar e un fondo di gianduia croccante ai cereali", TipoMenu.CARNE);
+        Dessert dessert5 = new Dessert("Strudel di mele", 6.38, "Un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.", TipoMenu.VEGAN);
+        Dessert dessert6 = new Dessert("Gelo di Anguria", 3.99, "Il gelo di mellone (gelu di muluni in siciliano), anche detto gelo d'anguria, \nè un tipico dolce al cucchiaio siciliano, tradizionalmente preparato a Ferragosto", TipoMenu.VEGAN);
+        menuCarne.addDessert(dessert1);
+        menuCarne.addDessert(dessert2);
+        menuCarne.addDessert(dessert3);
+        menuCarne.addDessert(dessert4);
+        menuVegan.addDessert(dessert5);
+        menuVegan.addDessert(dessert6);
+        menuCarne.printDessert();
 
     }
+
 }
