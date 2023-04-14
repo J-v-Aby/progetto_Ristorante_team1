@@ -54,5 +54,6 @@ public class PrimiPiatti {
         if (tipoPrimo.equals(TipoMenu.VEGAN)){
             System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_GREEN+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
         }
+
     }
 }

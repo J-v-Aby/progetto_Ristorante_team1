@@ -1,7 +1,6 @@
 public class Bevande {
     private String nome;
     private Double prezzo;
-   private TipoMenu tipoBevande;
 
     public Bevande(String nome, Double prezzo) {
         this.nome = nome;
