@@ -43,6 +43,7 @@ public class PrimiPiatti {
         this.tipoPrimo = tipoPrimo;
     }
 
+
     public void print() {
         if (tipoPrimo.equals(TipoMenu.CARNE)){
             System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_YELLOW+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
