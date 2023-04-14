@@ -1,5 +1,7 @@
 public class UtilityColor {
 
+
+
     // Background
     public static final String ANSI_BLACK_BACKGROUND = "\u001B[40m";
     public static final String ANSI_RED_BACKGROUND = "\u001B[41m";

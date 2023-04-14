@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Menu {
 
+    //TODO se volete potete inserire altri field
     private String nome;
     private TipoMenu tipoMenu;
     private ArrayList<Antipasti> antipastiList;
@@ -47,6 +48,7 @@ public class Menu {
             String[] descrizione = primiPiatti.getDescrizione().split(" ");
             // creo un for each che permetta allo switch di identificare gli allergeni
             for (String s : descrizione) {
+                //TODO in portata aggiungiamo una lista di allergenici
                 switch (s) {
                     case "uova", "maionese" -> System.out.println("Allergene presente: " + Allergeni.UOVA.nomeAllergene);
                     case "gamberi", "granchi" -> System.out.println("Allergene presente: " + Allergeni.CROSTACEI.nomeAllergene);

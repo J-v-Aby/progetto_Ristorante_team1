@@ -11,7 +11,8 @@ public enum Allergeni {
     SENAPE("Senape"),
     NICKEL("Nickel");
 
-String nomeAllergene;
+    //TODO sempre i modificatori di accesso
+private final String nomeAllergene;
     Allergeni(String nomeAllergene) {
         this.nomeAllergene = nomeAllergene;
 

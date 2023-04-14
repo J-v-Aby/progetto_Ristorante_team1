@@ -1,4 +1,6 @@
 public class Bevande {
+
+
     private String nome;
     private Double prezzo;
 
