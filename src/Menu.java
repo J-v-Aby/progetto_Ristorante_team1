@@ -1,70 +1,112 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Menu {
-    private Antipasti antipasti;
-    private PrimiPiatti primiPiatti;
-    private SecondiPiatti secondiPiatti;
-    private Dessert dessert;
-    private Bevande bevande;
 
-    public Menu(Antipasti antipasti) {
-        this.antipasti = antipasti;
+    private String nome;
+    private TipoMenu tipoMenu;
+    private ArrayList<Antipasti> antipastiList;
+    private ArrayList<PrimiPiatti> primiPiattiList;
+    private ArrayList<SecondiPiatti> secondiPiattiList;
+    private ArrayList<Dessert> dessertList;
+    private ArrayList<Bevande> bevandeList;
+
+
+
+    public Menu(String nome, TipoMenu tipoMenu) {
+        this.nome = nome;
+        this.tipoMenu = tipoMenu;
+        this.antipastiList = new ArrayList<>();
+        this.primiPiattiList = new ArrayList<>();
+        this.secondiPiattiList = new ArrayList<>();
+        this.dessertList = new ArrayList<>();
+        this.bevandeList = new ArrayList<>();
     }
 
-    public Menu(PrimiPiatti primiPiatti) {
-        this.primiPiatti = primiPiatti;
+    public void addAntipasti(Antipasti antipasti) {
+        antipastiList.add(antipasti);
     }
 
-    public Menu(SecondiPiatti secondiPiatti) {
-        this.secondiPiatti = secondiPiatti;
+    public void removeAntipasti(Antipasti antipasti) {
+        antipastiList.remove(antipasti);
     }
 
-    public Menu(Dessert dessert) {
-        this.dessert = dessert;
+    public void printAnti() {
+        for (Antipasti antipasti : antipastiList) {
+            antipasti.print();
+        }
     }
 
-    public Menu(Bevande bevande) {
-        this.bevande = bevande;
+    public void addPrimipiatti(PrimiPiatti primiPiatti){ primiPiattiList.add(primiPiatti);}
+    public void removePrimiPiatti(PrimiPiatti primiPiatti){primiPiattiList.remove(primiPiatti);}
+    public void printPrimi() {
+        for (PrimiPiatti primiPiatti : primiPiattiList) {
+            primiPiatti.print();
+            //Creo un Array di stringe dove passo il regex nelle descrizioni
+            String[] descrizione = primiPiatti.getDescrizione().split(" ");
+            // creo un for each che permetta allo switch di identificare gli allergeni
+            for (String s : descrizione) {
+                switch (s) {
+                    case "uova", "maionese" -> System.out.println("Allergene presente: " + Allergeni.UOVA.nomeAllergene);
+                    case "gamberi", "granchi" -> System.out.println("Allergene presente: " + Allergeni.CROSTACEI.nomeAllergene);
+                    case "sedano" -> System.out.println("Allergene presente: " + Allergeni.SEDANO.nomeAllergene);
+                    case "arachidi" -> System.out.println("Allergene presente: " + Allergeni.ARACHIDI.nomeAllergene);
+                    case "capesante", "cozze", "calamari", "polpo" -> System.out.println("Allergene presente: " + Allergeni.MOLLUSCHI.nomeAllergene);
+                    case "mandorle", "noci" -> System.out.println("Allergene presente : " + Allergeni.FRUTTA_A_GUSCIO.nomeAllergene);
+                    case "pesce", "salmone", "orata" -> System.out.println("Allergene presente: " + Allergeni.PESCE.nomeAllergene);
+                    case "latte", "burro", "yogurt" -> System.out.println("Allergene presente: " + Allergeni.LATTE.nomeAllergene);
+                    case "senape" -> System.out.println("Allergene presente: " + Allergeni.SENAPE.nomeAllergene);
+                    case "funghi", "pomodoro", "tartufo" -> System.out.println("Allergene presente: " + Allergeni.NICKEL.nomeAllergene);
+                    case "cannelloni", "ravioli", "paccheri", "linguine", "spaghetti", "conchiglioni", "farina", "saitan" ->
+                            System.out.println("Allergene presente: " + Allergeni.GLUTINE.nomeAllergene);
+                    default -> {
+                    }
+                }
+            }
+        }
     }
 
-    public Antipasti getAntipasti() {
-        return antipasti;
+
+
+    public void addSecondiPiatti(SecondiPiatti secondiPiatti) {
+        secondiPiattiList.add(secondiPiatti);
+    }
+    public void removeAntipasti(SecondiPiatti secondiPiatti) {
+        secondiPiattiList.remove(secondiPiatti);
+    }
+    public void printSecondi() {
+        for (SecondiPiatti secondiPiatti : secondiPiattiList) {
+            secondiPiatti.print();
+        }
     }
 
-    public void setAntipasti(Antipasti antipasti) {
-        this.antipasti = antipasti;
+    public void addDessert(Dessert dessert) {
+        dessertList.add(dessert);
+    }
+    public void removeDessert(Dessert dessert) {
+        dessertList.remove(dessert);
+    }
+    public void printDessert() {
+        for (Dessert dessert : dessertList) {
+            dessert.print();
+        }
     }
 
-    public PrimiPiatti getPrimiPiatti() {
-        return primiPiatti;
+    public void addBevande (Bevande bevande) {
+        bevandeList.add(bevande);
+    }
+    public void removeBevande (Bevande bevande) {
+        bevandeList.remove(bevande);
+    }
+    public void printBevande () {
+        for(Bevande bevande : bevandeList) {
+            bevande.print();
+        }
     }
 
-    public void setPrimiPiatti(PrimiPiatti primiPiatti) {
-        this.primiPiatti = primiPiatti;
-    }
 
-    public SecondiPiatti getSecondiPiatti() {
-        return secondiPiatti;
-    }
 
-    public void setSecondiPiatti(SecondiPiatti secondiPiatti) {
-        this.secondiPiatti = secondiPiatti;
-    }
 
-    public Dessert getDessert() {
-        return dessert;
-    }
-
-    public void setDessert(Dessert dessert) {
-        this.dessert = dessert;
-    }
-
-    public Bevande getBevande() {
-        return bevande;
-    }
-
-    public void setBevande(Bevande bevande) {
-        this.bevande = bevande;
-    }
 
 }

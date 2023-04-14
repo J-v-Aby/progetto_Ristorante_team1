@@ -2,13 +2,16 @@ public class Dessert {
     private String nome;
     private Double prezzo;
     private String descrizione;
-    private Integer checkTipoMenu;
+    private TipoMenu tipoDessert;
+    private ChefStellati chef;
+    private String igrdienti;
 
-    public Dessert(String nome, Double prezzo, String descrizione, Integer checkTipoMenu) {
+    public Dessert(String nome, Double prezzo, String descrizione, TipoMenu tipoDessert, ChefStellati chef) {
         this.nome = nome;
         this.prezzo = prezzo;
+        this.chef = chef;
         this.descrizione = descrizione;
-        this.checkTipoMenu = checkTipoMenu;
+        this.tipoDessert = tipoDessert;
     }
 
     public String getNome() {
@@ -35,16 +38,24 @@ public class Dessert {
         this.descrizione = descrizione;
     }
 
-    public Integer getCheckTipoMenu() {
-        return checkTipoMenu;
+    public TipoMenu getTipoDessert() {
+        return tipoDessert;
     }
 
-    public void setCheckTipoMenu(Integer checkTipoMenu) {
-        this.checkTipoMenu = checkTipoMenu;
+    public void setTipoDessert(TipoMenu tipoDessert) {
+        this.tipoDessert = tipoDessert;
     }
 
-    public void printDessert() {
-        System.out.println("\n" + "\033[0;1m" + nome + "\033[0m" + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+    public void print() {
+        if (tipoDessert.equals(TipoMenu.CARNE)){
+            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_YELLOW+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione+ "\n" + " piatto preparato da " + chef.nomeChef);
+        }
+        if (tipoDessert.equals(TipoMenu.PESCE)){
+            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_BLUE+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione+ "\n" +" piatto preparato da " + chef.nomeChef);
+        }
+        if (tipoDessert.equals(TipoMenu.VEGAN)){
+            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_GREEN+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione+ "\n" +"piatto preparato da " + chef.nomeChef);
+        }
     }
 }
 
