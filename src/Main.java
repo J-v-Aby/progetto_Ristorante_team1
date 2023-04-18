@@ -4,6 +4,8 @@ public class Main {
     public static void main(String[] args) {
 //        // HEADER
         System.out.println("\n\n\t\t\t" + UtilityColor.ANSI_YELLOW_BACKGROUND + UtilityColor.ANSI_BLACK + "  C O P P A  C I C U T I  " + UtilityColor.ANSI_RESET + "\n");
+        System.out.println("\t\t\t"+"L'esperienza che ferma il tempo\n" +
+                "Le lancette rallentano il loro avanzare, nell’aria il racconto di piatti che emozionano al primo sguardo."+"\n"+" Danzatori silenziosi si muovono intorno a te per regalarti lo spettacolo di un servizio impeccabile,"+"\n"+" in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, benvenuti nel Ristorante di Villa Crespi.");
         System.out.println("\n\t" + "Prezzo Medio: 50€\t" + "Recensioni: ⭐⭐⭐⭐⭐");
         System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "A N T I P A S T I" + UtilityColor.ANSI_RESET + "\n");
         Menu menuCarne = new Menu("Carne", TipoMenu.CARNE);
@@ -90,24 +92,24 @@ public class Main {
         menuVegan.addSecondiPiatti(tofu);
         menuVegan.addSecondiPiatti(seitan);
         menuCarne.printSecondi();
-//
-//        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "D E S S E R T" + UtilityColor.ANSI_RESET + "\n");
-//        Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "Crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", TipoMenu.CARNE, ChefStellati.Mario_Parmeggiani);
-//        Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "Base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco con topping alle albicocche.", TipoMenu.CARNE, ChefStellati.Mario_Parmeggiani);
-//        Dessert dessert3 = new Dessert("Cheesecake al cioccolato", 5.90, "Base di biscotto su cui poggia un alto strato di crema di formaggio fresco con topping al cioccolato.", TipoMenu.CARNE, ChefStellati.Marcus_Samuelsson);
-//        Dessert dessert4 = new Dessert("Torta setteveli", 7.40, "Pan di Spagna (senza farina) di mandorle pugliesi, mousse di nocciole del Piemonte, \ncioccolato Madagascar e un fondo di gianduia croccante ai cereali", TipoMenu.CARNE, ChefStellati.Marcus_Samuelsson);
-//        Dessert dessert5 = new Dessert("Strudel di mele", 6.38, "Un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.", TipoMenu.VEGAN, ChefStellati.Vicky_Lau);
-//        Dessert dessert6 = new Dessert("Gelo di Anguria", 3.99, "Il gelo di mellone (gelu di muluni in siciliano), anche detto gelo d'anguria, \nè un tipico dolce al cucchiaio siciliano, tradizionalmente preparato a Ferragosto", TipoMenu.VEGAN, ChefStellati.Vicky_Lau);
-//
-//        menuCarne.addDessert(dessert1);
-//        menuCarne.addDessert(dessert2);
-//        menuCarne.addDessert(dessert3);
-//        menuCarne.addDessert(dessert4);
-//        menuVegan.addDessert(dessert5);
-//        menuVegan.addDessert(dessert6);
-//        menuCarne.printDessert();
-//
-        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "D E S S E R T" + UtilityColor.ANSI_RESET + "\n");
+
+       System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "D E S S E R T" + UtilityColor.ANSI_RESET + "\n");
+        Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "Crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", TipoMenu.CREMA, ChefStellati.MARIO_PARMEGGIANI, "panna fresca liquida, latte, tuorli, zucchero, baccello di vaniglia");
+        Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "Base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco con topping alle albicocche.", TipoMenu.FRUTTA, ChefStellati.MARIO_PARMEGGIANI,"biscotti g.free, burro, philadelphia, panna fresca, zucchero gelatina alimentare, bacche di vaniglia, confettura di albicocca");
+        Dessert dessert3 = new Dessert("Cheesecake al cioccolato", 5.90, "Base di biscotto su cui poggia un alto strato di crema di formaggio fresco con topping al cioccolato.", TipoMenu.CIOCCOLATO, ChefStellati.MARCUS_SAMUELSSON,"biscotti, burro, philadelphia, panna fresca, zucchero gelatina alimentare, bacche di vaniglia, crema di cioccolato, scaglie di cioccolato fondente");
+        Dessert dessert4 = new Dessert("Torta setteveli", 7.40, "Pan di Spagna, mandorle pugliesi, mousse di nocciole del Piemonte, \ncioccolato Madagascar e un fondo di gianduia croccante ai cereali", TipoMenu.CIOCCOLATO, ChefStellati.MARCUS_SAMUELSSON, "uova, zucchero, farina, cacao, crema nocciola,cereali al cioccolato,amido di riso, latte, gelatia, panna, pasta di nocciole,cioccolato fondente, schiroppo di glucosio");
+        Dessert dessert5 = new Dessert("Strudel di mele", 6.38, "Un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.", TipoMenu.FRUTTA, ChefStellati.VICKY_LAU, "mele, uvetta, marsala o vermouth, confettura di albicocca, mandorle, panna veggetale, zucchero, cannella");
+        Dessert dessert6 = new Dessert("Gelo di Anguria", 3.99, "Il gelo di mellone (gelu di muluni in siciliano), anche detto gelo d'anguria, \nè un tipico dolce al cucchiaio siciliano, tradizionalmente preparato a Ferragosto", TipoMenu.FRUTTA, ChefStellati.VICKY_LAU, "succo di anguria amido di frumento, zucchero di canna, anice, gocce di cioccolato fondente");
+
+        menuCarne.addDessert(dessert1);
+        menuCarne.addDessert(dessert2);
+        menuCarne.addDessert(dessert3);
+        menuCarne.addDessert(dessert4);
+        menuVegan.addDessert(dessert5);
+        menuVegan.addDessert(dessert6);
+        menuCarne.printDessert();
+
+        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "B E V A N D E" + UtilityColor.ANSI_RESET + "\n");
         Bevande acqua = new Bevande("Acqua naturale 0.5l", 1.00,"Acqua di Nepi", false);
         Bevande acquaG = new Bevande("Acqua naturale 1l", 2.00,"Boario",false);
         Bevande acquaFrizzante = new Bevande("Acqua frizzante 0.5l", 1.00,"Guizza",false);

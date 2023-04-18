@@ -1,9 +1,9 @@
 public enum ChefStellati {
 
-    //TODO gli enum si scrivono sempre in maiuscolo
-    Marcus_Samuelsson ( "Marcus Samuelsson"),
-    Mario_Parmeggiani("Mario Parmeggiani"),
-    Vicky_Lau(" Vicky Lau");
+
+    MARCUS_SAMUELSSON ( "Marcus Samuelsson"),
+    MARIO_PARMEGGIANI("Mario Parmeggiani"),
+    VICKY_LAU(" Vicky Lau");
 
     String nomeChef;
     ChefStellati (String nomeChef) {
