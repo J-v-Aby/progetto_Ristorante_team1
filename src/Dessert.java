@@ -38,7 +38,7 @@ public class Dessert extends PortataPadre {
     @Override
     public void print() {
         super.print();
-        System.out.println("Chef: "+chef+ "\n"+ " ingrefienti : "+"\n" + igredienti);
+        System.out.println("Chef: "+chef.nomeChef+ "\n"+ " ingrefienti : "+"\n" + igredienti);
     }
 }
 
