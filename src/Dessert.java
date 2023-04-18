@@ -1,21 +1,21 @@
 public class Dessert extends PortataPadre {
 
-    private TipoMenu tipoDessert;
+    private TipoDessert tipoDessert;
     private ChefStellati chef;
     private String igredienti;
 
-    public Dessert(String nome, Double prezzo, String descrizione, TipoMenu tipoDessert, ChefStellati chef,String igredienti ) {
+    public Dessert(String nome, Double prezzo, String descrizione, TipoDessert tipoDessert, ChefStellati chef,String igredienti ) {
         super(nome, prezzo, descrizione);
         this.tipoDessert= tipoDessert;
         this.chef= chef;
         this.igredienti=igredienti;
     }
 
-    public TipoMenu getTipoDessert() {
+    public TipoDessert getTipoDessert() {
         return tipoDessert;
     }
 
-    public void setTipoDessert(TipoMenu tipoDessert) {
+    public void setTipoDessert(TipoDessert tipoDessert) {
         this.tipoDessert = tipoDessert;
     }
 
@@ -38,7 +38,7 @@ public class Dessert extends PortataPadre {
     @Override
     public void print() {
         super.print();
-        System.out.println("Chef: "+chef.nomeChef+ "\n"+ " ingrefienti : "+"\n" + igredienti);
+        System.out.println("Dessert a base di "+tipoDessert +"\n"+ "Chef: "+chef.nomeChef+ "\n"+ " ingrefienti : "+"\n" + igredienti);
     }
 }
 
