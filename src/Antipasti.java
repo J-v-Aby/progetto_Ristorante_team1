@@ -69,8 +69,6 @@ public class Antipasti {
 
     //TODO fare una print normale poi vediamo il resto, non si fa qui!
     public void print() {
-    super.printInfo()
-
 
         if (tipoAnti.equals(TipoMenu.CARNE)){
             System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_YELLOW+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione + tipoPiattoAntipasto.descrizioneTipoPiatto);

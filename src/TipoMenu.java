@@ -1,7 +1,11 @@
-public enum TipoMenu {
+ enum TipoMenu {
+    CARNE("Menu Carne"),
+    PESCE("Menu Pesce"),
+    VEGAN("Menu Vegan");
+    private String stringEnum;
 
-    //TODO si mette sempre la descrizione e il valore
-    CARNE,
-    PESCE,
-    VEGAN;
+    TipoMenu(String stringEnum) {
+        this.stringEnum = stringEnum;
+    }
 }
+
