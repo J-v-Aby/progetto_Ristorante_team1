@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b68139fb-a2f6-4666-bbdd-52b839cd0e10" name="Changes" comment="code review 31/03">
-      <change afterPath="$PROJECT_DIR$/src/Cottura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PortataPadre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ristorante_team1_java12.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ristorante_team1_java12.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_03_2023_15_16_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_03_2023_15_16__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Allergeni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Allergeni.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Antipasti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bevande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bevande.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondiPiatti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecondiPiatti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TipoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TipoMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PortataPadre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortataPadre.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "develop",
-    "last_opened_file_path": "C:/Users/Michele/OneDrive/Desktop/leadJava12/ristorante_team1_java12"
+    "last_opened_file_path": "C:/Users/Claudio/Desktop/ristorante_team1_java12"
   }
 }]]></component>
   <component name="RecentsManager">

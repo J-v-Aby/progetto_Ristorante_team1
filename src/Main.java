@@ -107,34 +107,34 @@ public class Main {
 //        menuVegan.addDessert(dessert6);
 //        menuCarne.printDessert();
 //
-//        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "D E S S E R T" + UtilityColor.ANSI_RESET + "\n");
-//        Bevande acqua = new Bevande("Acqua naturale 0.5l", 1.00);
-//        Bevande acquaG = new Bevande("Acqua naturale 1l", 2.00);
-//        Bevande acquaFrizzante = new Bevande("Acqua frizzante 0.5l", 1.00);
-//        Bevande acquaFrizzanteG = new Bevande("Acqua frizzante 1l ", 2.00);
-//        Bevande cocaColaL = new Bevande("Coca Cola 33cl ", 2.00);
-//        Bevande cocaColaB = new Bevande("Coca Cola 1.5l ", 4.00);
-//        Bevande sprite = new Bevande("Sprite 33cl", 2.00);
-//        Bevande fanta = new Bevande("Fanta 33cl", 2.00);
-//        Bevande birraBionda = new Bevande("Birra bionda 0.25 cl", 4.00);
-//        Bevande birraBiondaG = new Bevande("Birra bionda 0.50 cl", 5.00);
-//        Bevande birraRossa = new Bevande("Birra rossa 0.25cl", 4.00);
-//        Bevande birraRossaG = new Bevande("Birra rossa 0.5cl", 5.00);
-//
-//        menuCarne.addBevande(acqua);
-//        menuCarne.addBevande(acquaG);
-//        menuCarne.addBevande(acquaFrizzante);
-//        menuCarne.addBevande(acquaFrizzanteG);
-//        menuCarne.addBevande(cocaColaL);
-//        menuCarne.addBevande(cocaColaB);
-//        menuCarne.addBevande(sprite);
-//        menuCarne.addBevande(fanta);
-//        menuCarne.addBevande(birraBionda);
-//        menuCarne.addBevande(birraBiondaG);
-//        menuCarne.addBevande(birraRossa);
-//        menuCarne.addBevande(birraRossaG);
-//        menuCarne.printBevande();
-//
+        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "D E S S E R T" + UtilityColor.ANSI_RESET + "\n");
+        Bevande acqua = new Bevande("Acqua naturale 0.5l", 1.00,"Acqua di Nepi", false);
+        Bevande acquaG = new Bevande("Acqua naturale 1l", 2.00,"Boario",false);
+        Bevande acquaFrizzante = new Bevande("Acqua frizzante 0.5l", 1.00,"Guizza",false);
+        Bevande acquaFrizzanteG = new Bevande("Acqua frizzante 1l ", 2.00,"Natia",false);
+        Bevande cocaColaL = new Bevande("Coca Cola", 2.00,"Lattina da 33cl",false);
+        Bevande cocaColaB = new Bevande("Coca Cola bottiglia", 4.00,"Bottiglia da 1.5l",false);
+        Bevande sprite = new Bevande("Sprite", 2.00,"Lattina da 33cl",false);
+        Bevande fanta = new Bevande("Fanta", 2.00,"Lattina da 33cl",false);
+        Bevande birraBionda = new Bevande("Birra bionda 0.25 cl", 4.00,"Helles",true);
+        Bevande birraBiondaG = new Bevande("Birra bionda 0.50 cl", 5.00,"Golden Ale",true);
+        Bevande birraRossa = new Bevande("Birra rossa 0.25cl", 4.00,"Peroni Gran Riserva",true);
+        Bevande birraRossaG = new Bevande("Birra rossa 0.5cl", 5.00,"McFarland",true);
+
+        menuCarne.addBevande(acqua);
+        menuCarne.addBevande(acquaG);
+        menuCarne.addBevande(acquaFrizzante);
+        menuCarne.addBevande(acquaFrizzanteG);
+        menuCarne.addBevande(cocaColaL);
+        menuCarne.addBevande(cocaColaB);
+        menuCarne.addBevande(sprite);
+        menuCarne.addBevande(fanta);
+        menuCarne.addBevande(birraBionda);
+        menuCarne.addBevande(birraBiondaG);
+        menuCarne.addBevande(birraRossa);
+        menuCarne.addBevande(birraRossaG);
+        menuCarne.printBevande();
+
 
     }
 }

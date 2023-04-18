@@ -50,11 +50,11 @@ public class PortataPadre {
 
     public String allergeniGetString() {
         if (listaAllergeni.size() != 0) {
-            String sumAllerg = "\t\tAllergeni: ";
+            StringBuilder sumAllerg = new StringBuilder("\t\tAllergeni: ");
             for (Allergeni allergeni : listaAllergeni) {
-                sumAllerg += allergeni.getNomeAllergene() + ", ";
+                sumAllerg.append(allergeni.getNomeAllergene()).append(", ");
             }
-            return sumAllerg;
+            return sumAllerg.toString();
         }
         return "";
     }

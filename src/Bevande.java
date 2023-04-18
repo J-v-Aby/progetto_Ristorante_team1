@@ -1,33 +1,26 @@
-public class Bevande {
+public class Bevande extends PortataPadre {
+
+    boolean isAlcolic;
 
 
-    private String nome;
-    private Double prezzo;
-
-    public Bevande(String nome, Double prezzo) {
-        this.nome = nome;
-        this.prezzo = prezzo;
-
+    public Bevande(String nome, Double prezzo, String descrizione,boolean isAlcolic) {
+        super(nome, prezzo, descrizione);
+        this.isAlcolic = isAlcolic;
     }
 
-    public String getNome() {
-        return nome;
+    public boolean isAlcolic() {
+        return isAlcolic;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setAlcolic(boolean alcolic) {
+        isAlcolic = alcolic;
     }
 
-    public Double getPrezzo() {
-        return prezzo;
-    }
-
-    public void setPrezzo(Double prezzo) {
-        this.prezzo = prezzo;
-    }
-
-
+    @Override
     public void print() {
-        System.out.println("\n" + "\033[0;1m" + nome + "\033[0m" + "\t\t\t\t\t\t" + prezzo + " €");
+        super.print();
+        if(isAlcolic){
+            System.out.println("Bevanda alcolica");
+        }
     }
 }
