@@ -77,10 +77,19 @@ public class Main {
         // Vegan
         SecondiPiatti polpette = new SecondiPiatti("Polpette di lenticchie", 8.0, "polpette di lenticchie al forno o in padella con pane, aglio e prezzemolo", "Verdure",Cottura.COTTA);
         SecondiPiatti tofu = new SecondiPiatti("Tofu piccante", 9.0, "fette di tofu alla piastra con limone e peperoncino", "Verdure croccanti alla piastra",Cottura.MEDIA);
-        SecondiPiatti seitan = new SecondiPiatti("Seitan al vino Rosso", 10.0, "seitan stufato con vino rosso, cipolla e rosmarino", "Funghi porcini", Cottura.MEDIA);
+        SecondiPiatti seitan = new SecondiPiatti("Seitan al vino Rosso", 10.0, "seitan stufato con vino rosso, cipolla, rosmarino e senape", "Funghi porcini", Cottura.MEDIA);
 
-        arrosto.getListaAllergeni().add(Allergeni.UOVA);
-        arrosto.getListaAllergeni().add(Allergeni.GLUTINE);
+        arrosto.getListaAllergeni().add(Allergeni.LATTE);
+        manzo.getListaAllergeni().add(Allergeni.LATTE);
+        pollo.getListaAllergeni().add(Allergeni.ARACHIDI);
+
+        salmone.getListaAllergeni().add(Allergeni.PESCE);
+        gamberi.getListaAllergeni().add(Allergeni.PESCE);
+        orata.getListaAllergeni().add(Allergeni.PESCE);
+        orata.getListaAllergeni().add(Allergeni.GLUTINE);
+
+        seitan.getListaAllergeni().add(Allergeni.SENAPE);
+
 
         menuCarne.addSecondiPiatti(arrosto);
         menuCarne.addSecondiPiatti(manzo);
