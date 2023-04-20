@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e98ee44e-e1c6-4001-b64e-4f5886c63a4f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TipoDessert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dessert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Antipasti.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TipoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TipoMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PortataPadre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PortataPadre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TipoPiatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TipoPiatto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,14 @@
       <recent name="C:\Users\Michele\OneDrive\Desktop\leadJava12\ristorante_team1_java12" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ristorante_team1_java12" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ristorante_team1_java12" />
@@ -68,6 +75,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

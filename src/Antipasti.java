@@ -1,54 +1,13 @@
-public class Antipasti {
+public class Antipasti extends PortataPadre {
 
-    //TODO i campi a comune vanno spostati in una classe padre
-    private String nome;
-    private Double prezzo;
-    private String descrizione;
-
-    //TODO inserire enumerati
+    //TODO aggiungere filed
+    private String descrizioneInInglese;
     private TipoPiatto tipoPiattoAntipasto;
 
-    //TODO tipo menu va su menu
-    private TipoMenu tipoAnti;
-
-    public Antipasti(String nome, Double prezzo, String descrizione, TipoPiatto tipoPiattoAntipasto, TipoMenu tipoAnti) {
-        this.nome = nome;
-        this.prezzo = prezzo;
-        this.descrizione = descrizione;
+    public Antipasti(String nome, Double prezzo, String descrizione, String descrizioneInInglese, TipoPiatto tipoPiattoAntipasto) {
+        super(nome, prezzo, descrizione);
+        this.descrizioneInInglese = descrizioneInInglese;
         this.tipoPiattoAntipasto = tipoPiattoAntipasto;
-        this.tipoAnti = tipoAnti;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Double getPrezzo() {
-        return prezzo;
-    }
-
-    public void setPrezzo(Double prezzo) {
-        this.prezzo = prezzo;
-    }
-
-    public String getDescrizione() {
-        return descrizione;
-    }
-
-    public void setDescrizione(String descrizione) {
-        this.descrizione = descrizione;
-    }
-
-    public TipoMenu getTipoMenu() {
-        return tipoAnti;
-    }
-
-    public void setTipoMenu() {
-        this.tipoAnti = tipoAnti;
     }
 
     public TipoPiatto getTipoPiattoAntipasto() {
@@ -59,26 +18,17 @@ public class Antipasti {
         this.tipoPiattoAntipasto = tipoPiattoAntipasto;
     }
 
-    public TipoMenu getTipoAnti() {
-        return tipoAnti;
+    public String getDescrizioneInInglese() {
+        return descrizioneInInglese;
     }
 
-    public void setTipoAnti(TipoMenu tipoAnti) {
-        this.tipoAnti = tipoAnti;
+    public void setDescrizioneInInglese(String descrizioneInInglese) {
+        this.descrizioneInInglese = descrizioneInInglese;
     }
 
-    //TODO fare una print normale poi vediamo il resto, non si fa qui!
+    @Override
     public void print() {
-
-        if (tipoAnti.equals(TipoMenu.CARNE)){
-            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_YELLOW+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione + tipoPiattoAntipasto.descrizioneTipoPiatto);
-        }
-        if (tipoAnti.equals(TipoMenu.PESCE)){
-            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_BLUE+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione + tipoPiattoAntipasto.descrizioneTipoPiatto);
-        }
-        if (tipoAnti.equals(TipoMenu.VEGAN)){
-            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_GREEN+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione + tipoPiattoAntipasto.descrizioneTipoPiatto);
-        }
+        super.print();
+        System.out.println("Description: " + descrizioneInInglese + "\n" +tipoPiattoAntipasto.descrizioneTipoPiatto);
     }
-
 }
