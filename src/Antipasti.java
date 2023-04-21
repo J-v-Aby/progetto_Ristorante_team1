@@ -29,6 +29,6 @@ public class Antipasti extends PortataPadre {
     @Override
     public void print() {
         super.print();
-        System.out.println("Description: " + descrizioneInInglese + "\n" +tipoPiattoAntipasto.descrizioneTipoPiatto);
+        System.out.println(descrizioneInInglese + "\n" +tipoPiattoAntipasto.descrizioneTipoPiatto);
     }
 }

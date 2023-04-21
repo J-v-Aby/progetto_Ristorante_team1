@@ -60,6 +60,6 @@ public class PortataPadre {
     }
 
     public void print() {
-        System.out.println("\n" + UtilityColor.ANSI_BOLD + nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" +"Descrizione: "+ descrizione + allergeniGetString());
+        System.out.println("\n" + UtilityColor.ANSI_BOLD + nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione + allergeniGetString());
     }
 }
