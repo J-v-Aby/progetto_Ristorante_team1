@@ -1,6 +1,6 @@
 public class Bevande extends PortataPadre {
 
-    boolean isAlcolic;
+    private boolean isAlcolic;
 
 
     public Bevande(String nome, Double prezzo, String descrizione,boolean isAlcolic) {
