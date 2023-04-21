@@ -1,6 +1,10 @@
-public class PrimiPiatti extends PortataPadre {
+public class PrimiPiatti extends Portata {
+
+    //TODO che manca?
      boolean consigliatoPerBimbi;
-    private int tempoCottura;
+
+    //TODO utilizziamo sempre gli oggetti :Integer, tranne per i booleaniù
+     private int tempoCottura;
 
     public PrimiPiatti(String nome, Double prezzo, String descrizione,boolean consigliatoPerBimbi, int tempoCottura) {
         super(nome, prezzo, descrizione);

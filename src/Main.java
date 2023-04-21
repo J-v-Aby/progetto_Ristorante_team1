@@ -6,14 +6,14 @@ public class Main {
                 "Le lancette rallentano il loro avanzare, nell’aria il racconto di piatti che emozionano al primo sguardo." + "\n" + " Danzatori silenziosi si muovono intorno a te per regalarti lo spettacolo di un servizio impeccabile," + "\n" + " in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, benvenuti nel Ristorante di Coppa Cicuti.");
         System.out.println("\n\t" + "Prezzo Medio: 50€\t" + "Recensioni: ⭐⭐⭐⭐⭐");
         System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "A N T I P A S T I" + UtilityColor.ANSI_RESET + "\n");
-        Menu menuCarne = new Menu("Carne", TipoMenu.CARNE);
-        Menu menuPesce = new Menu("Pesce", TipoMenu.PESCE);
-        Menu menuVegan = new Menu("Vegan", TipoMenu.VEGAN);
+        Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE);
+        Menu menuPesce = new Menu("Pesce", TipologiaEnum.PESCE);
+        Menu menuVegan = new Menu("Vegan", TipologiaEnum.VEGAN);
 
         //carne
-        Antipasti anti1 = new Antipasti("Carpaccio di manzo", 10.50, "Fettina di manzo crudo condita con succo di limone, servita con rucola e scaglie di parmigiano.", "Slice of raw beef seasoned with lemon juice, served with rocket and parmesan flakes.", TipoPiatto.KM_ZERO);
-        Antipasti anti2 = new Antipasti("Polpettine di carne al sugo", 12.00, "Polpettine di carne mista (manzo e maiale) in un sugo di pomodoro.", "Mixed meatballs (beef and pork) in a tomato sauce.", TipoPiatto.PIATTO_TIPICO);
-        Antipasti anti3 = new Antipasti("Involtini di carne con verdure", 15.00, "Fettine di carne ripiene di verdure (carote, zucchine, peperoni) cotte in padella.", "Slices of meat stuffed with vegetables (carrots, courgettes, peppers) cooked in a pan.", TipoPiatto.MENU_STANDARD);
+        Portata anti1 = new Antipasti("Carpaccio di manzo", 10.50, "Fettina di manzo crudo condita con succo di limone, servita con rucola e scaglie di parmigiano.", "Slice of raw beef seasoned with lemon juice, served with rocket and parmesan flakes.", TipoPiatto.KM_ZERO);
+        Portata anti2 = new Antipasti("Polpettine di carne al sugo", 12.00, "Polpettine di carne mista (manzo e maiale) in un sugo di pomodoro.", "Mixed meatballs (beef and pork) in a tomato sauce.", TipoPiatto.PIATTO_TIPICO);
+        Portata anti3 = new Antipasti("Involtini di carne con verdure", 15.00, "Fettine di carne ripiene di verdure (carote, zucchine, peperoni) cotte in padella.", "Slices of meat stuffed with vegetables (carrots, courgettes, peppers) cooked in a pan.", TipoPiatto.MENU_STANDARD);
         //pesce
         Antipasti anti4 = new Antipasti("Tartare di tonno", 18.50, "Tartare di tonno crudo condita con olio evo, succo di lime, sale e pepe, servita con avocado a cubetti.", "Raw tuna tartare seasoned with extra virgin olive oil, lime juice, salt and pepper, served with diced avocado.", TipoPiatto.KM_ZERO);
         Antipasti anti5 = new Antipasti("Crostini con salmone affumicato e formaggio", 20.50, "Crostini di pane tostato con salmone, formaggio fresco cremoso, erba cipollina e pepe.", "Toasted croutons with salmon, fresh cream cheese, chives and pepper.", TipoPiatto.MENU_STANDARD);
@@ -23,9 +23,9 @@ public class Main {
         Antipasti anti8 = new Antipasti("Frittelle di zucchine e patate e salsa yogurt", 10.00, "Frittelle di zucchine e patate, servite con salsa allo yogurt vegetale (yogurt vegetale a base di soia o mandorle).", "Courgette and potato fritters, served with vegetable yoghurt sauce (soy or almond-based vegetable yoghurt).", TipoPiatto.MENU_STANDARD);
         Antipasti anti9 = new Antipasti("Involtini di melanzane con cous cous e verdure", 12.00, "Fettine di melanzane grigliate ripiene di cous cous con verdure di stagione cotte in padella.", "Slices of grilled aubergines filled with cous cous with seasonal vegetables cooked in a pan.", TipoPiatto.BIOLOGICO);
 
-        menuCarne.addAntipasti(anti1);
-        menuCarne.addAntipasti(anti2);
-        menuCarne.addAntipasti(anti3);
+        menuCarne.addPortata(anti1);
+        menuCarne.addPortata(anti2);
+        menuCarne.addPortata(anti3);
         menuPesce.addAntipasti(anti4);
         menuPesce.addAntipasti(anti5);
         menuPesce.addAntipasti(anti6);

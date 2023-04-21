@@ -6,6 +6,7 @@ public enum TipoPiatto {
     KM_ZERO("Ingredienti a chilometro zero \uD83E\uDDD1\u200D\uD83C\uDF3E"),
     MENU_STANDARD("Un classico del nostro Menù! \uD83D\uDC4C");
 
+    //TODO
     String descrizioneTipoPiatto;
 
     TipoPiatto(String descrizioneTipoPiatto) {

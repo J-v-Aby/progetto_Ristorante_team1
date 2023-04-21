@@ -1,4 +1,4 @@
-public class Dessert extends PortataPadre {
+public class Dessert extends Portata {
 
     private TipoDessert tipoDessert;
     private ChefStellati chef;

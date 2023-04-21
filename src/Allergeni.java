@@ -1,4 +1,8 @@
 public enum Allergeni {
+
+    //TODO si devono chimare sempre con AllergeniEnum, sempre con gli enumerati va fatto così
+    //facciamo anche dei pacchetti, per gli enum? e per le portate?
+
     UOVA("Uova"),
     CROSTACEI("Crostacei"),
     SEDANO("Sedano"),
