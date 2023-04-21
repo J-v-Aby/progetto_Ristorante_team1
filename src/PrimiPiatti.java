@@ -1,59 +1,36 @@
-public class PrimiPiatti {
-    private String nome;
-    private Double prezzo;
-    private String descrizione;
-    private TipoMenu tipoPrimo;
+public class PrimiPiatti extends PortataPadre {
+     boolean consigliatoPerBimbi;
+    private int tempoCottura;
 
-    public PrimiPiatti(String nome, Double prezzo, String descrizione, TipoMenu tipoPrimo) {
-        this.nome = nome;
-        this.prezzo = prezzo;
-        this.descrizione = descrizione;
-        this.tipoPrimo = tipoPrimo;
+    public PrimiPiatti(String nome, Double prezzo, String descrizione,boolean consigliatoPerBimbi, int tempoCottura) {
+        super(nome, prezzo, descrizione);
+        this.consigliatoPerBimbi = consigliatoPerBimbi;
+        this.tempoCottura = tempoCottura;
     }
 
-    public String getNome() {
-        return nome;
+    public boolean isConsigliatoPerBimbi() {
+        return consigliatoPerBimbi;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Double getPrezzo() {
-        return prezzo;
-    }
-
-    public void setPrezzo(Double prezzo) {
-        this.prezzo = prezzo;
-    }
-
-    public String getDescrizione() {
-        return descrizione;
-    }
-
-    public void setDescrizione(String descrizione) {
-        this.descrizione = descrizione;
-    }
-
-    public TipoMenu getTipoPrimo() {
-        return tipoPrimo;
-    }
-
-    public void setTipoPrimo(TipoMenu tipoPrimo) {
-        this.tipoPrimo = tipoPrimo;
+    public void setConsigliatoPerBimbi(boolean consigliato) {
+        consigliatoPerBimbi = consigliato;
     }
 
 
+    public int getTempoCottura() {
+        return tempoCottura;
+    }
+
+    public void setTempoCottura(int tempoCottura) {
+        this.tempoCottura = tempoCottura;
+    }
+
+    @Override
     public void print() {
-        if (tipoPrimo.equals(TipoMenu.CARNE)){
-            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_YELLOW+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
+        super.print();
+        System.out.println("Teampo cottura: " + tempoCottura + " minuti");
+        if (isConsigliatoPerBimbi()){
+            System.out.println("Consigliato per bimbi");
         }
-        if (tipoPrimo.equals(TipoMenu.PESCE)){
-            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_BLUE+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
-        }
-        if (tipoPrimo.equals(TipoMenu.VEGAN)){
-            System.out.println("\n" + UtilityColor.ANSI_BOLD + UtilityColor.ANSI_GREEN+ nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione);
-        }
-
     }
 }

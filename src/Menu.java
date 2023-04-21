@@ -38,37 +38,13 @@ public class Menu {
         }
     }
 
-//    public void addPrimipiatti(PrimiPiatti primiPiatti){ primiPiattiList.add(primiPiatti);}
-//    public void removePrimiPiatti(PrimiPiatti primiPiatti){primiPiattiList.remove(primiPiatti);}
-//    public void printPrimi() {
-//        for (PrimiPiatti primiPiatti : primiPiattiList) {
-//            primiPiatti.print();
-//            //Creo un Array di stringe dove passo il regex nelle descrizioni
-//            String[] descrizione = primiPiatti.getDescrizione().split(" ");
-//            // creo un for each che permetta allo switch di identificare gli allergeni
-//            for (String s : descrizione) {
-//                //TODO in portata aggiungiamo una lista di allergenici
-//                switch (s) {
-//                    case "uova", "maionese" -> System.out.println("Allergene presente: " + Allergeni.UOVA.nomeAllergene);
-//                    case "gamberi", "granchi" -> System.out.println("Allergene presente: " + Allergeni.CROSTACEI.nomeAllergene);
-//                    case "sedano" -> System.out.println("Allergene presente: " + Allergeni.SEDANO.nomeAllergene);
-//                    case "arachidi" -> System.out.println("Allergene presente: " + Allergeni.ARACHIDI.nomeAllergene);
-//                    case "capesante", "cozze", "calamari", "polpo" -> System.out.println("Allergene presente: " + Allergeni.MOLLUSCHI.nomeAllergene);
-//                    case "mandorle", "noci" -> System.out.println("Allergene presente : " + Allergeni.FRUTTA_A_GUSCIO.nomeAllergene);
-//                    case "pesce", "salmone", "orata" -> System.out.println("Allergene presente: " + Allergeni.PESCE.nomeAllergene);
-//                    case "latte", "burro", "yogurt" -> System.out.println("Allergene presente: " + Allergeni.LATTE.nomeAllergene);
-//                    case "senape" -> System.out.println("Allergene presente: " + Allergeni.SENAPE.nomeAllergene);
-//                    case "funghi", "pomodoro", "tartufo" -> System.out.println("Allergene presente: " + Allergeni.NICKEL.nomeAllergene);
-//                    case "cannelloni", "ravioli", "paccheri", "linguine", "spaghetti", "conchiglioni", "farina", "saitan" ->
-//                            System.out.println("Allergene presente: " + Allergeni.GLUTINE.nomeAllergene);
-//                    default -> {
-//                    }
-//                }
-//            }
-//        }
-//    }
-
-
+    public void addPrimiPiatti(PrimiPiatti primiPiatti){primiPiattiList.add(primiPiatti);}
+    public void removePrimi(PrimiPiatti primiPiatti){primiPiattiList.remove(primiPiatti);}
+    public void printPrimi(){
+        for (PrimiPiatti primiPiatti : primiPiattiList){
+            primiPiatti.print();
+        }
+    }
 
     public void addSecondiPiatti(SecondiPiatti secondiPiatti) {
         secondiPiattiList.add(secondiPiatti);

@@ -35,32 +35,40 @@ public class Main {
         menuCarne.printAnti();
 
 
-//        //PRIMI
-//        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "P R I M I" + UtilityColor.ANSI_RESET + "\n");
-//        //Carne
-//        PrimiPiatti primiPiatti1 = new PrimiPiatti("Cannelloni alla genovese e sedano ", 13.0, "cannelloni  ripieni di carne e sedano croccante gratinati al forno ", TipoMenu.CARNE);
-//        PrimiPiatti primiPiatti2 = new PrimiPiatti("Ravioli di coniglio ", 16.5, "ravioli  ripieni di coniglio e aromi conditi con burro e salvia", TipoMenu.CARNE);
-//        PrimiPiatti primiPiatti3 = new PrimiPiatti("Risotto d’autunno ", 15.0, "risotto con castagne mele e capocollo profumato con rosmarino ", TipoMenu.CARNE);
-//        //Pesce
-//        PrimiPiatti primiPiatti4 = new PrimiPiatti("Risotto all’onda con velo di gamberi crudi", 13.5, "risotto cremoso con gamberi crudi e zafferano ", TipoMenu.PESCE);
-//        PrimiPiatti primiPiatti5 = new PrimiPiatti("Paccheri, anelli di calamari, pomodoro pachino e salicornia", 15.0, "paccheri con calamari pomodoro e salicornia conditi con olio extravergine d’oliva ", TipoMenu.PESCE);
-//        PrimiPiatti primiPiatti6 = new PrimiPiatti("Linguine con capesante, tartufo bianco e basilico", 14.0, "linguine con capesante tartufo bianco e basilico conditi con olio extravergine d’oliva ", TipoMenu.PESCE);
-//        //Vegan
-//        PrimiPiatti primiPiatti7 = new PrimiPiatti("Ravioli vegani di barbabietole con mele e noci", 12.5, "ravioli vegani ripieni di barbabietole mele e noci conditi con burro e salvia ", TipoMenu.VEGAN);
-//        PrimiPiatti primiPiatti8 = new PrimiPiatti("Spaghetti al pesto di avocado, basilico e pinoli", 13.0, "spaghetti al pesto di avocado basilico e pinoli conditi con olio extravergine d’oliva ", TipoMenu.VEGAN);
-//        PrimiPiatti primiPiatti9 = new PrimiPiatti("Conchiglioni con broccoli e mandorle", 14.5, "conchiglioni ripieni di broccoli e mandorle gratinati al forno ", TipoMenu.VEGAN);
-//
-//        menuCarne.addPrimipiatti(primiPiatti1);
-//        menuCarne.addPrimipiatti(primiPiatti2);
-//        menuCarne.addPrimipiatti(primiPiatti3);
-//        menuPesce.addPrimipiatti(primiPiatti4);
-//        menuPesce.addPrimipiatti(primiPiatti5);
-//        menuPesce.addPrimipiatti(primiPiatti6);
-//        menuVegan.addPrimipiatti(primiPiatti7);
-//        menuVegan.addPrimipiatti(primiPiatti8);
-//        menuVegan.addPrimipiatti(primiPiatti9);
-//
-//        menuCarne.printPrimi();
+        //PRIMI
+        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "P R I M I" + UtilityColor.ANSI_RESET + "\n");
+        //Carne
+        PrimiPiatti primiPiatti1 = new PrimiPiatti("Cannelloni alla genovese e sedano ", 13.0, "cannelloni  ripieni di carne e sedano croccante gratinati al forno ",true, 60);
+        PrimiPiatti primiPiatti2 = new PrimiPiatti("Ravioli di coniglio ", 16.5, "ravioli  ripieni di coniglio e aromi conditi con burro e salvia",true,12 );
+        PrimiPiatti primiPiatti3 = new PrimiPiatti("Risotto d’autunno ", 15.0, "risotto con castagne mele e capocollo profumato con rosmarino ",true,20 );
+        //Pesce
+        PrimiPiatti primiPiatti4 = new PrimiPiatti("Risotto all’onda con velo di gamberi crudi", 13.5, "risotto cremoso con gamberi crudi e zafferano ",false,20 );
+        PrimiPiatti primiPiatti5 = new PrimiPiatti("Paccheri, anelli di calamari, pomodoro pachino e salicornia", 15.0, "paccheri con calamari pomodoro e salicornia conditi con olio extravergine d’oliva ",true,15 );
+        PrimiPiatti primiPiatti6 = new PrimiPiatti("Linguine con capesante, tartufo bianco e basilico", 14.0, "linguine con capesante tartufo bianco e basilico conditi con olio extravergine d’oliva ", false,15);
+        //Vegan
+        PrimiPiatti primiPiatti7 = new PrimiPiatti("Ravioli vegani di barbabietole con mele e noci", 12.5, "ravioli vegani ripieni di barbabietole mele e noci conditi con burro e salvia ",true,15 );
+        PrimiPiatti primiPiatti8 = new PrimiPiatti("Spaghetti al pesto di avocado, basilico e pinoli", 13.0, "spaghetti al pesto di avocado basilico e pinoli conditi con olio extravergine d’oliva ",true,15 );
+        PrimiPiatti primiPiatti9 = new PrimiPiatti("Conchiglioni con broccoli e mandorle", 14.5, "conchiglioni ripieni di broccoli e mandorle gratinati al forno ",true,25 );
+
+        primiPiatti1.getListaAllergeni().add(Allergeni.SEDANO);
+        primiPiatti2.getListaAllergeni().add(Allergeni.LATTE);
+        primiPiatti4.getListaAllergeni().add(Allergeni.CROSTACEI);
+        primiPiatti5.getListaAllergeni().add(Allergeni.NICKEL);
+        primiPiatti6.getListaAllergeni().add(Allergeni.MOLLUSCHI);
+        primiPiatti7.getListaAllergeni().add(Allergeni.FRUTTA_A_GUSCIO);
+        primiPiatti8.getListaAllergeni().add(Allergeni.GLUTINE);
+        primiPiatti9.getListaAllergeni().add(Allergeni.FRUTTA_A_GUSCIO);
+
+        menuCarne.addPrimiPiatti(primiPiatti1);
+        menuCarne.addPrimiPiatti(primiPiatti2);
+        menuCarne.addPrimiPiatti(primiPiatti3);
+        menuPesce.addPrimiPiatti(primiPiatti4);
+        menuPesce.addPrimiPiatti(primiPiatti5);
+        menuPesce.addPrimiPiatti(primiPiatti6);
+        menuVegan.addPrimiPiatti(primiPiatti7);
+        menuVegan.addPrimiPiatti(primiPiatti8);
+        menuVegan.addPrimiPiatti(primiPiatti9);
+        menuCarne.printPrimi();
 
 
         // SECONDI
