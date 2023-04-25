@@ -1,29 +1,32 @@
-public class Dessert extends Portata {
+import enumPackage.ChefStellatiEnum;
+import enumPackage.TipoDessertEnum;
 
-    private TipoDessert tipoDessert;
-    private ChefStellati chef;
+public class Dessert extends Portata{
+
+    private TipoDessertEnum tipoDessert;
+    private ChefStellatiEnum chef;
     private String ingredienti;
 
-    public Dessert(String nome, Double prezzo, String descrizione, TipoDessert tipoDessert, ChefStellati chef,String ingredienti ) {
+    public Dessert(String nome, Double prezzo, String descrizione, TipoDessertEnum tipoDessertEnum, ChefStellatiEnum chef, String ingredienti ) {
         super(nome, prezzo, descrizione);
-        this.tipoDessert= tipoDessert;
-        this.chef= chef;
+        this.tipoDessert= tipoDessertEnum;
+        this.chef=chef;
         this.ingredienti =ingredienti;
     }
 
-    public TipoDessert getTipoDessert() {
+    public TipoDessertEnum getTipoDessert() {
         return tipoDessert;
     }
 
-    public void setTipoDessert(TipoDessert tipoDessert) {
-        this.tipoDessert = tipoDessert;
+    public void setTipoDessert(TipoDessertEnum tipoDessertEnum) {
+        this.tipoDessert = tipoDessertEnum;
     }
 
-    public ChefStellati getChef() {
+    public ChefStellatiEnum getChef() {
         return chef;
     }
 
-    public void setChef(ChefStellati chef) {
+    public void setChef(ChefStellatiEnum chef) {
         this.chef = chef;
     }
 
@@ -38,7 +41,7 @@ public class Dessert extends Portata {
     @Override
     public void print() {
         super.print();
-        System.out.println("Dessert a base di "+tipoDessert +"\n"+ "Chef: "+chef.nomeChef+ "\n"+ "Ingredienti: "+"\n" + ingredienti);
+        System.out.println("Dessert a base di "+tipoDessert +"\n"+ "Chef: "+chef+ "\n"+ "Ingredienti: "+"\n" + ingredienti);
     }
 }
 

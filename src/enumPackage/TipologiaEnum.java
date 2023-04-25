@@ -1,4 +1,6 @@
- public enum TipologiaEnum {
+package enumPackage;
+
+public enum TipologiaEnum {
     CARNE("Menu Carne"),
     PESCE("Menu Pesce"),
     VEGAN("Menu Vegan");

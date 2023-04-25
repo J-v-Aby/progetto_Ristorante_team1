@@ -1,3 +1,7 @@
+import enumPackage.ChefStellatiEnum;
+import enumPackage.TipoDessertEnum;
+import enumPackage.TipologiaEnum;
+
 public class Main {
     public static void main(String[] args) {
 //        // HEADER
@@ -26,6 +30,7 @@ public class Main {
         menuCarne.addPortata(anti1);
         menuCarne.addPortata(anti2);
         menuCarne.addPortata(anti3);
+/*
         menuPesce.addAntipasti(anti4);
         menuPesce.addAntipasti(anti5);
         menuPesce.addAntipasti(anti6);
@@ -108,22 +113,23 @@ public class Main {
         menuVegan.addSecondiPiatti(tofu);
         menuVegan.addSecondiPiatti(seitan);
         menuCarne.printSecondi();
+*/
 
         System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "D E S S E R T" + UtilityColor.ANSI_RESET + "\n");
-        Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "Crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", TipoDessert.CREMA, ChefStellati.MARIO_PARMEGGIANI, "panna fresca liquida, latte, tuorli, zucchero, baccello di vaniglia");
-        Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "Base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco con topping alle albicocche.", TipoDessert.FRUTTA, ChefStellati.MARIO_PARMEGGIANI, "biscotti g.free, burro, philadelphia, panna fresca, zucchero gelatina alimentare, bacche di vaniglia, confettura di albicocca");
-        Dessert dessert3 = new Dessert("Cheesecake al cioccolato", 5.90, "Base di biscotto su cui poggia un alto strato di crema di formaggio fresco con topping al cioccolato.", TipoDessert.CIOCCOLATO, ChefStellati.MARCUS_SAMUELSSON, "biscotti, burro, philadelphia, panna fresca, zucchero gelatina alimentare, bacche di vaniglia, crema di cioccolato, scaglie di cioccolato fondente");
-        Dessert dessert4 = new Dessert("Torta setteveli", 7.40, "Pan di Spagna, mandorle pugliesi, mousse di nocciole del Piemonte, \ncioccolato Madagascar e un fondo di gianduia croccante ai cereali", TipoDessert.CIOCCOLATO, ChefStellati.MARCUS_SAMUELSSON, "uova, zucchero, farina, cacao, crema nocciola,cereali al cioccolato,amido di riso, latte, gelatia, panna, pasta di nocciole,cioccolato fondente, schiroppo di glucosio");
-        Dessert dessert5 = new Dessert("Strudel di mele", 6.38, "Un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.", TipoDessert.FRUTTA, ChefStellati.VICKY_LAU, "mele, uvetta, marsala o vermouth, confettura di albicocca, mandorle, panna veggetale, zucchero, cannella");
-        Dessert dessert6 = new Dessert("Gelo di Anguria", 3.99, "Il gelo di mellone (gelu di muluni in siciliano), anche detto gelo d'anguria, \nè un tipico dolce al cucchiaio siciliano, tradizionalmente preparato a Ferragosto", TipoDessert.FRUTTA, ChefStellati.VICKY_LAU, "succo di anguria amido di frumento, zucchero di canna, anice, gocce di cioccolato fondente");
+        Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "Crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", TipoDessertEnum.CREMA, ChefStellatiEnum.MARIO_PARMEGGIANI, "panna fresca liquida, latte, tuorli, zucchero, baccello di vaniglia");
+        Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "Base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco con topping alle albicocche.", TipoDessertEnum.FRUTTA, ChefStellatiEnum.MARIO_PARMEGGIANI, "biscotti g.free, burro, philadelphia, panna fresca, zucchero gelatina alimentare, bacche di vaniglia, confettura di albicocca");
+        Dessert dessert3 = new Dessert("Cheesecake al cioccolato", 5.90, "Base di biscotto su cui poggia un alto strato di crema di formaggio fresco con topping al cioccolato.", TipoDessertEnum.CIOCCOLATO, ChefStellatiEnum.MARCUS_SAMUELSSON, "biscotti, burro, philadelphia, panna fresca, zucchero gelatina alimentare, bacche di vaniglia, crema di cioccolato, scaglie di cioccolato fondente");
+        Dessert dessert4 = new Dessert("Torta setteveli", 7.40, "Pan di Spagna, mandorle pugliesi, mousse di nocciole del Piemonte, \ncioccolato Madagascar e un fondo di gianduia croccante ai cereali", TipoDessertEnum.CIOCCOLATO, ChefStellatiEnum.MARCUS_SAMUELSSON, "uova, zucchero, farina, cacao, crema nocciola,cereali al cioccolato,amido di riso, latte, gelatia, panna, pasta di nocciole,cioccolato fondente, schiroppo di glucosio");
+        Dessert dessert5 = new Dessert("Strudel di mele", 6.38, "Un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.", TipoDessertEnum.FRUTTA, ChefStellatiEnum.VICKY_LAU, "mele, uvetta, marsala o vermouth, confettura di albicocca, mandorle, panna veggetale, zucchero, cannella");
+        Dessert dessert6 = new Dessert("Gelo di Anguria", 3.99, "Il gelo di mellone (gelu di muluni in siciliano), anche detto gelo d'anguria, \nè un tipico dolce al cucchiaio siciliano, tradizionalmente preparato a Ferragosto", TipoDessertEnum.FRUTTA, ChefStellatiEnum.VICKY_LAU, "succo di anguria amido di frumento, zucchero di canna, anice, gocce di cioccolato fondente");
 
-        menuCarne.addDessert(dessert1);
-        menuCarne.addDessert(dessert2);
-        menuCarne.addDessert(dessert3);
-        menuCarne.addDessert(dessert4);
-        menuVegan.addDessert(dessert5);
-        menuVegan.addDessert(dessert6);
-        menuCarne.printDessert();
+        menuCarne.addPortata(dessert1);
+        menuCarne.addPortata(dessert2);
+        menuCarne.addPortata(dessert3);
+        menuCarne.addPortata(dessert4);
+        menuCarne.addPortata(dessert5);
+        menuCarne.addPortata(dessert6);
+        menuCarne.print();
 
         System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "B E V A N D E" + UtilityColor.ANSI_RESET + "\n");
         Bevande acqua = new Bevande("Acqua naturale 0.5l", 1.00, "Acqua di Nepi", false);
@@ -139,7 +145,7 @@ public class Main {
         Bevande birraRossa = new Bevande("Birra rossa 0.25cl", 4.00, "Peroni Gran Riserva", true);
         Bevande birraRossaG = new Bevande("Birra rossa 0.5cl", 5.00, "McFarland", true);
 
-        menuCarne.addBevande(acqua);
+      /*  menuCarne.addBevande(acqua);
         menuCarne.addBevande(acquaG);
         menuCarne.addBevande(acquaFrizzante);
         menuCarne.addBevande(acquaFrizzanteG);
@@ -152,7 +158,7 @@ public class Main {
         menuCarne.addBevande(birraRossa);
         menuCarne.addBevande(birraRossaG);
         menuCarne.printBevande();
-
+*/
 
     }
 }
