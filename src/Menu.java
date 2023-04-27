@@ -3,17 +3,13 @@ import enumPackage.TipologiaEnum;
 import java.util.ArrayList;
 
 public class Menu {
-
-    //TODO se volete potete inserire altri field
     private String nome;
     private ArrayList<Portata> portate;
-
     private TipologiaEnum tipoMenu;
-
 
     public Menu(String nome, TipologiaEnum tipoMenu) {
         this.nome = nome;
-        this.tipoMenu= tipoMenu;
+        this.tipoMenu = tipoMenu;
         this.portate = new ArrayList<>();
 
     }
@@ -31,10 +27,6 @@ public class Menu {
             portata.print();
         }
     }
-
-
-
-
 
 
 }

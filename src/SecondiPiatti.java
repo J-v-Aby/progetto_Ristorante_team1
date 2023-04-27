@@ -1,12 +1,14 @@
+import enumPackage.CotturaEnum;
+
 public class SecondiPiatti extends Portata {
 
     private String contorno;
-    private Cottura cottura;
+    private CotturaEnum cotturaEnum;
 
-    public SecondiPiatti(String nome, Double prezzo, String descrizione, String contorno, Cottura cottura) {
+    public SecondiPiatti(String nome, Double prezzo, String descrizione, String contorno, CotturaEnum cotturaEnum) {
         super(nome, prezzo, descrizione);
         this.contorno = contorno;
-        this.cottura = cottura;
+        this.cotturaEnum = cotturaEnum;
     }
 
     public String getContorno() {
@@ -17,17 +19,17 @@ public class SecondiPiatti extends Portata {
         this.contorno = contorno;
     }
 
-    public Cottura getCottura() {
-        return cottura;
+    public CotturaEnum getCottura() {
+        return cotturaEnum;
     }
 
-    public void setCottura(Cottura cottura) {
-        this.cottura = cottura;
+    public void setCottura(CotturaEnum cotturaEnum) {
+        this.cotturaEnum = cotturaEnum;
     }
 
     @Override
     public void print() {
         super.print();
-        System.out.println("Contorno: " + contorno + "\tTipo cottura: " + cottura);
+        System.out.println("Contorno: " + contorno + "\tTipo cottura: " + cotturaEnum);
     }
 }

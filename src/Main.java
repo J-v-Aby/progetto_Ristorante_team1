@@ -1,4 +1,5 @@
 import enumPackage.ChefStellatiEnum;
+import enumPackage.CotturaEnum;
 import enumPackage.TipoDessertEnum;
 import enumPackage.TipologiaEnum;
 
@@ -74,22 +75,22 @@ public class Main {
         menuVegan.addPrimiPiatti(primiPiatti8);
         menuVegan.addPrimiPiatti(primiPiatti9);
         menuCarne.printPrimi();
-
+*/
 
         // SECONDI
         System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "S E C O N D I" + UtilityColor.ANSI_RESET + "\n");
         // Carne
-        SecondiPiatti arrosto = new SecondiPiatti("Arrosto di Maiale al latte", 13.0, "morbido arrosto di maiale avvolto in una vellutata di latte e aromi", "Patate al forno", Cottura.COTTA);
-        SecondiPiatti manzo = new SecondiPiatti("Manzo alla Stroganoff", 14.0, "straccetti di manzo cotti in una salsa di panna acida, senape e funghi", "Verdure", Cottura.MEDIA);
-        SecondiPiatti pollo = new SecondiPiatti("Pollo al curry", 9.0, "bocconcini di pollo in una salsa esotica di yogurt, curry e pomodoro", "Insalata", Cottura.COTTA);
+        Portata arrosto = new SecondiPiatti("Arrosto di Maiale al latte", 13.0, "morbido arrosto di maiale avvolto in una vellutata di latte e aromi", "Patate al forno", CotturaEnum.COTTA);
+        Portata manzo = new SecondiPiatti("Manzo alla Stroganoff", 14.0, "straccetti di manzo cotti in una salsa di panna acida, senape e funghi", "Verdure", CotturaEnum.MEDIA);
+        Portata pollo = new SecondiPiatti("Pollo al curry", 9.0, "bocconcini di pollo in una salsa esotica di yogurt, curry e pomodoro", "Insalata", CotturaEnum.COTTA);
         // Pesce
-        SecondiPiatti salmone = new SecondiPiatti("Salmone al limone", 14.0, "filetti di salmone al forno profumati al limone", "Patate al forno", Cottura.SANGUE);
-        SecondiPiatti gamberi = new SecondiPiatti("Spiedini di gamberi e calamari", 13.0, "spiedini di gamberi e calamari grigliati e conditi con prezzemolo", "Insalata", Cottura.COTTA);
-        SecondiPiatti orata = new SecondiPiatti("Sandwich di orata alla siciliana", 12.0, "panini senza glutine farciti con filetti di orata cotti al forno e una crema di pomodorini secchi, capperi e olive", "Patatine fritte", Cottura.MEDIA);
+        Portata salmone = new SecondiPiatti("Salmone al limone", 14.0, "filetti di salmone al forno profumati al limone", "Patate al forno", CotturaEnum.SANGUE);
+        Portata gamberi = new SecondiPiatti("Spiedini di gamberi e calamari", 13.0, "spiedini di gamberi e calamari grigliati e conditi con prezzemolo", "Insalata", CotturaEnum.COTTA);
+        Portata orata = new SecondiPiatti("Sandwich di orata alla siciliana", 12.0, "panini senza glutine farciti con filetti di orata cotti al forno e una crema di pomodorini secchi, capperi e olive", "Patatine fritte", CotturaEnum.MEDIA);
         // Vegan
-        SecondiPiatti polpette = new SecondiPiatti("Polpette di lenticchie", 8.0, "polpette di lenticchie al forno o in padella con pane, aglio e prezzemolo", "Verdure", Cottura.COTTA);
-        SecondiPiatti tofu = new SecondiPiatti("Tofu piccante", 9.0, "fette di tofu alla piastra con limone e peperoncino", "Verdure croccanti alla piastra", Cottura.MEDIA);
-        SecondiPiatti seitan = new SecondiPiatti("Seitan al vino Rosso", 10.0, "seitan stufato con vino rosso, cipolla, rosmarino e senape", "Funghi porcini", Cottura.MEDIA);
+        Portata polpette = new SecondiPiatti("Polpette di lenticchie", 8.0, "polpette di lenticchie al forno o in padella con pane, aglio e prezzemolo", "Verdure", CotturaEnum.COTTA);
+        Portata tofu = new SecondiPiatti("Tofu piccante", 9.0, "fette di tofu alla piastra con limone e peperoncino", "Verdure croccanti alla piastra", CotturaEnum.MEDIA);
+        Portata seitan = new SecondiPiatti("Seitan al vino Rosso", 10.0, "seitan stufato con vino rosso, cipolla, rosmarino e senape", "Funghi porcini", CotturaEnum.MEDIA);
 
         arrosto.getListaAllergeni().add(Allergeni.LATTE);
         manzo.getListaAllergeni().add(Allergeni.LATTE);
@@ -103,17 +104,17 @@ public class Main {
         seitan.getListaAllergeni().add(Allergeni.SENAPE);
 
 
-        menuCarne.addSecondiPiatti(arrosto);
-        menuCarne.addSecondiPiatti(manzo);
-        menuCarne.addSecondiPiatti(pollo);
-        menuPesce.addSecondiPiatti(salmone);
-        menuPesce.addSecondiPiatti(gamberi);
-        menuPesce.addSecondiPiatti(orata);
-        menuVegan.addSecondiPiatti(polpette);
-        menuVegan.addSecondiPiatti(tofu);
-        menuVegan.addSecondiPiatti(seitan);
-        menuCarne.printSecondi();
-*/
+        menuCarne.addPortata(arrosto);
+        menuCarne.addPortata(manzo);
+        menuCarne.addPortata(pollo);
+        menuPesce.addPortata(salmone);
+        menuPesce.addPortata(gamberi);
+        menuPesce.addPortata(orata);
+        menuVegan.addPortata(polpette);
+        menuVegan.addPortata(tofu);
+        menuVegan.addPortata(seitan);
+        menuCarne.print();
+
 
         System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "D E S S E R T" + UtilityColor.ANSI_RESET + "\n");
         Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "Crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", TipoDessertEnum.CREMA, ChefStellatiEnum.MARIO_PARMEGGIANI, "panna fresca liquida, latte, tuorli, zucchero, baccello di vaniglia");
