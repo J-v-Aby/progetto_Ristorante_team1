@@ -1,22 +1,13 @@
+import enumPackage.TipoPiattoEnum;
+
 public class Antipasti extends Portata {
 
-
     private String descrizioneInInglese;
+    private TipoPiattoEnum tipoPiatto;
 
-    //TODO sistemare
-    private TipoPiatto tipoPiatto;
-
-    public Antipasti(String nome, Double prezzo, String descrizione, String descrizioneInInglese, TipoPiatto tipoPiattoAntipasto) {
+    public Antipasti(String nome, Double prezzo, String descrizione, String descrizioneInInglese, TipoPiattoEnum tipoPiatto) {
         super(nome, prezzo, descrizione);
         this.descrizioneInInglese = descrizioneInInglese;
-        this.tipoPiatto = tipoPiattoAntipasto;
-    }
-
-    public TipoPiatto getTipoPiatto() {
-        return tipoPiatto;
-    }
-
-    public void setTipoPiatto(TipoPiatto tipoPiatto) {
         this.tipoPiatto = tipoPiatto;
     }
 
@@ -28,9 +19,17 @@ public class Antipasti extends Portata {
         this.descrizioneInInglese = descrizioneInInglese;
     }
 
+    public TipoPiattoEnum getTipoPiatto() {
+        return tipoPiatto;
+    }
+
+    public void setTipoPiatto(TipoPiattoEnum tipoPiatto) {
+        this.tipoPiatto = tipoPiatto;
+    }
+
     @Override
     public void print() {
         super.print();
-        System.out.println(descrizioneInInglese + "\n" + tipoPiatto.descrizioneTipoPiatto);
+        System.out.println(descrizioneInInglese + "\n" + tipoPiatto.getDescrizioneTipoPiatto());
     }
 }

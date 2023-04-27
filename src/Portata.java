@@ -1,3 +1,5 @@
+import enumPackage.UtilityColorEnum;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -58,6 +60,6 @@ public class Portata {
     }
 
     public void print() {
-        System.out.println("\n" + UtilityColor.ANSI_BOLD + nome + UtilityColor.ANSI_RESET + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione + allergeniGetString());
+        System.out.println("\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + nome + UtilityColorEnum.ANSI_RESET.getCodice() + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione + allergeniGetString());
     }
 }

@@ -1,32 +1,30 @@
-import enumPackage.ChefStellatiEnum;
-import enumPackage.CotturaEnum;
-import enumPackage.TipoDessertEnum;
-import enumPackage.TipologiaEnum;
+import enumPackage.*;
 
 public class Main {
     public static void main(String[] args) {
 //        // HEADER
-        System.out.println("\n\n\t\t\t" + UtilityColor.ANSI_YELLOW_BACKGROUND + UtilityColor.ANSI_BLACK + "  C O P P A  C I C U T I  " + UtilityColor.ANSI_RESET + "\n");
+        System.out.println("\n\n\t\t\t" + UtilityColorEnum.ANSI_YELLOW_BACKGROUND.getCodice() + UtilityColorEnum.ANSI_BLACK.getCodice() + "  C O P P A  C I C U T I  " + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         System.out.println("\t\t\t" + "L'esperienza che ferma il tempo\n" +
                 "Le lancette rallentano il loro avanzare, nell’aria il racconto di piatti che emozionano al primo sguardo." + "\n" + " Danzatori silenziosi si muovono intorno a te per regalarti lo spettacolo di un servizio impeccabile," + "\n" + " in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, benvenuti nel Ristorante di Coppa Cicuti.");
         System.out.println("\n\t" + "Prezzo Medio: 50€\t" + "Recensioni: ⭐⭐⭐⭐⭐");
-        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "A N T I P A S T I" + UtilityColor.ANSI_RESET + "\n");
+
+        System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "A N T I P A S T I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE);
         Menu menuPesce = new Menu("Pesce", TipologiaEnum.PESCE);
         Menu menuVegan = new Menu("Vegan", TipologiaEnum.VEGAN);
 
         //carne
-        Portata anti1 = new Antipasti("Carpaccio di manzo", 10.50, "Fettina di manzo crudo condita con succo di limone, servita con rucola e scaglie di parmigiano.", "Slice of raw beef seasoned with lemon juice, served with rocket and parmesan flakes.", TipoPiatto.KM_ZERO);
-        Portata anti2 = new Antipasti("Polpettine di carne al sugo", 12.00, "Polpettine di carne mista (manzo e maiale) in un sugo di pomodoro.", "Mixed meatballs (beef and pork) in a tomato sauce.", TipoPiatto.PIATTO_TIPICO);
-        Portata anti3 = new Antipasti("Involtini di carne con verdure", 15.00, "Fettine di carne ripiene di verdure (carote, zucchine, peperoni) cotte in padella.", "Slices of meat stuffed with vegetables (carrots, courgettes, peppers) cooked in a pan.", TipoPiatto.MENU_STANDARD);
+        Portata anti1 = new Antipasti("Carpaccio di manzo", 10.50, "Fettina di manzo crudo condita con succo di limone, servita con rucola e scaglie di parmigiano.", "Slice of raw beef seasoned with lemon juice, served with rocket and parmesan flakes.", TipoPiattoEnum.KM_ZERO);
+        Portata anti2 = new Antipasti("Polpettine di carne al sugo", 12.00, "Polpettine di carne mista (manzo e maiale) in un sugo di pomodoro.", "Mixed meatballs (beef and pork) in a tomato sauce.", TipoPiattoEnum.PIATTO_TIPICO);
+        Portata anti3 = new Antipasti("Involtini di carne con verdure", 15.00, "Fettine di carne ripiene di verdure (carote, zucchine, peperoni) cotte in padella.", "Slices of meat stuffed with vegetables (carrots, courgettes, peppers) cooked in a pan.", TipoPiattoEnum.MENU_STANDARD);
         //pesce
-        Antipasti anti4 = new Antipasti("Tartare di tonno", 18.50, "Tartare di tonno crudo condita con olio evo, succo di lime, sale e pepe, servita con avocado a cubetti.", "Raw tuna tartare seasoned with extra virgin olive oil, lime juice, salt and pepper, served with diced avocado.", TipoPiatto.KM_ZERO);
-        Antipasti anti5 = new Antipasti("Crostini con salmone affumicato e formaggio", 20.50, "Crostini di pane tostato con salmone, formaggio fresco cremoso, erba cipollina e pepe.", "Toasted croutons with salmon, fresh cream cheese, chives and pepper.", TipoPiatto.MENU_STANDARD);
-        Antipasti anti6 = new Antipasti("Gamberetti in salsa rosa", 22.00, "Gamberetti lessi serviti con salsa rosa (salsa a base di maionese, ketchup, brandy).", "Boiled prawns served with pink sauce (mayonnaise-based sauce, ketchup, brandy).", TipoPiatto.PIATTO_TIPICO);
+        Portata anti4 = new Antipasti("Tartare di tonno", 18.50, "Tartare di tonno crudo condita con olio evo, succo di lime, sale e pepe, servita con avocado a cubetti.", "Raw tuna tartare seasoned with extra virgin olive oil, lime juice, salt and pepper, served with diced avocado.", TipoPiattoEnum.KM_ZERO);
+        Portata anti5 = new Antipasti("Crostini con salmone affumicato e formaggio", 20.50, "Crostini di pane tostato con salmone, formaggio fresco cremoso, erba cipollina e pepe.", "Toasted croutons with salmon, fresh cream cheese, chives and pepper.", TipoPiattoEnum.MENU_STANDARD);
+        Portata anti6 = new Antipasti("Gamberetti in salsa rosa", 22.00, "Gamberetti lessi serviti con salsa rosa (salsa a base di maionese, ketchup, brandy).", "Boiled prawns served with pink sauce (mayonnaise-based sauce, ketchup, brandy).", TipoPiattoEnum.PIATTO_TIPICO);
         //vegan
-        Antipasti anti7 = new Antipasti("Crostini con hummus e verdure grigliate", 8.50, "Crostini di pane tostato spalmati con hummus di ceci e verdure di stagione grigliate.", "Toasted croutons spread with chickpea hummus and grilled seasonal vegetables.", TipoPiatto.CONSIGLIATO_CHEF);
-        Antipasti anti8 = new Antipasti("Frittelle di zucchine e patate e salsa yogurt", 10.00, "Frittelle di zucchine e patate, servite con salsa allo yogurt vegetale (yogurt vegetale a base di soia o mandorle).", "Courgette and potato fritters, served with vegetable yoghurt sauce (soy or almond-based vegetable yoghurt).", TipoPiatto.MENU_STANDARD);
-        Antipasti anti9 = new Antipasti("Involtini di melanzane con cous cous e verdure", 12.00, "Fettine di melanzane grigliate ripiene di cous cous con verdure di stagione cotte in padella.", "Slices of grilled aubergines filled with cous cous with seasonal vegetables cooked in a pan.", TipoPiatto.BIOLOGICO);
+        Portata anti7 = new Antipasti("Crostini con hummus e verdure grigliate", 8.50, "Crostini di pane tostato spalmati con hummus di ceci e verdure di stagione grigliate.", "Toasted croutons spread with chickpea hummus and grilled seasonal vegetables.", TipoPiattoEnum.CONSIGLIATO_CHEF);
+        Portata anti8 = new Antipasti("Frittelle di zucchine e patate e salsa yogurt", 10.00, "Frittelle di zucchine e patate, servite con salsa allo yogurt vegetale (yogurt vegetale a base di soia o mandorle).", "Courgette and potato fritters, served with vegetable yoghurt sauce (soy or almond-based vegetable yoghurt).", TipoPiattoEnum.MENU_STANDARD);
+        Portata anti9 = new Antipasti("Involtini di melanzane con cous cous e verdure", 12.00, "Fettine di melanzane grigliate ripiene di cous cous con verdure di stagione cotte in padella.", "Slices of grilled aubergines filled with cous cous with seasonal vegetables cooked in a pan.", TipoPiattoEnum.BIOLOGICO);
 
         menuCarne.addPortata(anti1);
         menuCarne.addPortata(anti2);
@@ -78,7 +76,7 @@ public class Main {
 */
 
         // SECONDI
-        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "S E C O N D I" + UtilityColor.ANSI_RESET + "\n");
+        System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "S E C O N D I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         // Carne
         Portata arrosto = new SecondiPiatti("Arrosto di Maiale al latte", 13.0, "morbido arrosto di maiale avvolto in una vellutata di latte e aromi", "Patate al forno", CotturaEnum.COTTA);
         Portata manzo = new SecondiPiatti("Manzo alla Stroganoff", 14.0, "straccetti di manzo cotti in una salsa di panna acida, senape e funghi", "Verdure", CotturaEnum.MEDIA);
@@ -116,7 +114,7 @@ public class Main {
         
 
 
-        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "D E S S E R T" + UtilityColor.ANSI_RESET + "\n");
+        System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "D E S S E R T" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         Dessert dessert1 = new Dessert("Creme Brulee", 2.30, "Crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", TipoDessertEnum.CREMA, ChefStellatiEnum.MARIO_PARMEGGIANI, "panna fresca liquida, latte, tuorli, zucchero, baccello di vaniglia");
         Dessert dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "Base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco con topping alle albicocche.", TipoDessertEnum.FRUTTA, ChefStellatiEnum.MARIO_PARMEGGIANI, "biscotti g.free, burro, philadelphia, panna fresca, zucchero gelatina alimentare, bacche di vaniglia, confettura di albicocca");
         Dessert dessert3 = new Dessert("Cheesecake al cioccolato", 5.90, "Base di biscotto su cui poggia un alto strato di crema di formaggio fresco con topping al cioccolato.", TipoDessertEnum.CIOCCOLATO, ChefStellatiEnum.MARCUS_SAMUELSSON, "biscotti, burro, philadelphia, panna fresca, zucchero gelatina alimentare, bacche di vaniglia, crema di cioccolato, scaglie di cioccolato fondente");
@@ -131,7 +129,7 @@ public class Main {
         menuCarne.addPortata(dessert5);
         menuCarne.addPortata(dessert6);
 
-        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "B E V A N D E" + UtilityColor.ANSI_RESET + "\n");
+        System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "B E V A N D E" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         Portata acqua = new Bevande("Acqua naturale 0.5l", 1.00, "Acqua di Nepi", 0);
         Portata acquaG = new Bevande("Acqua naturale 1l", 2.00, "Boario", 0);
         Portata acquaFrizzante = new Bevande("Acqua frizzante 0.5l", 1.00, "Guizza", 0);

@@ -1,4 +1,6 @@
-public enum TipoPiatto {
+        package enumPackage;
+
+public enum TipoPiattoEnum {
     //Questi codici sono le emoji
     PIATTO_TIPICO("Piatto tipico \uD83D\uDFE2⚪\uD83D\uDD34"),
     CONSIGLIATO_CHEF("Piatto consigliato dallo Chef! \uD83E\uDDD1\u200D\uD83C\uDF73"),
@@ -6,10 +8,17 @@ public enum TipoPiatto {
     KM_ZERO("Ingredienti a chilometro zero \uD83E\uDDD1\u200D\uD83C\uDF3E"),
     MENU_STANDARD("Un classico del nostro Menù! \uD83D\uDC4C");
 
-    //TODO
-    String descrizioneTipoPiatto;
+    private String descrizioneTipoPiatto;
 
-    TipoPiatto(String descrizioneTipoPiatto) {
+    TipoPiattoEnum(String descrizioneTipoPiatto) {
+        this.descrizioneTipoPiatto = descrizioneTipoPiatto;
+    }
+
+    public String getDescrizioneTipoPiatto() {
+        return descrizioneTipoPiatto;
+    }
+
+    public void setDescrizioneTipoPiatto(String descrizioneTipoPiatto) {
         this.descrizioneTipoPiatto = descrizioneTipoPiatto;
     }
 }
