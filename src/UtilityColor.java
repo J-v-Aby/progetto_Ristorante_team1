@@ -1,5 +1,6 @@
 public class UtilityColor {
 
+    //TODO facciamo un enumerato, valore e descrizione
 
 
     // Background

@@ -1,21 +1,23 @@
-public class Antipasti extends PortataPadre {
+public class Antipasti extends Portata {
 
-    //TODO aggiungere filed
+
     private String descrizioneInInglese;
-    private TipoPiatto tipoPiattoAntipasto;
+
+    //TODO sistemare
+    private TipoPiatto tipoPiatto;
 
     public Antipasti(String nome, Double prezzo, String descrizione, String descrizioneInInglese, TipoPiatto tipoPiattoAntipasto) {
         super(nome, prezzo, descrizione);
         this.descrizioneInInglese = descrizioneInInglese;
-        this.tipoPiattoAntipasto = tipoPiattoAntipasto;
+        this.tipoPiatto = tipoPiattoAntipasto;
     }
 
-    public TipoPiatto getTipoPiattoAntipasto() {
-        return tipoPiattoAntipasto;
+    public TipoPiatto getTipoPiatto() {
+        return tipoPiatto;
     }
 
-    public void setTipoPiattoAntipasto(TipoPiatto tipoPiattoAntipasto) {
-        this.tipoPiattoAntipasto = tipoPiattoAntipasto;
+    public void setTipoPiatto(TipoPiatto tipoPiatto) {
+        this.tipoPiatto = tipoPiatto;
     }
 
     public String getDescrizioneInInglese() {
@@ -29,6 +31,6 @@ public class Antipasti extends PortataPadre {
     @Override
     public void print() {
         super.print();
-        System.out.println("Description: " + descrizioneInInglese + "\n" +tipoPiattoAntipasto.descrizioneTipoPiatto);
+        System.out.println(descrizioneInInglese + "\n" + tipoPiatto.descrizioneTipoPiatto);
     }
 }

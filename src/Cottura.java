@@ -1,3 +1,5 @@
+
+//TODO cosa manca? da dove possiamo vedere questa classe
 enum Cottura {
     SANGUE("Al sangue"),
     MEDIA("Cottura media"),

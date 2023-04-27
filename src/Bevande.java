@@ -1,6 +1,8 @@
-public class Bevande extends PortataPadre {
+public class Bevande extends Portata {
 
-    boolean isAlcolic;
+
+    //TODO inseriamo il grado alcolico, e poi facciamo un metodo che se è 0 ci stampa qualcosa
+    private boolean isAlcolic;
 
 
     public Bevande(String nome, Double prezzo, String descrizione,boolean isAlcolic) {

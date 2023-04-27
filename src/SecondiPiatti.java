@@ -1,4 +1,4 @@
-public class SecondiPiatti extends PortataPadre {
+public class SecondiPiatti extends Portata {
 
     private String contorno;
     private Cottura cottura;

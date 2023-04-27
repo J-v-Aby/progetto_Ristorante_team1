@@ -1,44 +1,47 @@
-public class Dessert extends PortataPadre {
+import enumPackage.ChefStellatiEnum;
+import enumPackage.TipoDessertEnum;
 
-    private TipoDessert tipoDessert;
-    private ChefStellati chef;
-    private String igredienti;
+public class Dessert extends Portata{
 
-    public Dessert(String nome, Double prezzo, String descrizione, TipoDessert tipoDessert, ChefStellati chef,String igredienti ) {
+    private TipoDessertEnum tipoDessert;
+    private ChefStellatiEnum chef;
+    private String ingredienti;
+
+    public Dessert(String nome, Double prezzo, String descrizione, TipoDessertEnum tipoDessertEnum, ChefStellatiEnum chef, String ingredienti ) {
         super(nome, prezzo, descrizione);
-        this.tipoDessert= tipoDessert;
-        this.chef= chef;
-        this.igredienti=igredienti;
+        this.tipoDessert= tipoDessertEnum;
+        this.chef=chef;
+        this.ingredienti =ingredienti;
     }
 
-    public TipoDessert getTipoDessert() {
+    public TipoDessertEnum getTipoDessert() {
         return tipoDessert;
     }
 
-    public void setTipoDessert(TipoDessert tipoDessert) {
-        this.tipoDessert = tipoDessert;
+    public void setTipoDessert(TipoDessertEnum tipoDessertEnum) {
+        this.tipoDessert = tipoDessertEnum;
     }
 
-    public ChefStellati getChef() {
+    public ChefStellatiEnum getChef() {
         return chef;
     }
 
-    public void setChef(ChefStellati chef) {
+    public void setChef(ChefStellatiEnum chef) {
         this.chef = chef;
     }
 
-    public String getIgredienti() {
-        return igredienti;
+    public String getIngredienti() {
+        return ingredienti;
     }
 
-    public void setIgredienti(String igredienti) {
-        this.igredienti = igredienti;
+    public void setIngredienti(String ingredienti) {
+        this.ingredienti = ingredienti;
     }
 
     @Override
     public void print() {
         super.print();
-        System.out.println("Dessert a base di "+tipoDessert +"\n"+ "Chef: "+chef.nomeChef+ "\n"+ " ingrefienti : "+"\n" + igredienti);
+        System.out.println("Dessert a base di "+tipoDessert +"\n"+ "Chef: "+chef+ "\n"+ "Ingredienti: "+"\n" + ingredienti);
     }
 }
 
