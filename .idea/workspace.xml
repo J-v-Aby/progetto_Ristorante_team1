@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e98ee44e-e1c6-4001-b64e-4f5886c63a4f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Antipasti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChefStellati.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enumPackage/ChefStellatiEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cottura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cottura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dessert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bevande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bevande.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondiPiatti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecondiPiatti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TipoDessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enumPackage/TipoDessertEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TipologiaEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enumPackage/TipologiaEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UtilityColor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -2,27 +2,28 @@ public class Bevande extends Portata {
 
 
     //TODO inseriamo il grado alcolico, e poi facciamo un metodo che se è 0 ci stampa qualcosa
-    private boolean isAlcolic;
+    private double gradazioneAlcolica;
 
 
-    public Bevande(String nome, Double prezzo, String descrizione,boolean isAlcolic) {
+    public Bevande(String nome, Double prezzo, String descrizione,double gradazioneAlcolica) {
         super(nome, prezzo, descrizione);
-        this.isAlcolic = isAlcolic;
+        this.gradazioneAlcolica = gradazioneAlcolica;
     }
 
-    public boolean isAlcolic() {
-        return isAlcolic;
+
+    public double getGradazioneAlcolica() {
+        return gradazioneAlcolica;
     }
 
-    public void setAlcolic(boolean alcolic) {
-        isAlcolic = alcolic;
+    public void setGradazioneAlcolica(double gradazioneAlcolica) {
+        this.gradazioneAlcolica = gradazioneAlcolica;
     }
 
     @Override
     public void print() {
         super.print();
-        if(isAlcolic){
-            System.out.println("Bevanda alcolica");
+        if(gradazioneAlcolica > 0.01){
+            System.out.println("Bevanda alcolica al " + gradazioneAlcolica + "%");
         }
     }
 }
