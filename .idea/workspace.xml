@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e98ee44e-e1c6-4001-b64e-4f5886c63a4f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/menu.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/Antipasti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bevande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/Bevande.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/Dessert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/Portata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrimiPiatti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/PrimiPiatti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondiPiatti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/SecondiPiatti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enumPackage/CotturaEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enumPackage/CotturaEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/portate/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/Portata.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,15 +42,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Claudio/Desktop/ristorante_team1_java12&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Feature/mod",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Claudio/Desktop/ristorante_team1_java12"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Michele\OneDrive\Desktop\leadJava12\ristorante_team1_java12\src" />
@@ -140,7 +135,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="develop" />
+                        <option value="Feature/mod" />
                       </list>
                     </value>
                   </entry>

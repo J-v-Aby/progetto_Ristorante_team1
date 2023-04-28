@@ -25,8 +25,7 @@ public class Menu {
         portate.remove(antipasti);
     }
 
-    //TODO chiamiamolo printMenu
-    public void print() {
+    public void printMenu() {
         for (Portata portata : portate) {
             portata.print();
         }

@@ -63,6 +63,9 @@ public class Portata {
         return "";
     }
 
+    /**
+     * Metodo della classe Padre Portata da Overridare nelle classi che estendono la stessa.
+     */
     public void print() {
         System.out.println("\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + nome + UtilityColorEnum.ANSI_RESET.getCodice() + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione + allergeniGetString());
     }
