@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e98ee44e-e1c6-4001-b64e-4f5886c63a4f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/enumPackage/UtilityColorEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Antipasti.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Portata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TipoPiatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enumPackage/TipoPiattoEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UtilityColor.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680269778503</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="aggiustata visibilità field bevande">
+      <created>1682075984949</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682075984949</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -139,6 +152,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="code review 31/03" />
-    <option name="LAST_COMMIT_MESSAGE" value="code review 31/03" />
+    <MESSAGE value="aggiustata visibilità field bevande" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiustata visibilità field bevande" />
   </component>
 </project>

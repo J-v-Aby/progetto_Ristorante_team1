@@ -29,14 +29,15 @@ public class Main {
         menuCarne.addPortata(anti1);
         menuCarne.addPortata(anti2);
         menuCarne.addPortata(anti3);
-//
-//        menuPesce.addAntipasti(anti4);
-//        menuPesce.addAntipasti(anti5);
-//        menuPesce.addAntipasti(anti6);
-//        menuVegan.addAntipasti(anti7);
-//        menuVegan.addAntipasti(anti8);
-//        menuVegan.addAntipasti(anti9);
-//        menuCarne.printAnti();
+
+//        menuPesce.addPortata(anti4);
+//        menuPesce.addPortata(anti5);
+//        menuPesce.addPortata(anti6);
+
+//        menuVegan.addPortata(anti7);
+//        menuVegan.addPortata(anti8);
+//        menuVegan.addPortata(anti9);
+
 
 
         //PRIMI
