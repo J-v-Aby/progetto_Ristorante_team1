@@ -5,6 +5,8 @@ import portate.*;
 import java.util.ArrayList;
 
 public class Menu {
+
+    //TODO prezzo medio, chef
     private String nome;
     private ArrayList<Portata> portate;
     private TipologiaEnum tipoMenu;
@@ -13,7 +15,6 @@ public class Menu {
         this.nome = nome;
         this.tipoMenu = tipoMenu;
         this.portate = new ArrayList<>();
-
     }
 
     public void addPortata(Portata antipasti) {
@@ -24,12 +25,14 @@ public class Menu {
         portate.remove(antipasti);
     }
 
+    //TODO chiamiamolo printMenu
     public void print() {
         for (Portata portata : portate) {
             portata.print();
         }
     }
 
+    //TODO rivedere
     public void printAntiSOLID_FattoPerProva_TiPregoMicheleNonCiPicchiare() {
         boolean round1 = true;
         boolean round2 = true;

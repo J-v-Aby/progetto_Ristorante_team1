@@ -6,7 +6,9 @@ public class Main {
 //        // HEADER
         System.out.println("\n\n\t\t\t" + UtilityColorEnum.ANSI_YELLOW_BACKGROUND.getCodice() + UtilityColorEnum.ANSI_BLACK.getCodice() + "  C O P P A  C I C U T I  " + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         System.out.println("\t\t\t" + "L'esperienza che ferma il tempo\n" +
-                "Le lancette rallentano il loro avanzare, nell’aria il racconto di piatti che emozionano al primo sguardo." + "\n" + " Danzatori silenziosi si muovono intorno a te per regalarti lo spettacolo di un servizio impeccabile," + "\n" + " in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, benvenuti nel Ristorante di Coppa Cicuti.");
+                "Le lancette rallentano il loro avanzare, nell’aria il racconto di piatti che emozionano al primo sguardo."
+                + "\n" + " Danzatori silenziosi si muovono intorno a te per regalarti lo spettacolo di un servizio impeccabile,"
+                + "\n" + " in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, benvenuti nel Ristorante di Coppa Cicuti.");
         System.out.println("\n\t" + "Prezzo Medio: 50€\t" + "Recensioni: ⭐⭐⭐⭐⭐");
 
         //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "A N T I P A S T I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
@@ -23,8 +25,16 @@ public class Main {
         Portata anti5 = new Antipasti("Crostini con salmone affumicato e formaggio", 20.50, "Crostini di pane tostato con salmone, formaggio fresco cremoso, erba cipollina e pepe.", "Toasted croutons with salmon, fresh cream cheese, chives and pepper.", TipoPiattoEnum.MENU_STANDARD);
         Portata anti6 = new Antipasti("Gamberetti in salsa rosa", 22.00, "Gamberetti lessi serviti con salsa rosa (salsa a base di maionese, ketchup, brandy).", "Boiled prawns served with pink sauce (mayonnaise-based sauce, ketchup, brandy).", TipoPiattoEnum.PIATTO_TIPICO);
         //vegan
-        Portata anti7 = new Antipasti("Crostini con hummus e verdure grigliate", 8.50, "Crostini di pane tostato spalmati con hummus di ceci e verdure di stagione grigliate.", "Toasted croutons spread with chickpea hummus and grilled seasonal vegetables.", TipoPiattoEnum.CONSIGLIATO_CHEF);
-        Portata anti8 = new Antipasti("Frittelle di zucchine e patate e salsa yogurt", 10.00, "Frittelle di zucchine e patate, servite con salsa allo yogurt vegetale (yogurt vegetale a base di soia o mandorle).", "Courgette and potato fritters, served with vegetable yoghurt sauce (soy or almond-based vegetable yoghurt).", TipoPiattoEnum.MENU_STANDARD);
+        Portata anti7 = new Antipasti("Crostini con hummus e verdure grigliate",
+                8.50, "Crostini di pane tostato spalmati con hummus di ceci e verdure di stagione grigliate.",
+                "Toasted croutons spread with chickpea hummus and grilled seasonal vegetables.",
+                TipoPiattoEnum.CONSIGLIATO_CHEF);
+        Portata anti8 = new Antipasti(
+                "Frittelle di zucchine e patate e salsa yogurt",
+                10.00,
+                "Frittelle di zucchine e patate, servite con salsa allo yogurt vegetale (yogurt vegetale a base di soia o mandorle).",
+                "Courgette and potato fritters, served with vegetable yoghurt sauce (soy or almond-based vegetable yoghurt).",
+                TipoPiattoEnum.MENU_STANDARD);
         Portata anti9 = new Antipasti("Involtini di melanzane con cous cous e verdure", 12.00, "Fettine di melanzane grigliate ripiene di cous cous con verdure di stagione cotte in padella.", "Slices of grilled aubergines filled with cous cous with seasonal vegetables cooked in a pan.", TipoPiattoEnum.BIOLOGICO);
 
         menuCarne.addPortata(anti1);
@@ -40,21 +50,20 @@ public class Main {
         menuVegan.addPortata(anti9);
 
 
-
         //PRIMI
         //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "P R I M I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         //Carne
-        Portata primiPiatti1 = new PrimiPiatti("Cannelloni alla genovese e sedano ", 13.0, "cannelloni  ripieni di carne e sedano croccante gratinati al forno ",true, 60);
-        Portata primiPiatti2 = new PrimiPiatti("Ravioli di coniglio ", 16.5, "ravioli  ripieni di coniglio e aromi conditi con burro e salvia",true,12 );
-        Portata primiPiatti3 = new PrimiPiatti("Risotto d’autunno ", 15.0, "risotto con castagne mele e capocollo profumato con rosmarino ",true,20 );
+        Portata primiPiatti1 = new PrimiPiatti("Cannelloni alla genovese e sedano ", 13.0, "cannelloni  ripieni di carne e sedano croccante gratinati al forno ", true, 60);
+        Portata primiPiatti2 = new PrimiPiatti("Ravioli di coniglio ", 16.5, "ravioli  ripieni di coniglio e aromi conditi con burro e salvia", true, 12);
+        Portata primiPiatti3 = new PrimiPiatti("Risotto d’autunno ", 15.0, "risotto con castagne mele e capocollo profumato con rosmarino ", true, 20);
         //Pesce
-        Portata primiPiatti4 = new PrimiPiatti("Risotto all’onda con velo di gamberi crudi", 13.5, "risotto cremoso con gamberi crudi e zafferano ",false,20 );
-        Portata primiPiatti5 = new PrimiPiatti("Paccheri, anelli di calamari, pomodoro pachino e salicornia", 15.0, "paccheri con calamari pomodoro e salicornia conditi con olio extravergine d’oliva ",true,15 );
-        Portata primiPiatti6 = new PrimiPiatti("Linguine con capesante, tartufo bianco e basilico", 14.0, "linguine con capesante tartufo bianco e basilico conditi con olio extravergine d’oliva ", false,15);
+        Portata primiPiatti4 = new PrimiPiatti("Risotto all’onda con velo di gamberi crudi", 13.5, "risotto cremoso con gamberi crudi e zafferano ", false, 20);
+        Portata primiPiatti5 = new PrimiPiatti("Paccheri, anelli di calamari, pomodoro pachino e salicornia", 15.0, "paccheri con calamari pomodoro e salicornia conditi con olio extravergine d’oliva ", true, 15);
+        Portata primiPiatti6 = new PrimiPiatti("Linguine con capesante, tartufo bianco e basilico", 14.0, "linguine con capesante tartufo bianco e basilico conditi con olio extravergine d’oliva ", false, 15);
         //Vegan
-        Portata primiPiatti7 = new PrimiPiatti("Ravioli vegani di barbabietole con mele e noci", 12.5, "ravioli vegani ripieni di barbabietole mele e noci conditi con burro e salvia ",true,15 );
-        Portata primiPiatti8 = new PrimiPiatti("Spaghetti al pesto di avocado, basilico e pinoli", 13.0, "spaghetti al pesto di avocado basilico e pinoli conditi con olio extravergine d’oliva ",true,15 );
-        Portata primiPiatti9 = new PrimiPiatti("Conchiglioni con broccoli e mandorle", 14.5, "conchiglioni ripieni di broccoli e mandorle gratinati al forno ",true,25 );
+        Portata primiPiatti7 = new PrimiPiatti("Ravioli vegani di barbabietole con mele e noci", 12.5, "ravioli vegani ripieni di barbabietole mele e noci conditi con burro e salvia ", true, 15);
+        Portata primiPiatti8 = new PrimiPiatti("Spaghetti al pesto di avocado, basilico e pinoli", 13.0, "spaghetti al pesto di avocado basilico e pinoli conditi con olio extravergine d’oliva ", true, 15);
+        Portata primiPiatti9 = new PrimiPiatti("Conchiglioni con broccoli e mandorle", 14.5, "conchiglioni ripieni di broccoli e mandorle gratinati al forno ", true, 25);
 
         primiPiatti1.getListaAllergeni().add(AllergeniEnum.SEDANO);
         primiPiatti2.getListaAllergeni().add(AllergeniEnum.LATTE);
@@ -74,7 +83,6 @@ public class Main {
         menuVegan.addPortata(primiPiatti7);
         menuVegan.addPortata(primiPiatti8);
         menuVegan.addPortata(primiPiatti9);
-
 
 
         // SECONDI
@@ -113,7 +121,6 @@ public class Main {
         menuVegan.addPortata(polpette);
         menuVegan.addPortata(tofu);
         menuVegan.addPortata(seitan);
-        
 
 
         //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "D E S S E R T" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
@@ -159,8 +166,6 @@ public class Main {
         menuCarne.addPortata(birraRossaG);
 
         menuCarne.printAntiSOLID_FattoPerProva_TiPregoMicheleNonCiPicchiare();
-
-
 
 
     }

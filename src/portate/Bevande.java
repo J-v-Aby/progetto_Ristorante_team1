@@ -1,16 +1,12 @@
 package portate;
 
 public class Bevande extends Portata {
-
-
     private double gradazioneAlcolica;
 
-
-    public Bevande(String nome, Double prezzo, String descrizione,double gradazioneAlcolica) {
+    public Bevande(String nome, Double prezzo, String descrizione, double gradazioneAlcolica) {
         super(nome, prezzo, descrizione);
         this.gradazioneAlcolica = gradazioneAlcolica;
     }
-
 
     public double getGradazioneAlcolica() {
         return gradazioneAlcolica;
@@ -23,7 +19,7 @@ public class Bevande extends Portata {
     @Override
     public void print() {
         super.print();
-        if(gradazioneAlcolica > 0.01){
+        if (gradazioneAlcolica > 0.01) {
             System.out.println("Bevanda alcolica al " + gradazioneAlcolica + "%");
         }
     }

@@ -9,13 +9,14 @@ public enum AllergeniEnum {
     ARACHIDI("Arachidi"),
     MOLLUSCHI("Molluschi"),
     FRUTTA_A_GUSCIO("Frutta a guscio"),
-    PESCE ("Pesce"),
+    PESCE("Pesce"),
     LATTE("Latte"),
     SENAPE("Senape"),
     NICKEL("Nickel");
 
-private final String nomeAllergene;
-   AllergeniEnum(String nomeAllergene) {
+    private final String nomeAllergene;
+
+    AllergeniEnum(String nomeAllergene) {
         this.nomeAllergene = nomeAllergene;
 
     }

@@ -3,7 +3,6 @@ package portate;
 import enumPackage.CotturaEnum;
 
 public class SecondiPiatti extends Portata {
-
     private String contorno;
     private CotturaEnum cotturaEnum;
 

@@ -1,12 +1,10 @@
 package portate;
 
 public class PrimiPiatti extends Portata {
+    private boolean consigliatoPerBimbi;
+    private Integer tempoCottura;
 
-     private boolean consigliatoPerBimbi;
-
-     private Integer tempoCottura;
-
-    public PrimiPiatti(String nome, Double prezzo, String descrizione,boolean consigliatoPerBimbi, int tempoCottura) {
+    public PrimiPiatti(String nome, Double prezzo, String descrizione, boolean consigliatoPerBimbi, int tempoCottura) {
         super(nome, prezzo, descrizione);
         this.consigliatoPerBimbi = consigliatoPerBimbi;
         this.tempoCottura = tempoCottura;
@@ -20,7 +18,6 @@ public class PrimiPiatti extends Portata {
         consigliatoPerBimbi = consigliato;
     }
 
-
     public int getTempoCottura() {
         return tempoCottura;
     }
@@ -33,7 +30,7 @@ public class PrimiPiatti extends Portata {
     public void print() {
         super.print();
         System.out.println("Teampo cottura: " + tempoCottura + " minuti");
-        if (isConsigliatoPerBimbi()){
+        if (isConsigliatoPerBimbi()) {
             System.out.println("Consigliato per bimbi");
         }
     }
