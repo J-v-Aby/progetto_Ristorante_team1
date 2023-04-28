@@ -30,13 +30,13 @@ public class Main {
         menuCarne.addPortata(anti2);
         menuCarne.addPortata(anti3);
 
-//        menuPesce.addPortata(anti4);
-//        menuPesce.addPortata(anti5);
-//        menuPesce.addPortata(anti6);
+        menuPesce.addPortata(anti4);
+        menuPesce.addPortata(anti5);
+        menuPesce.addPortata(anti6);
 
-//        menuVegan.addPortata(anti7);
-//        menuVegan.addPortata(anti8);
-//        menuVegan.addPortata(anti9);
+        menuVegan.addPortata(anti7);
+        menuVegan.addPortata(anti8);
+        menuVegan.addPortata(anti9);
 
 
 
