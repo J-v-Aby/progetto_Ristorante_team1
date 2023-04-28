@@ -1,3 +1,5 @@
+package portate;
+
 public class PrimiPiatti extends Portata {
 
      private boolean consigliatoPerBimbi;

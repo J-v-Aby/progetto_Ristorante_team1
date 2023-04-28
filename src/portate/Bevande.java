@@ -1,7 +1,8 @@
+package portate;
+
 public class Bevande extends Portata {
 
 
-    //TODO inseriamo il grado alcolico, e poi facciamo un metodo che se è 0 ci stampa qualcosa
     private double gradazioneAlcolica;
 
 

@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e98ee44e-e1c6-4001-b64e-4f5886c63a4f" name="Changes" comment="" />
+    <list default="true" id="e98ee44e-e1c6-4001-b64e-4f5886c63a4f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/menu.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/Antipasti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bevande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/Bevande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/Dessert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/Portata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimiPiatti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/PrimiPiatti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecondiPiatti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/SecondiPiatti.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

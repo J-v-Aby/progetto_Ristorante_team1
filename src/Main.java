@@ -1,4 +1,5 @@
 import enumPackage.*;
+import portate.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +9,7 @@ public class Main {
                 "Le lancette rallentano il loro avanzare, nell’aria il racconto di piatti che emozionano al primo sguardo." + "\n" + " Danzatori silenziosi si muovono intorno a te per regalarti lo spettacolo di un servizio impeccabile," + "\n" + " in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, benvenuti nel Ristorante di Coppa Cicuti.");
         System.out.println("\n\t" + "Prezzo Medio: 50€\t" + "Recensioni: ⭐⭐⭐⭐⭐");
 
-        System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "A N T I P A S T I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
+        //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "A N T I P A S T I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE);
         Menu menuPesce = new Menu("Pesce", TipologiaEnum.PESCE);
         Menu menuVegan = new Menu("Vegan", TipologiaEnum.VEGAN);
@@ -41,7 +42,7 @@ public class Main {
 
 
         //PRIMI
-        System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "P R I M I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
+        //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "P R I M I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         //Carne
         Portata primiPiatti1 = new PrimiPiatti("Cannelloni alla genovese e sedano ", 13.0, "cannelloni  ripieni di carne e sedano croccante gratinati al forno ",true, 60);
         Portata primiPiatti2 = new PrimiPiatti("Ravioli di coniglio ", 16.5, "ravioli  ripieni di coniglio e aromi conditi con burro e salvia",true,12 );
@@ -77,7 +78,7 @@ public class Main {
 
 
         // SECONDI
-        System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "S E C O N D I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
+        //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "S E C O N D I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         // Carne
         Portata arrosto = new SecondiPiatti("Arrosto di Maiale al latte", 13.0, "morbido arrosto di maiale avvolto in una vellutata di latte e aromi", "Patate al forno", CotturaEnum.COTTA);
         Portata manzo = new SecondiPiatti("Manzo alla Stroganoff", 14.0, "straccetti di manzo cotti in una salsa di panna acida, senape e funghi", "Verdure", CotturaEnum.MEDIA);
@@ -115,7 +116,7 @@ public class Main {
         
 
 
-        System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "D E S S E R T" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
+        //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "D E S S E R T" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         Portata dessert1 = new Dessert("Creme Brulee", 2.30, "Crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato", TipoDessertEnum.CREMA, ChefStellatiEnum.MARIO_PARMEGGIANI, "panna fresca liquida, latte, tuorli, zucchero, baccello di vaniglia");
         Portata dessert2 = new Dessert("Cheesecake alle albicocche", 5.90, "Base di pasta biscotto su cui poggia un alto strato di crema di formaggio fresco con topping alle albicocche.", TipoDessertEnum.FRUTTA, ChefStellatiEnum.MARIO_PARMEGGIANI, "biscotti g.free, burro, philadelphia, panna fresca, zucchero gelatina alimentare, bacche di vaniglia, confettura di albicocca");
         Portata dessert3 = new Dessert("Cheesecake al cioccolato", 5.90, "Base di biscotto su cui poggia un alto strato di crema di formaggio fresco con topping al cioccolato.", TipoDessertEnum.CIOCCOLATO, ChefStellatiEnum.MARCUS_SAMUELSSON, "biscotti, burro, philadelphia, panna fresca, zucchero gelatina alimentare, bacche di vaniglia, crema di cioccolato, scaglie di cioccolato fondente");
@@ -130,7 +131,7 @@ public class Main {
         menuCarne.addPortata(dessert5);
         menuCarne.addPortata(dessert6);
 
-        System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "B E V A N D E" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
+        //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "B E V A N D E" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         Portata acqua = new Bevande("Acqua naturale 0.5l", 1.00, "Acqua di Nepi", 0);
         Portata acquaG = new Bevande("Acqua naturale 1l", 2.00, "Boario", 0);
         Portata acquaFrizzante = new Bevande("Acqua frizzante 0.5l", 1.00, "Guizza", 0);
@@ -157,7 +158,7 @@ public class Main {
         menuCarne.addPortata(birraRossa);
         menuCarne.addPortata(birraRossaG);
 
-        menuCarne.print();
+        menuCarne.printAntiSOLID_FattoPerProva_TiPregoMicheleNonCiPicchiare();
 
 
 

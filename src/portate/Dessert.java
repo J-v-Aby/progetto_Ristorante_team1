@@ -1,3 +1,5 @@
+package portate;
+
 import enumPackage.ChefStellatiEnum;
 import enumPackage.TipoDessertEnum;
 
@@ -41,7 +43,7 @@ public class Dessert extends Portata{
     @Override
     public void print() {
         super.print();
-        System.out.println("Dessert a base di "+tipoDessert +"\n"+ "Chef: "+chef+ "\n"+ "Ingredienti: "+"\n" + ingredienti);
+        System.out.println("portate.Dessert a base di "+tipoDessert +"\n"+ "Chef: "+chef.getNomeChef()+ "\n"+ "Ingredienti: "+"\n" + ingredienti);
     }
 }
 
