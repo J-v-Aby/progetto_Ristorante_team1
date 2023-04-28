@@ -1,7 +1,6 @@
-public enum Allergeni {
+package enumPackage;
 
-    //TODO si devono chimare sempre con AllergeniEnum, sempre con gli enumerati va fatto così
-    //facciamo anche dei pacchetti, per gli enum? e per le portate?
+public enum AllergeniEnum {
 
     UOVA("Uova"),
     CROSTACEI("Crostacei"),
@@ -15,9 +14,8 @@ public enum Allergeni {
     SENAPE("Senape"),
     NICKEL("Nickel");
 
-    //TODO sempre i modificatori di accesso ???
 private final String nomeAllergene;
-    Allergeni(String nomeAllergene) {
+   AllergeniEnum(String nomeAllergene) {
         this.nomeAllergene = nomeAllergene;
 
     }

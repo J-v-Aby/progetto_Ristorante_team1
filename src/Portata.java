@@ -1,3 +1,4 @@
+import enumPackage.AllergeniEnum;
 import enumPackage.UtilityColorEnum;
 
 import java.util.HashSet;
@@ -7,7 +8,7 @@ public class Portata {
     private String nome;
     private Double prezzo;
     private String descrizione;
-    private Set<Allergeni> listaAllergeni;
+    private Set<AllergeniEnum> listaAllergeni;
 
     public Portata(String nome, Double prezzo, String descrizione) {
         this.nome = nome;
@@ -40,18 +41,18 @@ public class Portata {
         this.descrizione = descrizione;
     }
 
-    public Set<Allergeni> getListaAllergeni() {
+    public Set<AllergeniEnum> getListaAllergeni() {
         return listaAllergeni;
     }
 
-    public void setListaAllergeni(Set<Allergeni> listaAllergeni) {
+    public void setListaAllergeni(Set<AllergeniEnum> listaAllergeni) {
         this.listaAllergeni = listaAllergeni;
     }
 
     public String allergeniGetString() {
         if (listaAllergeni.size() != 0) {
             StringBuilder sumAllerg = new StringBuilder("\t\tAllergeni: ");
-            for (Allergeni allergeni : listaAllergeni) {
+            for (AllergeniEnum allergeni : listaAllergeni) {
                 sumAllerg.append(allergeni.getNomeAllergene()).append(", ");
             }
             return sumAllerg.toString();

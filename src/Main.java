@@ -29,51 +29,51 @@ public class Main {
         menuCarne.addPortata(anti1);
         menuCarne.addPortata(anti2);
         menuCarne.addPortata(anti3);
-/*
-        menuPesce.addAntipasti(anti4);
-        menuPesce.addAntipasti(anti5);
-        menuPesce.addAntipasti(anti6);
-        menuVegan.addAntipasti(anti7);
-        menuVegan.addAntipasti(anti8);
-        menuVegan.addAntipasti(anti9);
-        menuCarne.printAnti();
+//
+//        menuPesce.addAntipasti(anti4);
+//        menuPesce.addAntipasti(anti5);
+//        menuPesce.addAntipasti(anti6);
+//        menuVegan.addAntipasti(anti7);
+//        menuVegan.addAntipasti(anti8);
+//        menuVegan.addAntipasti(anti9);
+//        menuCarne.printAnti();
 
 
         //PRIMI
-        System.out.println("\n\n" + UtilityColor.ANSI_BOLD + "P R I M I" + UtilityColor.ANSI_RESET + "\n");
+        System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "P R I M I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         //Carne
-        PrimiPiatti primiPiatti1 = new PrimiPiatti("Cannelloni alla genovese e sedano ", 13.0, "cannelloni  ripieni di carne e sedano croccante gratinati al forno ",true, 60);
-        PrimiPiatti primiPiatti2 = new PrimiPiatti("Ravioli di coniglio ", 16.5, "ravioli  ripieni di coniglio e aromi conditi con burro e salvia",true,12 );
-        PrimiPiatti primiPiatti3 = new PrimiPiatti("Risotto d’autunno ", 15.0, "risotto con castagne mele e capocollo profumato con rosmarino ",true,20 );
+        Portata primiPiatti1 = new PrimiPiatti("Cannelloni alla genovese e sedano ", 13.0, "cannelloni  ripieni di carne e sedano croccante gratinati al forno ",true, 60);
+        Portata primiPiatti2 = new PrimiPiatti("Ravioli di coniglio ", 16.5, "ravioli  ripieni di coniglio e aromi conditi con burro e salvia",true,12 );
+        Portata primiPiatti3 = new PrimiPiatti("Risotto d’autunno ", 15.0, "risotto con castagne mele e capocollo profumato con rosmarino ",true,20 );
         //Pesce
-        PrimiPiatti primiPiatti4 = new PrimiPiatti("Risotto all’onda con velo di gamberi crudi", 13.5, "risotto cremoso con gamberi crudi e zafferano ",false,20 );
-        PrimiPiatti primiPiatti5 = new PrimiPiatti("Paccheri, anelli di calamari, pomodoro pachino e salicornia", 15.0, "paccheri con calamari pomodoro e salicornia conditi con olio extravergine d’oliva ",true,15 );
-        PrimiPiatti primiPiatti6 = new PrimiPiatti("Linguine con capesante, tartufo bianco e basilico", 14.0, "linguine con capesante tartufo bianco e basilico conditi con olio extravergine d’oliva ", false,15);
+        Portata primiPiatti4 = new PrimiPiatti("Risotto all’onda con velo di gamberi crudi", 13.5, "risotto cremoso con gamberi crudi e zafferano ",false,20 );
+        Portata primiPiatti5 = new PrimiPiatti("Paccheri, anelli di calamari, pomodoro pachino e salicornia", 15.0, "paccheri con calamari pomodoro e salicornia conditi con olio extravergine d’oliva ",true,15 );
+        Portata primiPiatti6 = new PrimiPiatti("Linguine con capesante, tartufo bianco e basilico", 14.0, "linguine con capesante tartufo bianco e basilico conditi con olio extravergine d’oliva ", false,15);
         //Vegan
-        PrimiPiatti primiPiatti7 = new PrimiPiatti("Ravioli vegani di barbabietole con mele e noci", 12.5, "ravioli vegani ripieni di barbabietole mele e noci conditi con burro e salvia ",true,15 );
-        PrimiPiatti primiPiatti8 = new PrimiPiatti("Spaghetti al pesto di avocado, basilico e pinoli", 13.0, "spaghetti al pesto di avocado basilico e pinoli conditi con olio extravergine d’oliva ",true,15 );
-        PrimiPiatti primiPiatti9 = new PrimiPiatti("Conchiglioni con broccoli e mandorle", 14.5, "conchiglioni ripieni di broccoli e mandorle gratinati al forno ",true,25 );
+        Portata primiPiatti7 = new PrimiPiatti("Ravioli vegani di barbabietole con mele e noci", 12.5, "ravioli vegani ripieni di barbabietole mele e noci conditi con burro e salvia ",true,15 );
+        Portata primiPiatti8 = new PrimiPiatti("Spaghetti al pesto di avocado, basilico e pinoli", 13.0, "spaghetti al pesto di avocado basilico e pinoli conditi con olio extravergine d’oliva ",true,15 );
+        Portata primiPiatti9 = new PrimiPiatti("Conchiglioni con broccoli e mandorle", 14.5, "conchiglioni ripieni di broccoli e mandorle gratinati al forno ",true,25 );
 
-        primiPiatti1.getListaAllergeni().add(Allergeni.SEDANO);
-        primiPiatti2.getListaAllergeni().add(Allergeni.LATTE);
-        primiPiatti4.getListaAllergeni().add(Allergeni.CROSTACEI);
-        primiPiatti5.getListaAllergeni().add(Allergeni.NICKEL);
-        primiPiatti6.getListaAllergeni().add(Allergeni.MOLLUSCHI);
-        primiPiatti7.getListaAllergeni().add(Allergeni.FRUTTA_A_GUSCIO);
-        primiPiatti8.getListaAllergeni().add(Allergeni.GLUTINE);
-        primiPiatti9.getListaAllergeni().add(Allergeni.FRUTTA_A_GUSCIO);
+        primiPiatti1.getListaAllergeni().add(AllergeniEnum.SEDANO);
+        primiPiatti2.getListaAllergeni().add(AllergeniEnum.LATTE);
+        primiPiatti4.getListaAllergeni().add(AllergeniEnum.CROSTACEI);
+        primiPiatti5.getListaAllergeni().add(AllergeniEnum.NICKEL);
+        primiPiatti6.getListaAllergeni().add(AllergeniEnum.MOLLUSCHI);
+        primiPiatti7.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
+        primiPiatti8.getListaAllergeni().add(AllergeniEnum.GLUTINE);
+        primiPiatti9.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
 
-        menuCarne.addPrimiPiatti(primiPiatti1);
-        menuCarne.addPrimiPiatti(primiPiatti2);
-        menuCarne.addPrimiPiatti(primiPiatti3);
-        menuPesce.addPrimiPiatti(primiPiatti4);
-        menuPesce.addPrimiPiatti(primiPiatti5);
-        menuPesce.addPrimiPiatti(primiPiatti6);
-        menuVegan.addPrimiPiatti(primiPiatti7);
-        menuVegan.addPrimiPiatti(primiPiatti8);
-        menuVegan.addPrimiPiatti(primiPiatti9);
-        menuCarne.printPrimi();
-*/
+        menuCarne.addPortata(primiPiatti1);
+        menuCarne.addPortata(primiPiatti2);
+        menuCarne.addPortata(primiPiatti3);
+        menuPesce.addPortata(primiPiatti4);
+        menuPesce.addPortata(primiPiatti5);
+        menuPesce.addPortata(primiPiatti6);
+        menuVegan.addPortata(primiPiatti7);
+        menuVegan.addPortata(primiPiatti8);
+        menuVegan.addPortata(primiPiatti9);
+
+
 
         // SECONDI
         System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "S E C O N D I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
@@ -90,16 +90,16 @@ public class Main {
         Portata tofu = new SecondiPiatti("Tofu piccante", 9.0, "fette di tofu alla piastra con limone e peperoncino", "Verdure croccanti alla piastra", CotturaEnum.MEDIA);
         Portata seitan = new SecondiPiatti("Seitan al vino Rosso", 10.0, "seitan stufato con vino rosso, cipolla, rosmarino e senape", "Funghi porcini", CotturaEnum.MEDIA);
 
-        arrosto.getListaAllergeni().add(Allergeni.LATTE);
-        manzo.getListaAllergeni().add(Allergeni.LATTE);
-        pollo.getListaAllergeni().add(Allergeni.ARACHIDI);
+        arrosto.getListaAllergeni().add(AllergeniEnum.LATTE);
+        manzo.getListaAllergeni().add(AllergeniEnum.LATTE);
+        pollo.getListaAllergeni().add(AllergeniEnum.ARACHIDI);
 
-        salmone.getListaAllergeni().add(Allergeni.PESCE);
-        gamberi.getListaAllergeni().add(Allergeni.PESCE);
-        orata.getListaAllergeni().add(Allergeni.PESCE);
-        orata.getListaAllergeni().add(Allergeni.GLUTINE);
+        salmone.getListaAllergeni().add(AllergeniEnum.PESCE);
+        gamberi.getListaAllergeni().add(AllergeniEnum.PESCE);
+        orata.getListaAllergeni().add(AllergeniEnum.PESCE);
+        orata.getListaAllergeni().add(AllergeniEnum.GLUTINE);
 
-        seitan.getListaAllergeni().add(Allergeni.SENAPE);
+        seitan.getListaAllergeni().add(AllergeniEnum.SENAPE);
 
 
         menuCarne.addPortata(arrosto);
