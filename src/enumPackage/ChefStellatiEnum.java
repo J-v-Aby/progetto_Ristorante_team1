@@ -1,5 +1,9 @@
 package enumPackage;
 
+/**
+ * categoia di chef specializzati
+ *
+ */
 public enum ChefStellatiEnum {
 
 

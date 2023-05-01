@@ -1,5 +1,9 @@
 package enumPackage;
 
+/**
+ * enum che indentifica la tipologia di dessert
+ *
+ */
 public enum TipoDessertEnum {
     CREMA("Crema"),
     FRUTTA("Frutta"),
