@@ -106,24 +106,24 @@ public class Main {
                 "conchiglioni ripieni di broccoli e mandorle gratinati al forno ",
                 true, 25);
 
-        primiPiatti1.getListaAllergeni().add(AllergeniEnum.SEDANO);
-        primiPiatti2.getListaAllergeni().add(AllergeniEnum.LATTE);
-        primiPiatti4.getListaAllergeni().add(AllergeniEnum.CROSTACEI);
-        primiPiatti5.getListaAllergeni().add(AllergeniEnum.NICKEL);
-        primiPiatti6.getListaAllergeni().add(AllergeniEnum.MOLLUSCHI);
-        primiPiatti7.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
-        primiPiatti8.getListaAllergeni().add(AllergeniEnum.GLUTINE);
-        primiPiatti9.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
 
         menuCarne.addPortata(primiPiatti1);
+        primiPiatti1.getListaAllergeni().add(AllergeniEnum.SEDANO);
         menuCarne.addPortata(primiPiatti2);
+        primiPiatti2.getListaAllergeni().add(AllergeniEnum.LATTE);
         menuCarne.addPortata(primiPiatti3);
         menuPesce.addPortata(primiPiatti4);
+        primiPiatti4.getListaAllergeni().add(AllergeniEnum.CROSTACEI);
         menuPesce.addPortata(primiPiatti5);
+        primiPiatti5.getListaAllergeni().add(AllergeniEnum.NICKEL);
         menuPesce.addPortata(primiPiatti6);
+        primiPiatti6.getListaAllergeni().add(AllergeniEnum.MOLLUSCHI);
         menuVegan.addPortata(primiPiatti7);
+        primiPiatti7.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
         menuVegan.addPortata(primiPiatti8);
+        primiPiatti8.getListaAllergeni().add(AllergeniEnum.GLUTINE);
         menuVegan.addPortata(primiPiatti9);
+        primiPiatti9.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
 
 
         // SECONDI
@@ -159,28 +159,23 @@ public class Main {
                 "seitan stufato con vino rosso, cipolla, rosmarino e senape",
                 "Funghi porcini", CotturaEnum.MEDIA);
 
+        menuCarne.addPortata(arrosto);
         arrosto.getListaAllergeni().add(AllergeniEnum.LATTE);
+        menuCarne.addPortata(manzo);
         manzo.getListaAllergeni().add(AllergeniEnum.LATTE);
+        menuCarne.addPortata(pollo);
         pollo.getListaAllergeni().add(AllergeniEnum.ARACHIDI);
-
+        menuPesce.addPortata(salmone);
         salmone.getListaAllergeni().add(AllergeniEnum.PESCE);
+        menuPesce.addPortata(gamberi);
         gamberi.getListaAllergeni().add(AllergeniEnum.PESCE);
+        menuPesce.addPortata(orata);
         orata.getListaAllergeni().add(AllergeniEnum.PESCE);
         orata.getListaAllergeni().add(AllergeniEnum.GLUTINE);
-
-        seitan.getListaAllergeni().add(AllergeniEnum.SENAPE);
-
-
-        menuCarne.addPortata(arrosto);
-        menuCarne.addPortata(manzo);
-        menuCarne.addPortata(pollo);
-        menuPesce.addPortata(salmone);
-        menuPesce.addPortata(gamberi);
-        menuPesce.addPortata(orata);
         menuVegan.addPortata(polpette);
         menuVegan.addPortata(tofu);
         menuVegan.addPortata(seitan);
-
+        seitan.getListaAllergeni().add(AllergeniEnum.SENAPE);
 
         //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "D E S S E R T" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         Portata dessert1 = new Dessert("Creme Brulee", 2.30,
@@ -207,18 +202,24 @@ public class Main {
                 "Un gustosissimo rotolo di pasta farcito con mele, uvetta, pinoli e cannella.",
                 TipoDessertEnum.FRUTTA, ChefStellatiEnum.VICKY_LAU,
                 "mele, uvetta, marsala o vermouth, confettura di albicocca, mandorle," +
-                        " panna veggetale, zucchero, cannella");
+                        " panna vegetale, zucchero, cannella");
         Portata dessert6 = new Dessert("Gelo di Anguria", 3.99,
-                "Il gelo di mellone (gelu di muluni in siciliano), anche detto gelo d'anguria, " +
+                "Il gelo di anguria (gelu di muluni in siciliano), anche detto gelo d'anguria, " +
                         "è un tipico dolce al cucchiaio siciliano, tradizionalmente preparato a Ferragosto",
                 TipoDessertEnum.FRUTTA, ChefStellatiEnum.VICKY_LAU,
                 "succo di anguria amido di frumento, zucchero di canna, anice, gocce di cioccolato fondente");
 
         menuCarne.addPortata(dessert1);
+        dessert1.getListaAllergeni().add(AllergeniEnum.LATTE);
         menuCarne.addPortata(dessert2);
+        dessert2.getListaAllergeni().add(AllergeniEnum.LATTE);
         menuCarne.addPortata(dessert3);
+        dessert3.getListaAllergeni().add(AllergeniEnum.LATTE);
         menuCarne.addPortata(dessert4);
+        dessert4.getListaAllergeni().add(AllergeniEnum.UOVA);
+        dessert4.getListaAllergeni().add(AllergeniEnum.LATTE);
         menuCarne.addPortata(dessert5);
+        dessert5.getListaAllergeni().add(AllergeniEnum.LATTE);
         menuCarne.addPortata(dessert6);
 
         //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "B E V A N D E" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
