@@ -1,5 +1,8 @@
 package enumPackage;
-
+/**
+ * Enum che permette di inserire il tipo di allergene
+ * presente nella portata.
+ */
 public enum AllergeniEnum {
 
     UOVA("Uova"),

@@ -89,7 +89,7 @@ public class Main {
         Portata primiPiatti4 = new PrimiPiatti("Risotto all’onda con velo di gamberi crudi", 13.5,
                 "risotto cremoso con gamberi crudi e zafferano ",
                 false, 20);
-        Portata primiPiatti5 = new PrimiPiatti("Paccheri, anelli di calamari, pomodoro pachino e salicornia", 15.0,
+        Portata primiPiatti5 = new PrimiPiatti("Paccheri, anelli di calamari, pomodoro e salicornia", 15.0,
                 "paccheri con calamari pomodoro e salicornia conditi con olio extravergine d’oliva ",
                 true, 15);
         Portata primiPiatti6 = new PrimiPiatti("Linguine con capesante, tartufo bianco e basilico", 14.0,
