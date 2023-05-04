@@ -2,7 +2,10 @@ import enumPackage.TipologiaEnum;
 import enumPackage.UtilityColorEnum;
 import portate.*;
 
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Menu {
 
@@ -10,11 +13,13 @@ public class Menu {
     private String nome;
     private ArrayList<Portata> portate;
     private TipologiaEnum tipoMenu;
+    private Calendar date;
 
     public Menu(String nome, TipologiaEnum tipoMenu) {
         this.nome = nome;
         this.tipoMenu = tipoMenu;
         this.portate = new ArrayList<>();
+        this.date = date;
     }
 
     public void addPortata(Portata antipasti) {
@@ -29,6 +34,14 @@ public class Menu {
         for (Portata portata : portate) {
             portata.print();
         }
+    }
+
+    public Calendar getDate() {
+        return date;
+    }
+
+    public void setDate(Calendar date) {
+        this.date = date;
     }
 
     //TODO rivedere
@@ -58,6 +71,7 @@ public class Menu {
             }
             p.print();
             System.out.println("");
+
         }
     }
 

@@ -2,7 +2,9 @@ package enumPackage;
 
 public enum UtilityColorEnum {
 
-    //TODO inserire la descizione
+    /** Questi di seguito sono i codici necessari per inserire i colori sul tsto, sullo sfondo e per inserire
+     * il grassetto.
+    */
 
     // Background
     ANSI_BLACK_BACKGROUND("\u001B[40m"),

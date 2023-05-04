@@ -1,6 +1,9 @@
 import enumPackage.*;
 import portate.*;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
 //        // HEADER
@@ -17,6 +20,18 @@ public class Main {
         Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE);
         Menu menuPesce = new Menu("Pesce", TipologiaEnum.PESCE);
         Menu menuVegan = new Menu("Vegan", TipologiaEnum.VEGAN);
+
+        /**
+         * Qui impostiamo la data odierna tramite la classe Calendar per poi impostare i giorni di natale e stampare il
+         * relativo messaggio.
+         */
+        Calendar dataOdierna = Calendar.getInstance();
+        int giornoOggi = dataOdierna.get(Calendar.DAY_OF_MONTH);
+        int meseOggi = dataOdierna.get(Calendar.MONTH) + 1;
+        menuCarne.setDate(dataOdierna);
+        if(giornoOggi == 04 && meseOggi == 05) {
+            System.out.println("\nBuon Natale da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
+        }
 
         //carne
         Portata anti1 = new Antipasti("Carpaccio di manzo", 10.50,
