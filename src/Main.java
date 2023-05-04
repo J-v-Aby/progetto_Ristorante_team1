@@ -29,7 +29,7 @@ public class Main {
         int giornoOggi = dataOdierna.get(Calendar.DAY_OF_MONTH);
         int meseOggi = dataOdierna.get(Calendar.MONTH) + 1;
         menuCarne.setDate(dataOdierna);
-        if(giornoOggi == 04 && meseOggi == 05) {
+        if(giornoOggi == 05 && meseOggi == 05) { //if(giornoOggi == 25 && meseOggi == 12)
             System.out.println("\nBuon Natale da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
         }
 
