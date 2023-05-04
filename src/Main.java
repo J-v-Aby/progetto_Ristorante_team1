@@ -16,10 +16,7 @@ public class Main {
                 "benvenuti nel Ristorante di Coppa Cicuti.");
         System.out.println("\n\t" + "Prezzo Medio: 50€\t" + "Recensioni: ⭐⭐⭐⭐⭐");
 
-        //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "A N T I P A S T I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
-        Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE);
-        Menu menuPesce = new Menu("Pesce", TipologiaEnum.PESCE);
-        Menu menuVegan = new Menu("Vegan", TipologiaEnum.VEGAN);
+        Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE, 50.00, ChefStellatiEnum.MARCUS_SAMUELSSON);
 
         /**
          * Qui impostiamo la data odierna tramite la classe Calendar per poi impostare i giorni di natale e stampare il
@@ -79,13 +76,13 @@ public class Main {
         menuCarne.addPortata(anti2);
         menuCarne.addPortata(anti3);
 
-        menuPesce.addPortata(anti4);
-        menuPesce.addPortata(anti5);
-        menuPesce.addPortata(anti6);
-
-        menuVegan.addPortata(anti7);
-        menuVegan.addPortata(anti8);
-        menuVegan.addPortata(anti9);
+//        menuPesce.addPortata(anti4);
+//        menuPesce.addPortata(anti5);
+//        menuPesce.addPortata(anti6);
+//
+//        menuVegan.addPortata(anti7);
+//        menuVegan.addPortata(anti8);
+//        menuVegan.addPortata(anti9);
 
 
         //PRIMI
@@ -127,18 +124,18 @@ public class Main {
         menuCarne.addPortata(primiPiatti2);
         primiPiatti2.getListaAllergeni().add(AllergeniEnum.LATTE);
         menuCarne.addPortata(primiPiatti3);
-        menuPesce.addPortata(primiPiatti4);
-        primiPiatti4.getListaAllergeni().add(AllergeniEnum.CROSTACEI);
-        menuPesce.addPortata(primiPiatti5);
-        primiPiatti5.getListaAllergeni().add(AllergeniEnum.NICKEL);
-        menuPesce.addPortata(primiPiatti6);
-        primiPiatti6.getListaAllergeni().add(AllergeniEnum.MOLLUSCHI);
-        menuVegan.addPortata(primiPiatti7);
-        primiPiatti7.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
-        menuVegan.addPortata(primiPiatti8);
-        primiPiatti8.getListaAllergeni().add(AllergeniEnum.GLUTINE);
-        menuVegan.addPortata(primiPiatti9);
-        primiPiatti9.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
+//        menuPesce.addPortata(primiPiatti4);
+//        primiPiatti4.getListaAllergeni().add(AllergeniEnum.CROSTACEI);
+//        menuPesce.addPortata(primiPiatti5);
+//        primiPiatti5.getListaAllergeni().add(AllergeniEnum.NICKEL);
+//        menuPesce.addPortata(primiPiatti6);
+//        primiPiatti6.getListaAllergeni().add(AllergeniEnum.MOLLUSCHI);
+//        menuVegan.addPortata(primiPiatti7);
+//        primiPiatti7.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
+//        menuVegan.addPortata(primiPiatti8);
+//        primiPiatti8.getListaAllergeni().add(AllergeniEnum.GLUTINE);
+//        menuVegan.addPortata(primiPiatti9);
+//        primiPiatti9.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
 
 
         // SECONDI
@@ -180,17 +177,17 @@ public class Main {
         manzo.getListaAllergeni().add(AllergeniEnum.LATTE);
         menuCarne.addPortata(pollo);
         pollo.getListaAllergeni().add(AllergeniEnum.ARACHIDI);
-        menuPesce.addPortata(salmone);
-        salmone.getListaAllergeni().add(AllergeniEnum.PESCE);
-        menuPesce.addPortata(gamberi);
-        gamberi.getListaAllergeni().add(AllergeniEnum.PESCE);
-        menuPesce.addPortata(orata);
-        orata.getListaAllergeni().add(AllergeniEnum.PESCE);
-        orata.getListaAllergeni().add(AllergeniEnum.GLUTINE);
-        menuVegan.addPortata(polpette);
-        menuVegan.addPortata(tofu);
-        menuVegan.addPortata(seitan);
-        seitan.getListaAllergeni().add(AllergeniEnum.SENAPE);
+//        menuPesce.addPortata(salmone);
+//        salmone.getListaAllergeni().add(AllergeniEnum.PESCE);
+//        menuPesce.addPortata(gamberi);
+//        gamberi.getListaAllergeni().add(AllergeniEnum.PESCE);
+//        menuPesce.addPortata(orata);
+//        orata.getListaAllergeni().add(AllergeniEnum.PESCE);
+//        orata.getListaAllergeni().add(AllergeniEnum.GLUTINE);
+//        menuVegan.addPortata(polpette);
+//        menuVegan.addPortata(tofu);
+//        menuVegan.addPortata(seitan);
+//        seitan.getListaAllergeni().add(AllergeniEnum.SENAPE);
 
         //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "D E S S E R T" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         Portata dessert1 = new Dessert("Creme Brulee", 2.30,
@@ -264,7 +261,8 @@ public class Main {
         menuCarne.addPortata(birraRossa);
         menuCarne.addPortata(birraRossaG);
 
-        menuCarne.printAntiSOLID_FattoPerProva_TiPregoMicheleNonCiPicchiare();
+        menuCarne.printMenu();
+
 
 
     }

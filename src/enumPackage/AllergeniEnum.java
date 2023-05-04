@@ -4,7 +4,6 @@ package enumPackage;
  * presente nella portata.
  */
 public enum AllergeniEnum {
-
     UOVA("Uova"),
     CROSTACEI("Crostacei"),
     SEDANO("Sedano"),
@@ -16,14 +15,11 @@ public enum AllergeniEnum {
     LATTE("Latte"),
     SENAPE("Senape"),
     NICKEL("Nickel");
-
     private final String nomeAllergene;
-
     AllergeniEnum(String nomeAllergene) {
         this.nomeAllergene = nomeAllergene;
 
     }
-
     public String getNomeAllergene() {
         return nomeAllergene;
     }

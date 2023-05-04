@@ -36,13 +36,14 @@ public enum UtilityColorEnum {
         this.codice = codice;
     }
 
-    public java.lang.String getCodice() {
+    public String getCodice() {
         return codice;
     }
 
     public void setCodice(String codice) {
         this.codice = codice;
     }
+
 
     //System.out.println(ANSI_GREEN_BACKGROUND.getCodice() + "This text has a green background but default text!" + ANSI_RESET.getCodice());
 //System.out.println(ANSI_RED.getCodice() + "This text has red text but a default background!" + ANSI_RESET.getCodice());

@@ -51,8 +51,11 @@ public class Portata {
         this.listaAllergeni = listaAllergeni;
     }
 
-    //TODO e che significa questo metodo? rendiamolo parlante
-    public String allergeniGetString() {
+    /**
+     * Metodo che restituisce in una stringa gli allergeni della pietanza, se presenti
+     * @return String
+     */
+    public String allergeniChecker() {
         if (listaAllergeni.size() != 0) {
             StringBuilder sumAllerg = new StringBuilder("\t\tAllergeni: ");
             for (AllergeniEnum allergeni : listaAllergeni) {
@@ -67,11 +70,6 @@ public class Portata {
      * Metodo della classe Padre Portata da Overridare nelle classi che estendono la stessa.
      */
     public void print() {
-        System.out.println("\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + nome + UtilityColorEnum.ANSI_RESET.getCodice() + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione + allergeniGetString());
-    }
-    //TODO e se volessimo cambiare i colori del menù? come facciamo?
-    public void print(UtilityColorEnum utilityColorEnumFirst, UtilityColorEnum utilityColorEnumSecond){
-        System.out.println("\n" + utilityColorEnumFirst.getCodice() + nome + utilityColorEnumSecond.getCodice() + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione + allergeniGetString());
-
+        System.out.println("\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + nome + UtilityColorEnum.ANSI_RESET.getCodice() + "\t\t\t\t\t\t" + prezzo + " €" + "\n" + descrizione + allergeniChecker());
     }
 }
