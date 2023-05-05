@@ -5,12 +5,14 @@ import enumPackage.UtilityColorEnum;
 import portate.*;
 
 
+import javax.xml.crypto.Data;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import static enumPackage.StagioniEnum.INVERNO;
 
@@ -27,13 +29,16 @@ public class Menu {
         this.nome = nome;
         this.tipoMenu = tipoMenu;
         this.portate = new ArrayList<>();
-        this.date = date;
+        this.date = Calendar.getInstance();
         this.prezzoMedio = prezzoMedio;
         this.chef = chef;
     }
 
     public void addPortata(Portata antipasti) {
         portate.add(antipasti);
+    }
+    public void addAllPortate(List<Portata> portatas) {
+        portate.addAll(portatas);
     }
 
     public void removePortata(Portata antipasti) {
@@ -93,8 +98,24 @@ public class Menu {
         this.date = date;
     }
 
+    /**
+     * Qui impostiamo la data odierna tramite la classe Calendar per poi impostare i giorni di natale e stampare il
+     * relativo messaggio.
+     */
+    //TODO fare il metodo
 
-    }
+    /**
+     * int giornoOggi = dataOdierna.get(Calendar.DAY_OF_MONTH);
+     *     int meseOggi = dataOdierna.get(Calendar.MONTH) + 1;
+     *         menuCarne.setDate(dataOdierna);
+     *         if(giornoOggi == 05 && meseOggi == 05) { //if(giornoOggi == 25 && meseOggi == 12)
+     *         System.out.println("\nBuon Natale da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
+     *     }
+     *
+     */
+
+
+}
 
 
 

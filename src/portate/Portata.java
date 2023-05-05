@@ -47,6 +47,10 @@ public class Portata {
         return listaAllergeni;
     }
 
+    public void addAllergenici(AllergeniEnum allergenico) {
+       listaAllergeni.add(allergenico);
+    }
+
     public void setListaAllergeni(Set<AllergeniEnum> listaAllergeni) {
         this.listaAllergeni = listaAllergeni;
     }

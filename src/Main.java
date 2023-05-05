@@ -1,12 +1,15 @@
 import enumPackage.*;
 import portate.*;
 
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
 //        // HEADER
+
+        //TODO va in ristorante
         System.out.println("\n\n\t\t\t" + UtilityColorEnum.ANSI_YELLOW_BACKGROUND.getCodice() + UtilityColorEnum.ANSI_BLACK.getCodice() +
                 "  C O P P A  C I C U T I  " + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
         System.out.println("\t\t\t" + "L'esperienza che ferma il tempo\n" +
@@ -18,17 +21,6 @@ public class Main {
 
         Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE, 50.00, ChefStellatiEnum.MARCUS_SAMUELSSON);
 
-        /**
-         * Qui impostiamo la data odierna tramite la classe Calendar per poi impostare i giorni di natale e stampare il
-         * relativo messaggio.
-         */
-        Calendar dataOdierna = Calendar.getInstance();
-        int giornoOggi = dataOdierna.get(Calendar.DAY_OF_MONTH);
-        int meseOggi = dataOdierna.get(Calendar.MONTH) + 1;
-        menuCarne.setDate(dataOdierna);
-        if(giornoOggi == 05 && meseOggi == 05) { //if(giornoOggi == 25 && meseOggi == 12)
-            System.out.println("\nBuon Natale da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
-        }
 
         //carne
         Portata anti1 = new Antipasti("Carpaccio di manzo", 10.50,
@@ -248,8 +240,9 @@ public class Main {
         Portata birraRossa = new Bevande("Birra rossa 0.25cl", 4.00, "Peroni Gran Riserva", 6);
         Portata birraRossaG = new Bevande("Birra rossa 0.5cl", 5.00, "McFarland", 6);
 
-        menuCarne.addPortata(acqua);
-        menuCarne.addPortata(acquaG);
+        //TODO dare un occhiate
+        menuCarne.addAllPortate(Arrays.asList(acqua,acquaG));
+
         menuCarne.addPortata(acquaFrizzante);
         menuCarne.addPortata(acquaFrizzanteG);
         menuCarne.addPortata(cocaColaL);
