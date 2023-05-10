@@ -63,7 +63,7 @@ public class Main {
                 "Fettine di melanzane grigliate ripiene di cous cous con verdure di stagione cotte in padella.",
                 "Slices of grilled aubergines filled with cous cous with seasonal vegetables cooked in a pan.",
                 TipoPiattoEnum.BIOLOGICO);
-
+//TODO aggiungere tramite menuCarne.addAllPortate(Arrays.asList(portata1, portata2, ecc...))
         menuCarne.addPortata(anti1);
         menuCarne.addPortata(anti2);
         menuCarne.addPortata(anti3);
@@ -110,7 +110,7 @@ public class Main {
                 "conchiglioni ripieni di broccoli e mandorle gratinati al forno ",
                 true, 25);
 
-
+//TODO aggiungere tramite menuCarne.addAllPortate(Arrays.asList(portata1, portata2, ecc...))
         menuCarne.addPortata(primiPiatti1);
         primiPiatti1.getListaAllergeni().add(AllergeniEnum.SEDANO);
         menuCarne.addPortata(primiPiatti2);
@@ -146,8 +146,8 @@ public class Main {
         Portata salmone = new SecondiPiatti("Salmone al limone", 14.0,
                 "filetti di salmone al forno profumati al limone",
                 "Patate al forno", CotturaEnum.SANGUE);
-        Portata gamberi = new SecondiPiatti("Spiedini di gamberi e calamari",
-                13.0, "spiedini di gamberi e calamari grigliati e conditi con prezzemolo",
+        Portata gamberi = new SecondiPiatti("Spiedini di gamberi e calamari", 13.0,
+                "spiedini di gamberi e calamari grigliati e conditi con prezzemolo",
                 "Insalata", CotturaEnum.COTTA);
         Portata orata = new SecondiPiatti("Sandwich di orata alla siciliana", 12.0,
                 "panini senza glutine farciti con filetti di orata cotti al forno e una crema di pomodorini secchi, capperi e olive",
@@ -163,12 +163,13 @@ public class Main {
                 "seitan stufato con vino rosso, cipolla, rosmarino e senape",
                 "Funghi porcini", CotturaEnum.MEDIA);
 
-        menuCarne.addPortata(arrosto);
+
+        menuCarne.addAllPortate(Arrays.asList(arrosto, manzo, pollo));
+
         arrosto.getListaAllergeni().add(AllergeniEnum.LATTE);
-        menuCarne.addPortata(manzo);
         manzo.getListaAllergeni().add(AllergeniEnum.LATTE);
-        menuCarne.addPortata(pollo);
         pollo.getListaAllergeni().add(AllergeniEnum.ARACHIDI);
+
 //        menuPesce.addPortata(salmone);
 //        salmone.getListaAllergeni().add(AllergeniEnum.PESCE);
 //        menuPesce.addPortata(gamberi);
@@ -213,6 +214,7 @@ public class Main {
                 TipoDessertEnum.FRUTTA, ChefStellatiEnum.VICKY_LAU,
                 "succo di anguria amido di frumento, zucchero di canna, anice, gocce di cioccolato fondente");
 
+        //TODO aggiungere tramite menuCarne.addAllPortate(Arrays.asList(portata1, portata2, ecc...))
         menuCarne.addPortata(dessert1);
         dessert1.getListaAllergeni().add(AllergeniEnum.LATTE);
         menuCarne.addPortata(dessert2);
@@ -240,8 +242,8 @@ public class Main {
         Portata birraRossa = new Bevande("Birra rossa 0.25cl", 4.00, "Peroni Gran Riserva", 6);
         Portata birraRossaG = new Bevande("Birra rossa 0.5cl", 5.00, "McFarland", 6);
 
-        //TODO dare un occhiate
-        menuCarne.addAllPortate(Arrays.asList(acqua,acquaG));
+        //TODO aggiungere tramite menuCarne.addAllPortate(Arrays.asList(portata1, portata2, ecc...))
+        menuCarne.addAllPortate(Arrays.asList(acqua, acquaG));
 
         menuCarne.addPortata(acquaFrizzante);
         menuCarne.addPortata(acquaFrizzanteG);
@@ -255,7 +257,6 @@ public class Main {
         menuCarne.addPortata(birraRossaG);
 
         menuCarne.printMenu();
-
 
 
     }
