@@ -2,9 +2,15 @@ package enumPackage;
 
 public enum UtilityColorEnum {
 
-    /** Questi di seguito sono i codici necessari per inserire i colori sul tsto, sullo sfondo e per inserire
+    /**
+     * Questi di seguito sono i codici necessari per inserire i colori sul tsto, sullo sfondo e per inserire
      * il grassetto.
-    */
+     * Esempi:
+     * System.out.println(ANSI_GREEN_BACKGROUND.getCodice() + "This text has a green background but default text!" + ANSI_RESET.getCodice());
+     * System.out.println(ANSI_RED.getCodice() + "This text has red text but a default background!" + ANSI_RESET.getCodice());
+     * System.out.println(ANSI_GREEN_BACKGROUND.getCodice() + ANSI_RED.getCodice() + "This text has a green background and red text!" + ANSI_RESET.getCodice());
+     *
+     */
 
     // Background
     ANSI_BLACK_BACKGROUND("\u001B[40m"),
@@ -44,8 +50,4 @@ public enum UtilityColorEnum {
         this.codice = codice;
     }
 
-
-    //System.out.println(ANSI_GREEN_BACKGROUND.getCodice() + "This text has a green background but default text!" + ANSI_RESET.getCodice());
-//System.out.println(ANSI_RED.getCodice() + "This text has red text but a default background!" + ANSI_RESET.getCodice());
-//System.out.println(ANSI_GREEN_BACKGROUND.getCodice() + ANSI_RED.getCodice() + "This text has a green background and red text!" + ANSI_RESET.getCodice());
 }

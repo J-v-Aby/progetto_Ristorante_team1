@@ -102,18 +102,27 @@ public class Menu {
      * Qui impostiamo la data odierna tramite la classe Calendar per poi impostare i giorni di natale e stampare il
      * relativo messaggio.
      */
-    //TODO fare il metodo
 
-    /**
-     * int giornoOggi = dataOdierna.get(Calendar.DAY_OF_MONTH);
-     *     int meseOggi = dataOdierna.get(Calendar.MONTH) + 1;
-     *         menuCarne.setDate(dataOdierna);
-     *         if(giornoOggi == 05 && meseOggi == 05) { //if(giornoOggi == 25 && meseOggi == 12)
-     *         System.out.println("\nBuon Natale da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
-     *     }
-     *
-     */
+    public void printMessaggioFestivita() {
+        int giornoOggi = date.get(Calendar.DAY_OF_MONTH);
+        int meseOggi = date.get(Calendar.MONTH) + 1;
 
+        if (giornoOggi == 15 && meseOggi == 8) { //if(giornoOggi == 25 && meseOggi == 12)
+            System.out.println("\nBuon Ferragosto da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
+        }
+
+        if (giornoOggi >=23 && giornoOggi <= 26 && meseOggi == 12) { //if(giornoOggi == 25 && meseOggi == 12)
+            System.out.println("\nBuon Natale da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
+        }
+
+        if (giornoOggi >= 27 && giornoOggi <= 31 && meseOggi == 12) { //if(giornoOggi == 25 && meseOggi == 12)
+            System.out.println("\nBuon anno nuovo da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
+        }
+
+        if (giornoOggi >= 1 && giornoOggi <= 3 && meseOggi == 1) { //if(giornoOggi == 25 && meseOggi == 12)
+            System.out.println("\nBuon anno nuovo da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
+        }
+    }
 
 }
 

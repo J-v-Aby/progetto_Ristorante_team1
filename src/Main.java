@@ -20,7 +20,7 @@ public class Main {
         System.out.println("\n\t" + "Prezzo Medio: 50€\t" + "Recensioni: ⭐⭐⭐⭐⭐");
 
         Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE, 50.00, ChefStellatiEnum.MARCUS_SAMUELSSON);
-
+        menuCarne.printMessaggioFestivita();
 
         //carne
         Portata anti1 = new Antipasti("Carpaccio di manzo", 10.50,
@@ -63,18 +63,12 @@ public class Main {
                 "Fettine di melanzane grigliate ripiene di cous cous con verdure di stagione cotte in padella.",
                 "Slices of grilled aubergines filled with cous cous with seasonal vegetables cooked in a pan.",
                 TipoPiattoEnum.BIOLOGICO);
-//TODO aggiungere tramite menuCarne.addAllPortate(Arrays.asList(portata1, portata2, ecc...))
-        menuCarne.addPortata(anti1);
-        menuCarne.addPortata(anti2);
-        menuCarne.addPortata(anti3);
 
-//        menuPesce.addPortata(anti4);
-//        menuPesce.addPortata(anti5);
-//        menuPesce.addPortata(anti6);
-//
-//        menuVegan.addPortata(anti7);
-//        menuVegan.addPortata(anti8);
-//        menuVegan.addPortata(anti9);
+        menuCarne.addAllPortate(Arrays.asList(anti1, anti2, anti3));
+
+        //menuPesce.addAllPortate(Arrays.asList(anti4, anti5, anti6));
+
+        //menuVegan.addAllPortate(Arrays.asList(anti7, anti8, anti9));
 
 
         //PRIMI

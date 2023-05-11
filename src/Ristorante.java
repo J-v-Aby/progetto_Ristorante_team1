@@ -6,7 +6,6 @@ public class Ristorante {
     private Integer numeroCoperti;
     private Portata piattoDelGiorno;
 
-    //TODO ognugno di voi dovrà farsi la propria tabella quindi installiamo un db con lo stesso nome ma in locale sui vostri pc
     //TODO bisogna inserire la prenotazione usando una struttura dati mappa che mette in relazione cliente e tavolo che saranno due classi
     //nel main chiamare ristorante.prenota(cliente,tavolo) stampare la prenotazione e poi il menù in base al tipo di cliente(vegano,carn ecc ecc)
     public Ristorante(String nome, String indirizzo, Integer numeroCoperti, Portata piattoDelGiorno) {
