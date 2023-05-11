@@ -7,7 +7,9 @@
     <list default="true" id="e98ee44e-e1c6-4001-b64e-4f5886c63a4f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enumPackage/AllergeniEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enumPackage/AllergeniEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ristorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ristorante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/portate/Dessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/Dessert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/portate/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portate/Portata.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +94,7 @@
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

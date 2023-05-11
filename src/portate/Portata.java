@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class Portata {
+public abstract class Portata {
     private String nome;
     private Double prezzo;
     private String descrizione;
@@ -48,7 +48,7 @@ public class Portata {
         return listaAllergeni;
     }
 
-    public void addAllergenici(AllergeniEnum allergenico) {
+    public void addAllergeni(AllergeniEnum allergenico) {
         listaAllergeni.add(allergenico);
     }
 

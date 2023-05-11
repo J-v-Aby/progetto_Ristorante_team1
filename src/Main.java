@@ -1,6 +1,7 @@
 import enumPackage.*;
 import portate.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
@@ -8,16 +9,6 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
 //        // HEADER
-
-        //TODO va in ristorante
-        System.out.println("\n\n\t\t\t" + UtilityColorEnum.ANSI_YELLOW_BACKGROUND.getCodice() + UtilityColorEnum.ANSI_BLACK.getCodice() +
-                "  C O P P A  C I C U T I  " + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
-        System.out.println("\t\t\t" + "L'esperienza che ferma il tempo\n" +
-                "Le lancette rallentano il loro avanzare, nell’aria il racconto di piatti che emozionano al primo sguardo."
-                + "\n" + " Danzatori silenziosi si muovono intorno a te per regalarti lo spettacolo di un servizio impeccabile,"
-                + "\n" + " in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, " +
-                "benvenuti nel Ristorante di Coppa Cicuti.");
-        System.out.println("\n\t" + "Prezzo Medio: 50€\t" + "Recensioni: ⭐⭐⭐⭐⭐");
 
         Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE, 50.00, ChefStellatiEnum.MARCUS_SAMUELSSON);
         menuCarne.printMessaggioFestivita();
@@ -64,16 +55,8 @@ public class Main {
                 "Slices of grilled aubergines filled with cous cous with seasonal vegetables cooked in a pan.",
                 TipoPiattoEnum.BIOLOGICO);
 
-        menuCarne.addAllPortate(Arrays.asList(anti1, anti2, anti3));
-
-        //menuPesce.addAllPortate(Arrays.asList(anti4, anti5, anti6));
-
-        //menuVegan.addAllPortate(Arrays.asList(anti7, anti8, anti9));
-
-
         //PRIMI
-        //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "P R I M I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
-        //Carne
+
         Portata primiPiatti1 = new PrimiPiatti("Cannelloni alla genovese e sedano ", 13.0,
                 "cannelloni  ripieni di carne e sedano croccante gratinati al forno ",
                 true, 60);
@@ -104,29 +87,19 @@ public class Main {
                 "conchiglioni ripieni di broccoli e mandorle gratinati al forno ",
                 true, 25);
 
-//TODO aggiungere tramite menuCarne.addAllPortate(Arrays.asList(portata1, portata2, ecc...))
-        menuCarne.addPortata(primiPiatti1);
+
         primiPiatti1.getListaAllergeni().add(AllergeniEnum.SEDANO);
-        menuCarne.addPortata(primiPiatti2);
         primiPiatti2.getListaAllergeni().add(AllergeniEnum.LATTE);
-        menuCarne.addPortata(primiPiatti3);
-//        menuPesce.addPortata(primiPiatti4);
 //        primiPiatti4.getListaAllergeni().add(AllergeniEnum.CROSTACEI);
-//        menuPesce.addPortata(primiPiatti5);
 //        primiPiatti5.getListaAllergeni().add(AllergeniEnum.NICKEL);
-//        menuPesce.addPortata(primiPiatti6);
 //        primiPiatti6.getListaAllergeni().add(AllergeniEnum.MOLLUSCHI);
-//        menuVegan.addPortata(primiPiatti7);
 //        primiPiatti7.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
-//        menuVegan.addPortata(primiPiatti8);
 //        primiPiatti8.getListaAllergeni().add(AllergeniEnum.GLUTINE);
-//        menuVegan.addPortata(primiPiatti9);
 //        primiPiatti9.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
 
 
         // SECONDI
-        //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "S E C O N D I" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
-        // Carne
+
         Portata arrosto = new SecondiPiatti("Arrosto di Maiale al latte", 13.0,
                 "morbido arrosto di maiale avvolto in una vellutata di latte e aromi",
                 "Patate al forno", CotturaEnum.COTTA);
@@ -157,26 +130,11 @@ public class Main {
                 "seitan stufato con vino rosso, cipolla, rosmarino e senape",
                 "Funghi porcini", CotturaEnum.MEDIA);
 
-
-        menuCarne.addAllPortate(Arrays.asList(arrosto, manzo, pollo));
-
         arrosto.getListaAllergeni().add(AllergeniEnum.LATTE);
         manzo.getListaAllergeni().add(AllergeniEnum.LATTE);
         pollo.getListaAllergeni().add(AllergeniEnum.ARACHIDI);
 
-//        menuPesce.addPortata(salmone);
-//        salmone.getListaAllergeni().add(AllergeniEnum.PESCE);
-//        menuPesce.addPortata(gamberi);
-//        gamberi.getListaAllergeni().add(AllergeniEnum.PESCE);
-//        menuPesce.addPortata(orata);
-//        orata.getListaAllergeni().add(AllergeniEnum.PESCE);
-//        orata.getListaAllergeni().add(AllergeniEnum.GLUTINE);
-//        menuVegan.addPortata(polpette);
-//        menuVegan.addPortata(tofu);
-//        menuVegan.addPortata(seitan);
-//        seitan.getListaAllergeni().add(AllergeniEnum.SENAPE);
-
-        //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "D E S S E R T" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
+        // Dessert
         Portata dessert1 = new Dessert("Creme Brulee", 2.30,
                 "Crema inglese cotta e sormontata da una sfoglia croccante di zucchero caramellato",
                 TipoDessertEnum.CREMA, ChefStellatiEnum.MARIO_PARMEGGIANI,
@@ -208,21 +166,15 @@ public class Main {
                 TipoDessertEnum.FRUTTA, ChefStellatiEnum.VICKY_LAU,
                 "succo di anguria amido di frumento, zucchero di canna, anice, gocce di cioccolato fondente");
 
-        //TODO aggiungere tramite menuCarne.addAllPortate(Arrays.asList(portata1, portata2, ecc...))
-        menuCarne.addPortata(dessert1);
-        dessert1.getListaAllergeni().add(AllergeniEnum.LATTE);
-        menuCarne.addPortata(dessert2);
+        dessert1.addAllergeni(AllergeniEnum.LATTE);
         dessert2.getListaAllergeni().add(AllergeniEnum.LATTE);
-        menuCarne.addPortata(dessert3);
         dessert3.getListaAllergeni().add(AllergeniEnum.LATTE);
-        menuCarne.addPortata(dessert4);
         dessert4.getListaAllergeni().add(AllergeniEnum.UOVA);
         dessert4.getListaAllergeni().add(AllergeniEnum.LATTE);
-        menuCarne.addPortata(dessert5);
         dessert5.getListaAllergeni().add(AllergeniEnum.LATTE);
-        menuCarne.addPortata(dessert6);
 
-        //System.out.println("\n\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + "B E V A N D E" + UtilityColorEnum.ANSI_RESET.getCodice() + "\n");
+
+        //Bevande
         Portata acqua = new Bevande("Acqua naturale 0.5l", 1.00, "Acqua di Nepi", 0);
         Portata acquaG = new Bevande("Acqua naturale 1l", 2.00, "Boario", 0);
         Portata acquaFrizzante = new Bevande("Acqua frizzante 0.5l", 1.00, "Guizza", 0);
@@ -236,19 +188,12 @@ public class Main {
         Portata birraRossa = new Bevande("Birra rossa 0.25cl", 4.00, "Peroni Gran Riserva", 6);
         Portata birraRossaG = new Bevande("Birra rossa 0.5cl", 5.00, "McFarland", 6);
 
-        //TODO aggiungere tramite menuCarne.addAllPortate(Arrays.asList(portata1, portata2, ecc...))
-        menuCarne.addAllPortate(Arrays.asList(acqua, acquaG));
+        menuCarne.addAllPortate(Arrays.asList(anti1, anti2, anti3, primiPiatti1, primiPiatti2, primiPiatti3, arrosto, manzo, pollo,
+                dessert1, dessert2, dessert3, dessert4, dessert5, dessert6, acqua, acquaG, acquaFrizzanteG, acquaFrizzante, cocaColaB,
+                cocaColaL, sprite, fanta, birraBionda, birraBiondaG, birraRossa, birraRossaG));
+        Ristorante ristorante= new Ristorante("Coppa Cicuti","San Giovanni Rotondolo",100);
 
-        menuCarne.addPortata(acquaFrizzante);
-        menuCarne.addPortata(acquaFrizzanteG);
-        menuCarne.addPortata(cocaColaL);
-        menuCarne.addPortata(cocaColaB);
-        menuCarne.addPortata(sprite);
-        menuCarne.addPortata(fanta);
-        menuCarne.addPortata(birraBionda);
-        menuCarne.addPortata(birraBiondaG);
-        menuCarne.addPortata(birraRossa);
-        menuCarne.addPortata(birraRossaG);
+        ristorante.impostazioni();
 
         menuCarne.printMenu();
 
