@@ -204,11 +204,14 @@ public class Main {
         menuCarne.addAllPortate(Arrays.asList(anti1, anti2, anti3, primiPiatti1, primiPiatti2, primiPiatti3, arrosto, manzo, pollo,
                 dessert1, dessert2, dessert3, dessert4, dessert5, dessert6, acqua, acquaG, acquaFrizzanteG, acquaFrizzante, cocaColaB,
                 cocaColaL, sprite, fanta, birraBionda, birraBiondaG, birraRossa, birraRossaG));
-        Ristorante ristorante= new Ristorante("Coppa Cicuti","San Giovanni Rotondolo",100);
+        Ristorante ristorante= new Ristorante("Coppa Cicuti","San Giovanni Rotondolo","\n\n\t\t\t" + UtilityColorEnum.ANSI_YELLOW_BACKGROUND.getCodice() + UtilityColorEnum.ANSI_BLACK.getCodice() +
+                "  C O P P A  C I C U T I  " + UtilityColorEnum.ANSI_RESET.getCodice() + "\n" + "\t\t\t" + "L'esperienza che ferma il tempo\n" +
+                "Le lancette rallentano il loro avanzare, nell’aria il racconto di piatti che emozionano al primo sguardo."
+                + "\n" + " Danzatori silenziosi si muovono intorno a te per regalarti lo spettacolo di un servizio impeccabile,"
+                + "\n" + " in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, " +
+                "benvenuti nel Ristorante di Coppa Cicuti." + "\n\t", "50 €", "⭐⭐⭐⭐⭐", 200);
 
-        ristorante.impostazioni();
-
-        menuCarne.printMenu();
+       ristorante.printGlobale(menuCarne);
 
 
     }

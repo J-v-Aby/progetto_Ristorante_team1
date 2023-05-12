@@ -67,7 +67,7 @@ public abstract class Portata {
             StringBuilder sumAllerg = new StringBuilder("Allergeni: ");
             Iterator<AllergeniEnum> iterator = listaAllergeni.iterator();
             while (iterator.hasNext()) {
-                sumAllerg.append(UtilityColorEnum.ANSI_RED.getCodice() + iterator.next().getNomeAllergene());
+                sumAllerg.append(UtilityColorEnum.ANSI_RED.getCodice()).append(iterator.next().getNomeAllergene());
                 if (iterator.hasNext()) {
                     sumAllerg.append(", ");
                 }
@@ -88,9 +88,9 @@ public abstract class Portata {
         while (stringBuilder.length() < 80) {
             stringBuilder.append(" ");
         }
-        stringBuilder.append(UtilityColorEnum.ANSI_YELLOW.getCodice() + prezzo + UtilityColorEnum.ANSI_RESET.getCodice() + " €" + "\n" + descrizione);
+        stringBuilder.append(UtilityColorEnum.ANSI_YELLOW.getCodice()).append(prezzo).append(UtilityColorEnum.ANSI_RESET.getCodice()).append(" €").append("\n").append(descrizione);
 
-        stringBuilder.append("\n" + allergeniChecker());
+        stringBuilder.append("\n").append(allergeniChecker());
         System.out.println(stringBuilder);
     }
 }
