@@ -55,6 +55,14 @@ public class Main {
                 "Slices of grilled aubergines filled with cous cous with seasonal vegetables cooked in a pan.",
                 TipoPiattoEnum.BIOLOGICO);
 
+         anti1.addAllergeni(AllergeniEnum.LATTE);
+         anti2.addAllergeni(AllergeniEnum.NICKEL);
+     //    anti4.addAllergeni(AllergeniEnum.PESCE);
+     //    anti5.addAllergeni(AllergeniEnum.PESCE);
+     //    anti6.addAllergeni(AllergeniEnum.CROSTACEI);
+     //    anti8.addAllergeni(AllergeniEnum.LATTE);
+
+
         //PRIMI
 
         Portata primiPiatti1 = new PrimiPiatti("Cannelloni alla genovese e sedano ", 13.0,
@@ -88,14 +96,14 @@ public class Main {
                 true, 25);
 
 
-        primiPiatti1.getListaAllergeni().add(AllergeniEnum.SEDANO);
-        primiPiatti2.getListaAllergeni().add(AllergeniEnum.LATTE);
-//        primiPiatti4.getListaAllergeni().add(AllergeniEnum.CROSTACEI);
-//        primiPiatti5.getListaAllergeni().add(AllergeniEnum.NICKEL);
-//        primiPiatti6.getListaAllergeni().add(AllergeniEnum.MOLLUSCHI);
-//        primiPiatti7.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
-//        primiPiatti8.getListaAllergeni().add(AllergeniEnum.GLUTINE);
-//        primiPiatti9.getListaAllergeni().add(AllergeniEnum.FRUTTA_A_GUSCIO);
+        primiPiatti1.addAllergeni(AllergeniEnum.SEDANO);
+        primiPiatti2.addAllergeni(AllergeniEnum.LATTE);
+    //    primiPiatti4.addAllergeni(AllergeniEnum.CROSTACEI);
+    //    primiPiatti5.addAllergeni(AllergeniEnum.NICKEL);
+    //    primiPiatti6.addAllergeni(AllergeniEnum.CROSTACEI);
+    //    primiPiatti7.addAllergeni(AllergeniEnum.NICKEL);
+    //    primiPiatti8.addAllergeni(AllergeniEnum.GLUTINE);
+    //    primiPiatti9.addAllergeni(AllergeniEnum.FRUTTA_A_GUSCIO);
 
 
         // SECONDI
@@ -117,7 +125,7 @@ public class Main {
                 "spiedini di gamberi e calamari grigliati e conditi con prezzemolo",
                 "Insalata", CotturaEnum.COTTA);
         Portata orata = new SecondiPiatti("Sandwich di orata alla siciliana", 12.0,
-                "panini senza glutine farciti con filetti di orata cotti al forno e una crema di pomodorini secchi, capperi e olive",
+                                   "panini senza glutine farciti con filetti di orata cotti al forno e una crema di pomodorini secchi, capperi e olive",
                 "Patatine fritte", CotturaEnum.MEDIA);
         // Vegan
         Portata polpette = new SecondiPiatti("Polpette di lenticchie", 8.0,
@@ -130,9 +138,14 @@ public class Main {
                 "seitan stufato con vino rosso, cipolla, rosmarino e senape",
                 "Funghi porcini", CotturaEnum.MEDIA);
 
-        arrosto.getListaAllergeni().add(AllergeniEnum.LATTE);
-        manzo.getListaAllergeni().add(AllergeniEnum.LATTE);
-        pollo.getListaAllergeni().add(AllergeniEnum.ARACHIDI);
+        arrosto.addAllergeni(AllergeniEnum.LATTE);
+        manzo.addAllergeni(AllergeniEnum.LATTE);
+        pollo.addAllergeni(AllergeniEnum.ARACHIDI);
+        // gamberi.addAllergeni(AllergeniEnum.CROSTACEI);
+        // orata.addAllergeni(AllergeniEnum.NICKEL);
+        // polpette.addAllergeni(AllergeniEnum.GLUTINE);
+
+
 
         // Dessert
         Portata dessert1 = new Dessert("Creme Brulee", 2.30,
@@ -167,11 +180,11 @@ public class Main {
                 "succo di anguria amido di frumento, zucchero di canna, anice, gocce di cioccolato fondente");
 
         dessert1.addAllergeni(AllergeniEnum.LATTE);
-        dessert2.getListaAllergeni().add(AllergeniEnum.LATTE);
-        dessert3.getListaAllergeni().add(AllergeniEnum.LATTE);
-        dessert4.getListaAllergeni().add(AllergeniEnum.UOVA);
-        dessert4.getListaAllergeni().add(AllergeniEnum.LATTE);
-        dessert5.getListaAllergeni().add(AllergeniEnum.LATTE);
+        dessert2.addAllergeni(AllergeniEnum.LATTE);
+        dessert3.addAllergeni(AllergeniEnum.LATTE);
+        dessert4.addAllergeni(AllergeniEnum.UOVA);
+        dessert4.addAllergeni(AllergeniEnum.LATTE);
+        dessert5.addAllergeni(AllergeniEnum.LATTE);
 
 
         //Bevande
