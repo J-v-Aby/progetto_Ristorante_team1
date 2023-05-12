@@ -1,4 +1,5 @@
 package enumPackage;
+
 /**
  * Enum che permette di inserire il tipo di allergene
  * presente nella portata.
@@ -16,10 +17,12 @@ public enum AllergeniEnum {
     SENAPE("Senape"),
     NICKEL("Nickel");
     private final String nomeAllergene;
+
     AllergeniEnum(String nomeAllergene) {
         this.nomeAllergene = nomeAllergene;
 
     }
+
     public String getNomeAllergene() {
         return nomeAllergene;
     }

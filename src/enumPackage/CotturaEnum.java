@@ -9,9 +9,11 @@ public enum CotturaEnum {
     MEDIA("Cottura media"),
     COTTA("Ben cotta");
     private final String tipoCottura;
+
     CotturaEnum(String tipoCottura) {
         this.tipoCottura = tipoCottura;
     }
+
     public String getTipoCottura() {
         return tipoCottura;
     }

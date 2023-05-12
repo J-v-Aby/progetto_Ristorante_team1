@@ -3,17 +3,17 @@ package portate;
 import enumPackage.ChefStellatiEnum;
 import enumPackage.TipoDessertEnum;
 
-public class Dessert extends Portata{
+public class Dessert extends Portata {
 
     private TipoDessertEnum tipoDessert;
     private ChefStellatiEnum chef;
     private String ingredienti;
 
-    public Dessert(String nome, Double prezzo, String descrizione, TipoDessertEnum tipoDessertEnum, ChefStellatiEnum chef, String ingredienti ) {
+    public Dessert(String nome, Double prezzo, String descrizione, TipoDessertEnum tipoDessertEnum, ChefStellatiEnum chef, String ingredienti) {
         super(nome, prezzo, descrizione);
-        this.tipoDessert= tipoDessertEnum;
-        this.chef=chef;
-        this.ingredienti =ingredienti;
+        this.tipoDessert = tipoDessertEnum;
+        this.chef = chef;
+        this.ingredienti = ingredienti;
     }
 
     public TipoDessertEnum getTipoDessert() {
@@ -43,7 +43,7 @@ public class Dessert extends Portata{
     @Override
     public void print() {
         super.print();
-        System.out.println("A base di "+tipoDessert +"\n"+ "Chef: "+chef.getNomeChef()+ "\n"+ "Ingredienti: "+"\n" + ingredienti);
+        System.out.println("A base di " + tipoDessert + "\n" + "Chef: " + chef.getNomeChef() + "\n" + "Ingredienti: " + "\n" + ingredienti);
     }
 }
 

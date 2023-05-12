@@ -5,22 +5,16 @@ import enumPackage.UtilityColorEnum;
 import portate.*;
 
 
-import javax.xml.crypto.Data;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Year;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-
-import static enumPackage.StagioniEnum.INVERNO;
 
 public class Menu {
     private String nome;
     private ArrayList<Portata> portate;
     private TipologiaEnum tipoMenu;
-    private Calendar date;
 
     private double prezzoMedio;
     private ChefStellatiEnum chef;
@@ -29,7 +23,6 @@ public class Menu {
         this.nome = nome;
         this.tipoMenu = tipoMenu;
         this.portate = new ArrayList<>();
-        this.date = Calendar.getInstance();
         this.prezzoMedio = prezzoMedio;
         this.chef = chef;
     }
@@ -37,6 +30,7 @@ public class Menu {
     public void addPortata(Portata antipasti) {
         portate.add(antipasti);
     }
+
     public void addAllPortate(List<Portata> portatas) {
         portate.addAll(portatas);
     }
@@ -50,8 +44,7 @@ public class Menu {
      * <p>Metodo che stampa il menù completo con il colore dell'intestazione delle portate, in base alla Stagione.
      * Il metodo utilizza la classe LocalDate per ottenere la data corrente e poi la confronta con le variabili rappresentanti
      * l'inizio e fine delle stagioni
-     </p>
-     *
+     * </p>
      */
     public void printMenu() {
         LocalDate data = LocalDate.now();
@@ -65,16 +58,16 @@ public class Menu {
         LocalDate fineInverno = LocalDate.of(Year.now().getValue(), Month.DECEMBER, 23);
 
         StagioniEnum stagione = null;
-        if (data.isAfter(inizioPrimavera)&& data.isBefore(finePrimavera)){
+        if (data.isAfter(inizioPrimavera) && data.isBefore(finePrimavera)) {
             stagione = StagioniEnum.PRIMAVERA;
         }
-        if (data.isAfter(inizioEstate)&& data.isBefore(fineEstate)){
+        if (data.isAfter(inizioEstate) && data.isBefore(fineEstate)) {
             stagione = StagioniEnum.ESTATE;
         }
-        if (data.isAfter(inizioAutunno)&& data.isBefore(fineAutunno)){
+        if (data.isAfter(inizioAutunno) && data.isBefore(fineAutunno)) {
             stagione = StagioniEnum.AUTUNNO;
         }
-        if (data.isAfter(inizioInverno)&& data.isBefore(fineInverno)){
+        if (data.isAfter(inizioInverno) && data.isBefore(fineInverno)) {
             stagione = StagioniEnum.INVERNO;
         }
 
@@ -90,39 +83,6 @@ public class Menu {
         portate.stream().filter(bevanda -> bevanda instanceof Bevande).forEach(bevanda -> bevanda.print());
     }
 
-    public Calendar getDate() {
-        return date;
-    }
-
-    public void setDate(Calendar date) {
-        this.date = date;
-    }
-
-    /**
-     * Qui impostiamo la data odierna tramite la classe Calendar per poi impostare i giorni di natale e stampare il
-     * relativo messaggio.
-     */
-
-    public void printMessaggioFestivita() {
-        int giornoOggi = date.get(Calendar.DAY_OF_MONTH);
-        int meseOggi = date.get(Calendar.MONTH) + 1;
-
-        if (giornoOggi == 15 && meseOggi == 8) { //if(giornoOggi == 25 && meseOggi == 12)
-            System.out.println("\nBuon Ferragosto da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
-        }
-
-        if (giornoOggi >=23 && giornoOggi <= 26 && meseOggi == 12) { //if(giornoOggi == 25 && meseOggi == 12)
-            System.out.println("\nBuon Natale da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
-        }
-
-        if (giornoOggi >= 27 && giornoOggi <= 31 && meseOggi == 12) { //if(giornoOggi == 25 && meseOggi == 12)
-            System.out.println("\nBuon anno nuovo da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
-        }
-
-        if (giornoOggi >= 1 && giornoOggi <= 3 && meseOggi == 1) { //if(giornoOggi == 25 && meseOggi == 12)
-            System.out.println("\nBuon anno nuovo da Coppa Cicuti! Per l'occasione il giro di ammazzacaffè lo paga Michele.");
-        }
-    }
 
 }
 

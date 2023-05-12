@@ -1,17 +1,15 @@
 import enumPackage.*;
 import portate.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.Month;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-//        // HEADER
 
         Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE, 50.00, ChefStellatiEnum.MARCUS_SAMUELSSON);
-        menuCarne.printMessaggioFestivita();
+
 
         //carne
         Portata anti1 = new Antipasti("Carpaccio di manzo", 10.50,
@@ -55,12 +53,12 @@ public class Main {
                 "Slices of grilled aubergines filled with cous cous with seasonal vegetables cooked in a pan.",
                 TipoPiattoEnum.BIOLOGICO);
 
-         anti1.addAllergeni(AllergeniEnum.LATTE);
-         anti2.addAllergeni(AllergeniEnum.NICKEL);
-     //    anti4.addAllergeni(AllergeniEnum.PESCE);
-     //    anti5.addAllergeni(AllergeniEnum.PESCE);
-     //    anti6.addAllergeni(AllergeniEnum.CROSTACEI);
-     //    anti8.addAllergeni(AllergeniEnum.LATTE);
+        anti1.addAllergeni(AllergeniEnum.LATTE);
+        anti2.addAllergeni(AllergeniEnum.NICKEL);
+        //    anti4.addAllergeni(AllergeniEnum.PESCE);
+        //    anti5.addAllergeni(AllergeniEnum.PESCE);
+        //    anti6.addAllergeni(AllergeniEnum.CROSTACEI);
+        //    anti8.addAllergeni(AllergeniEnum.LATTE);
 
 
         //PRIMI
@@ -98,12 +96,12 @@ public class Main {
 
         primiPiatti1.addAllergeni(AllergeniEnum.SEDANO);
         primiPiatti2.addAllergeni(AllergeniEnum.LATTE);
-    //    primiPiatti4.addAllergeni(AllergeniEnum.CROSTACEI);
-    //    primiPiatti5.addAllergeni(AllergeniEnum.NICKEL);
-    //    primiPiatti6.addAllergeni(AllergeniEnum.CROSTACEI);
-    //    primiPiatti7.addAllergeni(AllergeniEnum.NICKEL);
-    //    primiPiatti8.addAllergeni(AllergeniEnum.GLUTINE);
-    //    primiPiatti9.addAllergeni(AllergeniEnum.FRUTTA_A_GUSCIO);
+        //    primiPiatti4.addAllergeni(AllergeniEnum.CROSTACEI);
+        //    primiPiatti5.addAllergeni(AllergeniEnum.NICKEL);
+        //    primiPiatti6.addAllergeni(AllergeniEnum.CROSTACEI);
+        //    primiPiatti7.addAllergeni(AllergeniEnum.NICKEL);
+        //    primiPiatti8.addAllergeni(AllergeniEnum.GLUTINE);
+        //    primiPiatti9.addAllergeni(AllergeniEnum.FRUTTA_A_GUSCIO);
 
 
         // SECONDI
@@ -125,7 +123,7 @@ public class Main {
                 "spiedini di gamberi e calamari grigliati e conditi con prezzemolo",
                 "Insalata", CotturaEnum.COTTA);
         Portata orata = new SecondiPiatti("Sandwich di orata alla siciliana", 12.0,
-                                   "panini senza glutine farciti con filetti di orata cotti al forno e una crema di pomodorini secchi, capperi e olive",
+                "panini senza glutine farciti con filetti di orata cotti al forno e una crema di pomodorini secchi, capperi e olive",
                 "Patatine fritte", CotturaEnum.MEDIA);
         // Vegan
         Portata polpette = new SecondiPiatti("Polpette di lenticchie", 8.0,
@@ -144,7 +142,6 @@ public class Main {
         // gamberi.addAllergeni(AllergeniEnum.CROSTACEI);
         // orata.addAllergeni(AllergeniEnum.NICKEL);
         // polpette.addAllergeni(AllergeniEnum.GLUTINE);
-
 
 
         // Dessert
@@ -204,14 +201,17 @@ public class Main {
         menuCarne.addAllPortate(Arrays.asList(anti1, anti2, anti3, primiPiatti1, primiPiatti2, primiPiatti3, arrosto, manzo, pollo,
                 dessert1, dessert2, dessert3, dessert4, dessert5, dessert6, acqua, acquaG, acquaFrizzanteG, acquaFrizzante, cocaColaB,
                 cocaColaL, sprite, fanta, birraBionda, birraBiondaG, birraRossa, birraRossaG));
-        Ristorante ristorante= new Ristorante("Coppa Cicuti","San Giovanni Rotondolo","\n\n\t\t\t" + UtilityColorEnum.ANSI_YELLOW_BACKGROUND.getCodice() + UtilityColorEnum.ANSI_BLACK.getCodice() +
+        Ristorante ristorante = new Ristorante("Coppa Cicuti", "San Giovanni Rotondolo", "\n\n\t\t\t" + UtilityColorEnum.ANSI_YELLOW_BACKGROUND.getCodice() + UtilityColorEnum.ANSI_BLACK.getCodice() +
                 "  C O P P A  C I C U T I  " + UtilityColorEnum.ANSI_RESET.getCodice() + "\n" + "\t\t\t" + "L'esperienza che ferma il tempo\n" +
                 "Le lancette rallentano il loro avanzare, nell’aria il racconto di piatti che emozionano al primo sguardo."
                 + "\n" + " Danzatori silenziosi si muovono intorno a te per regalarti lo spettacolo di un servizio impeccabile,"
                 + "\n" + " in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, " +
                 "benvenuti nel Ristorante di Coppa Cicuti." + "\n\t", "50 €", "⭐⭐⭐⭐⭐", 200);
 
-       ristorante.printGlobale(menuCarne);
+        ristorante.getMappaMenu().put(TipologiaEnum.CARNE, menuCarne);
+
+        Cliente cliente1 = new Cliente("Mario Rossi", TipologiaEnum.CARNE, 3, LocalDate.of(2023, Month.JULY, 28));
+        ristorante.printGlobale(cliente1.getMenuPreferito());
 
 
     }

@@ -1,10 +1,10 @@
-        package enumPackage;
+package enumPackage;
 
 public enum TipoPiattoEnum {
 
     /**
      * l'enum TipoPiatto serve per aggiungere un commento riguardo al tipo di piatto, se è biologico, km zero ecc.
-     *
+     * <p>
      * Questi codici rappresentano le emoji.
      */
 
