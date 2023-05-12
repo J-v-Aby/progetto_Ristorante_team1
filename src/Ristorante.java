@@ -3,12 +3,15 @@ import portate.Portata;
 
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Ristorante {
     private String nome;
     private String indirizzo;
     private String descrizione;
+
+    //TODO non sarà mai string sarà un numero
     private String prezzoMedio;
     private String recensioni;
     private Integer numeroCoperti;
@@ -16,6 +19,7 @@ public class Ristorante {
     private Portata piattoDelGiorno;
 
     private Map<TipologiaEnum, Menu> mappaMenu;
+    private List<Menu>  menuList;
 
     private Calendar date;
 
@@ -141,6 +145,13 @@ public class Ristorante {
     public void printGlobale(TipologiaEnum tipoMenu) {
         System.out.print(descrizione);
         printMessaggioFestivita();
+
+        for (Menu menu: menuList) {
+          if(menu.getType() == tipoMenu){
+              menu.printMenu();
+          }
+        }
+
         mappaMenu.get(tipoMenu).printMenu();
     }
 }

@@ -16,6 +16,7 @@ public class Menu {
     private ArrayList<Portata> portate;
     private TipologiaEnum tipoMenu;
 
+    //TODO rifattorizzare con oggetti :double
     private double prezzoMedio;
     private ChefStellatiEnum chef;
 

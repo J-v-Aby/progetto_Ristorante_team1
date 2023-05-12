@@ -3,6 +3,8 @@ import enumPackage.TipologiaEnum;
 import java.time.LocalDate;
 
 public class Cliente {
+
+    //TODO fare due campi
     private String nomeCognome;
     private TipologiaEnum menuPreferito;
     private Integer postiPrenotati;
@@ -46,4 +48,7 @@ public class Cliente {
     public void setDataPrenotazione(LocalDate dataPrenotazione) {
         this.dataPrenotazione = dataPrenotazione;
     }
+
+
+    //TODO metodo per stampare le info
 }
