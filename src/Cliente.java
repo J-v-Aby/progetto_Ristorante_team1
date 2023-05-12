@@ -3,10 +3,10 @@ import enumPackage.TipologiaEnum;
 import java.time.LocalDate;
 
 public class Cliente {
-    String nomeCognome;
-    TipologiaEnum menuPreferito;
-    Integer postiPrenotati;
-    LocalDate dataPrenotazione;
+    private String nomeCognome;
+    private TipologiaEnum menuPreferito;
+    private Integer postiPrenotati;
+    private LocalDate dataPrenotazione;
 
     public Cliente(String nomeCognome, TipologiaEnum menuPreferito, Integer postiPrenotati, LocalDate dataPrenotazione) {
         this.nomeCognome = nomeCognome;
