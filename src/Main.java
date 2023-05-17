@@ -206,13 +206,13 @@ public class Main {
                 "Le lancette rallentano il loro avanzare, nell’aria il racconto di piatti che emozionano al primo sguardo."
                 + "\n" + " Danzatori silenziosi si muovono intorno a te per regalarti lo spettacolo di un servizio impeccabile,"
                 + "\n" + " in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, " +
-                "benvenuti nel Ristorante di Coppa Cicuti." + "\n\t", "50 €", "⭐⭐⭐⭐⭐", 200);
+                "benvenuti nel Ristorante di Coppa Cicuti." + "\n\t", 50.0, "⭐⭐⭐⭐⭐", 200);
 
         ristorante.getMappaMenu().put(TipologiaEnum.CARNE, menuCarne);
 
         Cliente cliente1 = new Cliente("Mario Rossi", TipologiaEnum.CARNE, 3, LocalDate.of(2023, Month.JULY, 28));
-        ristorante.printGlobale(cliente1.getMenuPreferito());
+       // ristorante.printGlobale(cliente1.getMenuPreferito());
 
-
+ristorante.prenotaTavolo(259);
     }
 }

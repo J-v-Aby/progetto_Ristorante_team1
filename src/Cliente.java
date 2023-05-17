@@ -10,7 +10,7 @@ public class Cliente {
     private Integer postiPrenotati;
     private LocalDate dataPrenotazione;
 
-    public Cliente(String nomeCognome, TipologiaEnum menuPreferito, Integer postiPrenotati, LocalDate dataPrenotazione) {
+    public Cliente(String nomeCognome, TipologiaEnum menuPreferito, Integer postiPrenotati,LocalDate dataPrenotazione) {
         this.nomeCognome = nomeCognome;
         this.menuPreferito = menuPreferito;
         this.postiPrenotati = postiPrenotati;

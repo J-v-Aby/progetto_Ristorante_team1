@@ -10,11 +10,11 @@ public class Ristorante {
     private String nome;
     private String indirizzo;
     private String descrizione;
-
-    //TODO non sarà mai string sarà un numero
-    private String prezzoMedio;
+    private Double prezzoMedio;
     private String recensioni;
     private Integer numeroCoperti;
+    private Integer numeroCopertiPrenotati;
+private Map<Ristorante,Cliente> prenotazioneCliente;
 
     private Portata piattoDelGiorno;
 
@@ -27,7 +27,7 @@ public class Ristorante {
     //nel main chiamare ristorante.prenota(cliente,tavolo) stampare la prenotazione e poi il menù in base al tipo di cliente(vegano,carn ecc ecc)
 
 
-    public Ristorante(String nome, String indirizzo, String descrizione, String prezzoMedio, String recensioni, Integer numeroCoperti) {
+    public Ristorante(String nome, String indirizzo, String descrizione, Double prezzoMedio, String recensioni, Integer numeroCoperti) {
         this.nome = nome;
         this.indirizzo = indirizzo;
         this.descrizione = descrizione;
@@ -36,6 +36,15 @@ public class Ristorante {
         this.numeroCoperti = numeroCoperti;
         this.mappaMenu = new HashMap<>();
         this.date = Calendar.getInstance();
+    }
+
+    public Map<Ristorante, Cliente> getPrenotazioneCliente() {
+        return prenotazioneCliente;
+    }
+
+    public void setPrenotazioneCliente(Map<Ristorante, Cliente> prenotazioneCliente) {
+        if (prenotaTavolo())
+        this.prenotazioneCliente = prenotazioneCliente;
     }
 
     public String getNome() {
@@ -62,16 +71,24 @@ public class Ristorante {
         this.descrizione = descrizione;
     }
 
-    public String getPrezzoMedio() {
+    public Double getPrezzoMedio() {
         return prezzoMedio;
     }
 
-    public void setPrezzoMedio(String prezzoMedio) {
+    public void setPrezzoMedio(Double prezzoMedio) {
         this.prezzoMedio = prezzoMedio;
     }
 
     public String getRecensioni() {
         return recensioni;
+    }
+
+    public Integer getNumeroCopertiPrenotati() {
+        return numeroCopertiPrenotati;
+    }
+
+    public void setNumeroCopertiPrenotati(Integer numeroCopertiPrenotati) {
+        this.numeroCopertiPrenotati = numeroCopertiPrenotati;
     }
 
     public void setRecensioni(String recensioni) {
@@ -140,9 +157,10 @@ public class Ristorante {
      * metodo per stampare l'intestazione + il menu utilizzando come chiave della mappa da cui prendere il menu
      * un parametro di TipologiaEnum
      *
-     * @param tipoMenu
+     * @param //tipoMenu
      */
-    public void printGlobale(TipologiaEnum tipoMenu) {
+    //TODO
+    /*public void printGlobale(TipologiaEnum tipoMenu) {
         System.out.print(descrizione);
         printMessaggioFestivita();
 
@@ -153,5 +171,20 @@ public class Ristorante {
         }
 
         mappaMenu.get(tipoMenu).printMenu();
+    }*/
+    public Integer prenotaTavolo (Integer prenotazione) {
+        if ( prenotazione %2==0){
+             numeroCopertiPrenotati=prenotazione/2;
+           numeroCoperti-= numeroCopertiPrenotati++;
+        }else {numeroCopertiPrenotati= ((prenotazione/2)+1);
+       numeroCoperti-= numeroCopertiPrenotati++;}
+        if(numeroCoperti>=0){
+            System.out.println("il tavolo é disponiblie ");
+            System.out.println( "restano "+ numeroCoperti+ " tavoli disponibili" );
+       return numeroCopertiPrenotati; }
+       System.out.println("impossibile prenotare, tavoli insufficienti");
+        return numeroCoperti;
     }
-}
+
+
+    }
