@@ -28,6 +28,46 @@ public class Menu {
         this.chef = chef;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public ArrayList<Portata> getPortate() {
+        return portate;
+    }
+
+    public void setPortate(ArrayList<Portata> portate) {
+        this.portate = portate;
+    }
+
+    public TipologiaEnum getTipoMenu() {
+        return tipoMenu;
+    }
+
+    public void setTipoMenu(TipologiaEnum tipoMenu) {
+        this.tipoMenu = tipoMenu;
+    }
+
+    public double getPrezzoMedio() {
+        return prezzoMedio;
+    }
+
+    public void setPrezzoMedio(double prezzoMedio) {
+        this.prezzoMedio = prezzoMedio;
+    }
+
+    public ChefStellatiEnum getChef() {
+        return chef;
+    }
+
+    public void setChef(ChefStellatiEnum chef) {
+        this.chef = chef;
+    }
+
     public void addPortata(Portata antipasti) {
         portate.add(antipasti);
     }

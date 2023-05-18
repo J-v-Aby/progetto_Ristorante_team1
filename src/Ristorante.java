@@ -1,10 +1,7 @@
 import enumPackage.TipologiaEnum;
 import portate.Portata;
 
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Ristorante {
     private String nome;
@@ -14,12 +11,8 @@ public class Ristorante {
     private String recensioni;
     private Integer numeroCoperti;
     private Integer numeroCopertiPrenotati;
-private Map<Ristorante,Cliente> prenotazioneCliente;
-
     private Portata piattoDelGiorno;
-
-    private Map<TipologiaEnum, Menu> mappaMenu;
-    private List<Menu>  menuList;
+    private List<Menu> menuList;
 
     private Calendar date;
 
@@ -34,17 +27,8 @@ private Map<Ristorante,Cliente> prenotazioneCliente;
         this.prezzoMedio = prezzoMedio;
         this.recensioni = recensioni;
         this.numeroCoperti = numeroCoperti;
-        this.mappaMenu = new HashMap<>();
+        this.menuList = new ArrayList<>();
         this.date = Calendar.getInstance();
-    }
-
-    public Map<Ristorante, Cliente> getPrenotazioneCliente() {
-        return prenotazioneCliente;
-    }
-
-    public void setPrenotazioneCliente(Map<Ristorante, Cliente> prenotazioneCliente) {
-        if (prenotaTavolo())
-        this.prenotazioneCliente = prenotazioneCliente;
     }
 
     public String getNome() {
@@ -111,14 +95,13 @@ private Map<Ristorante,Cliente> prenotazioneCliente;
         this.piattoDelGiorno = piattoDelGiorno;
     }
 
-    public Map<TipologiaEnum, Menu> getMappaMenu() {
-        return mappaMenu;
+    public List<Menu> getMenuList() {
+        return menuList;
     }
 
-    public void setMappaMenu(Map<TipologiaEnum, Menu> mappaMenu) {
-        this.mappaMenu = mappaMenu;
+    public void setMenuList(List<Menu> menuList) {
+        this.menuList = menuList;
     }
-
 
     public Calendar getDate() {
         return date;
@@ -154,37 +137,35 @@ private Map<Ristorante,Cliente> prenotazioneCliente;
     }
 
     /**
-     * metodo per stampare l'intestazione + il menu utilizzando come chiave della mappa da cui prendere il menu
+     * metodo per stampare l'intestazione + il menu utilizzando come parametro il field tipoMenu del menu che si vuole stampare
      * un parametro di TipologiaEnum
      *
      * @param //tipoMenu
      */
-    //TODO
-    /*public void printGlobale(TipologiaEnum tipoMenu) {
+    public void printGlobale() {
         System.out.print(descrizione);
         printMessaggioFestivita();
+    }
 
-        for (Menu menu: menuList) {
-          if(menu.getType() == tipoMenu){
-              menu.printMenu();
-          }
+    public void prenotaTavolo(Integer prenotazione) {
+        if (prenotazione % 2 == 0) {
+            numeroCopertiPrenotati = prenotazione / 2;
+            numeroCoperti -= numeroCopertiPrenotati++;
+        } else {
+            numeroCopertiPrenotati = ((prenotazione / 2) + 1);
+            numeroCoperti -= numeroCopertiPrenotati++;
         }
-
-        mappaMenu.get(tipoMenu).printMenu();
-    }*/
-    public Integer prenotaTavolo (Integer prenotazione) {
-        if ( prenotazione %2==0){
-             numeroCopertiPrenotati=prenotazione/2;
-           numeroCoperti-= numeroCopertiPrenotati++;
-        }else {numeroCopertiPrenotati= ((prenotazione/2)+1);
-       numeroCoperti-= numeroCopertiPrenotati++;}
-        if(numeroCoperti>=0){
+        if (numeroCoperti >= 0) {
             System.out.println("il tavolo é disponiblie ");
-            System.out.println( "restano "+ numeroCoperti+ " tavoli disponibili" );
-       return numeroCopertiPrenotati; }
-       System.out.println("impossibile prenotare, tavoli insufficienti");
-        return numeroCoperti;
+            System.out.println("restano " + numeroCoperti + " tavoli disponibili");
+        }
+        System.out.println("impossibile prenotare, tavoli insufficienti");
     }
 
-
+    public void printMenuCliente(TipologiaEnum tipologiaEnum) {
+        for (Menu menu : menuList)
+            if (menu.getTipoMenu() == tipologiaEnum) {
+                menu.printMenu();
+            }
     }
+}

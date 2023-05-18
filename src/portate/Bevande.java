@@ -1,7 +1,7 @@
 package portate;
 
 public class Bevande extends Portata {
-    private double gradazioneAlcolica;
+    private Double gradazioneAlcolica;
 
     public Bevande(String nome, Double prezzo, String descrizione, double gradazioneAlcolica) {
         super(nome, prezzo, descrizione);

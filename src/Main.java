@@ -1,8 +1,5 @@
 import enumPackage.*;
 import portate.*;
-
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.*;
 
 public class Main {
@@ -208,11 +205,12 @@ public class Main {
                 + "\n" + " in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, " +
                 "benvenuti nel Ristorante di Coppa Cicuti." + "\n\t", 50.0, "⭐⭐⭐⭐⭐", 200);
 
-        ristorante.getMappaMenu().put(TipologiaEnum.CARNE, menuCarne);
+        ristorante.getMenuList().add(menuCarne);
 
-        Cliente cliente1 = new Cliente("Mario Rossi", TipologiaEnum.CARNE, 3, LocalDate.of(2023, Month.JULY, 28));
-       // ristorante.printGlobale(cliente1.getMenuPreferito());
 
-ristorante.prenotaTavolo(259);
+        Cliente cliente1 = new Cliente("Mario", "Rossi",  "320", TipologiaEnum.CARNE);
+        cliente1.printInfo();
+        ristorante.printGlobale();
+        ristorante.printMenuCliente(cliente1.getMenuPreferito());
     }
 }

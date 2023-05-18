@@ -1,28 +1,41 @@
 import enumPackage.TipologiaEnum;
 
-import java.time.LocalDate;
-
 public class Cliente {
 
-    //TODO fare due campi
-    private String nomeCognome;
+    private String nome;
+    private String cognome;
+    private String numeroTelefono;
     private TipologiaEnum menuPreferito;
-    private Integer postiPrenotati;
-    private LocalDate dataPrenotazione;
 
-    public Cliente(String nomeCognome, TipologiaEnum menuPreferito, Integer postiPrenotati,LocalDate dataPrenotazione) {
-        this.nomeCognome = nomeCognome;
+    public Cliente(String nome, String cognome, String numeroTelefono, TipologiaEnum menuPreferito) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.numeroTelefono = numeroTelefono;
         this.menuPreferito = menuPreferito;
-        this.postiPrenotati = postiPrenotati;
-        this.dataPrenotazione = dataPrenotazione;
     }
 
-    public String getNomeCognome() {
-        return nomeCognome;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeCognome(String nomeCognome) {
-        this.nomeCognome = nomeCognome;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCognome() {
+        return cognome;
+    }
+
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+    public String getNumeroTelefono() {
+        return numeroTelefono;
+    }
+
+    public void setNumeroTelefono(String numeroTelefono) {
+        this.numeroTelefono = numeroTelefono;
     }
 
     public TipologiaEnum getMenuPreferito() {
@@ -33,22 +46,11 @@ public class Cliente {
         this.menuPreferito = menuPreferito;
     }
 
-    public Integer getPostiPrenotati() {
-        return postiPrenotati;
+    public void printInfo() {
+        System.out.print(
+                "Nome: " + getNome() +
+                "\nCognome: " + getCognome() +
+                "\nTelefono: " + getNumeroTelefono() +
+                "\nMenù preferito: " + getMenuPreferito() + "\n");
     }
-
-    public void setPostiPrenotati(Integer postiPrenotati) {
-        this.postiPrenotati = postiPrenotati;
-    }
-
-    public LocalDate getDataPrenotazione() {
-        return dataPrenotazione;
-    }
-
-    public void setDataPrenotazione(LocalDate dataPrenotazione) {
-        this.dataPrenotazione = dataPrenotazione;
-    }
-
-
-    //TODO metodo per stampare le info
 }
