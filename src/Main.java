@@ -198,15 +198,38 @@ public class Main {
         menuCarne.addAllPortate(Arrays.asList(anti1, anti2, anti3, primiPiatti1, primiPiatti2, primiPiatti3, arrosto, manzo, pollo,
                 dessert1, dessert2, dessert3, dessert4, dessert5, dessert6, acqua, acquaG, acquaFrizzanteG, acquaFrizzante, cocaColaB,
                 cocaColaL, sprite, fanta, birraBionda, birraBiondaG, birraRossa, birraRossaG));
-        Ristorante ristorante = new Ristorante("Coppa Cicuti", "San Giovanni Rotondolo", "\n\n\t\t\t" + UtilityColorEnum.ANSI_YELLOW_BACKGROUND.getCodice() + UtilityColorEnum.ANSI_BLACK.getCodice() +
+        Ristorante ristorante = new Ristorante("Coppa Cicuti", "San Giovanni Rotondolo", "\n\n\t\t\t"
+                + UtilityColorEnum.ANSI_YELLOW_BACKGROUND.getCodice() + UtilityColorEnum.ANSI_BLACK.getCodice() +
                 "  C O P P A  C I C U T I  " + UtilityColorEnum.ANSI_RESET.getCodice() + "\n" + "\t\t\t" + "L'esperienza che ferma il tempo\n" +
                 "Le lancette rallentano il loro avanzare, nell’aria il racconto di piatti che emozionano al primo sguardo."
                 + "\n" + " Danzatori silenziosi si muovono intorno a te per regalarti lo spettacolo di un servizio impeccabile,"
                 + "\n" + " in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, " +
-                "benvenuti nel Ristorante di Coppa Cicuti." + "\n\t", 50.0, "⭐⭐⭐⭐⭐", 200);
+                "benvenuti nel Ristorante di Coppa Cicuti." + "\n\t", 50.0, "⭐⭐⭐⭐⭐",
+                5,3,2,true);
 
         ristorante.getMenuList().add(menuCarne);
+        Prenotazione p= new Prenotazione(2,"mario rossi");
+ristorante.prenotaTavolo(p);
+        Prenotazione p1= new Prenotazione(4," v");
+        Prenotazione p2= new Prenotazione(1," f");
+        Prenotazione p3= new Prenotazione(2," s");
+        Prenotazione p4= new Prenotazione(4," a");
+        Prenotazione p5= new Prenotazione(2," t");
+        Prenotazione p6= new Prenotazione(5,"Flavio f");
+        Prenotazione p7= new Prenotazione(8,"bob f");
+        Prenotazione cr7= new Prenotazione(8,"cristiano ronaldo");
+        ristorante.prenotaTavolo(p2);
+        ristorante.prenotaTavolo(p3);
+        ristorante.prenotaTavolo(p4);
+        ristorante.prenotaTavolo(p5);
+        ristorante.prenotaTavolo(p6);
+        ristorante.prenotaTavolo(p1);
+        ristorante.prenotaTavolo(p7);
+        ristorante.liberaTavolaDallaCassa(p4);
 
+        ristorante.prenotaTavoloVip(cr7);
+
+        ristorante.prenotaTavolo(p);
 
         Cliente cliente1 = new Cliente("Mario", "Rossi",  "320", TipologiaEnum.CARNE);
         cliente1.printInfo();

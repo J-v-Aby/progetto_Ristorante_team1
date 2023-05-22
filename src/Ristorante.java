@@ -1,3 +1,4 @@
+import enumPackage.TavoliEnum;
 import enumPackage.TipologiaEnum;
 import portate.Portata;
 
@@ -9,8 +10,10 @@ public class Ristorante {
     private String descrizione;
     private Double prezzoMedio;
     private String recensioni;
-    private Integer numeroCoperti;
-    private Integer numeroCopertiPrenotati;
+    private Integer tavoloDaQuattro;
+    private Integer tavoloDaSei;
+    private Integer tavoloDaOtto;
+    private boolean tavoloVip;
     private Portata piattoDelGiorno;
     private List<Menu> menuList;
 
@@ -20,13 +23,17 @@ public class Ristorante {
     //nel main chiamare ristorante.prenota(cliente,tavolo) stampare la prenotazione e poi il menù in base al tipo di cliente(vegano,carn ecc ecc)
 
 
-    public Ristorante(String nome, String indirizzo, String descrizione, Double prezzoMedio, String recensioni, Integer numeroCoperti) {
+    public Ristorante(String nome, String indirizzo, String descrizione, Double prezzoMedio, String recensioni,
+                      Integer tavoloDaQuattro,Integer tavoloDaSei,Integer tavoloDaOtto,boolean tavoloVip) {
         this.nome = nome;
         this.indirizzo = indirizzo;
         this.descrizione = descrizione;
         this.prezzoMedio = prezzoMedio;
         this.recensioni = recensioni;
-        this.numeroCoperti = numeroCoperti;
+        this.tavoloDaQuattro = tavoloDaQuattro;
+        this.tavoloDaSei=tavoloDaSei;
+        this.tavoloDaOtto=tavoloDaOtto;
+        this.tavoloVip=tavoloVip;
         this.menuList = new ArrayList<>();
         this.date = Calendar.getInstance();
     }
@@ -67,28 +74,44 @@ public class Ristorante {
         return recensioni;
     }
 
-    public Integer getNumeroCopertiPrenotati() {
-        return numeroCopertiPrenotati;
+    public Integer getTavoloDaSei() {
+        return tavoloDaSei;
     }
 
-    public void setNumeroCopertiPrenotati(Integer numeroCopertiPrenotati) {
-        this.numeroCopertiPrenotati = numeroCopertiPrenotati;
+    public void setTavoloDaSei(Integer tavoloDaSei) {
+        this.tavoloDaSei = tavoloDaSei;
     }
 
     public void setRecensioni(String recensioni) {
         this.recensioni = recensioni;
     }
 
-    public Integer getNumeroCoperti() {
-        return numeroCoperti;
+    public Integer getTavoloDaQuattro() {
+        return tavoloDaQuattro;
     }
 
-    public void setNumeroCoperti(Integer numeroCoperti) {
-        this.numeroCoperti = numeroCoperti;
+    public void setTavoloDaQuattro(Integer tavoloDaQuattro) {
+        this.tavoloDaQuattro = tavoloDaQuattro;
     }
 
     public Portata getPiattoDelGiorno() {
         return piattoDelGiorno;
+    }
+
+    public Integer getTavoloDaOtto() {
+        return tavoloDaOtto;
+    }
+
+    public void setTavoloDaOtto(Integer tavoloDaOtto) {
+        this.tavoloDaOtto = tavoloDaOtto;
+    }
+
+    public boolean isTavoloVip() {
+        return tavoloVip;
+    }
+
+    public void setTavoloVip(boolean tavoloVip) {
+        this.tavoloVip = tavoloVip;
     }
 
     public void setPiattoDelGiorno(Portata piattoDelGiorno) {
@@ -147,20 +170,52 @@ public class Ristorante {
         printMessaggioFestivita();
     }
 
-    public void prenotaTavolo(Integer prenotazione) {
-        if (prenotazione % 2 == 0) {
-            numeroCopertiPrenotati = prenotazione / 2;
-            numeroCoperti -= numeroCopertiPrenotati++;
-        } else {
-            numeroCopertiPrenotati = ((prenotazione / 2) + 1);
-            numeroCoperti -= numeroCopertiPrenotati++;
-        }
-        if (numeroCoperti >= 0) {
-            System.out.println("il tavolo é disponiblie ");
-            System.out.println("restano " + numeroCoperti + " tavoli disponibili");
-        }
-        System.out.println("impossibile prenotare, tavoli insufficienti");
+    public void prenotaTavolo(Prenotazione prenotazione) {
+        if(prenotazione.getNumeroPosti()<=4&&tavoloDaQuattro>0){
+            prenotazione.equals(TavoliEnum.TAVOLO_4);
+            tavoloDaQuattro-=1;
+            System.out.println( "Singor " + prenotazione.getNomeCliente()+" la prentazione é andata a buon fine");
+        } else if((prenotazione.getNumeroPosti()>4)&&(prenotazione.getNumeroPosti()<=6)&&tavoloDaSei>0){
+            prenotazione.equals(TavoliEnum.TAVOLI_6);
+            tavoloDaSei-=1;
+            System.out.println( "Singor " + prenotazione.getNomeCliente()+" la prentazione é andata a buon fine");
+        } else if((prenotazione.getNumeroPosti()>6)&&(prenotazione.getNumeroPosti()<=8)&&tavoloDaOtto>0){
+            prenotazione.equals(TavoliEnum.TAVOLI_8);
+            tavoloDaOtto-=1;
+            System.out.println( "Singor " + prenotazione.getNomeCliente()+" la prentazione é andata a buon fine");
+        }else {System.out.println( "Singor  "+prenotazione.getNomeCliente()+ "  non ci sono tavoli disponibili al momento ");}
     }
+    public void prenotaTavoloVip(Prenotazione prenotazione){
+        if(tavoloVip==true) {
+            if (prenotazione.getNumeroPosti() <= 4 && tavoloDaQuattro > 0) {
+                prenotazione.equals(TavoliEnum.TAVOLO_4);
+                tavoloDaQuattro -= 1;
+                System.out.println("Singor  " + prenotazione.getNomeCliente() + " la prentazione é andata a buon fine");
+            } else if ((prenotazione.getNumeroPosti() > 4) && (prenotazione.getNumeroPosti() <= 6) && tavoloDaSei > 0) {
+                prenotazione.equals(TavoliEnum.TAVOLI_6);
+                tavoloDaSei -= 1;
+                System.out.println("Singor  " + prenotazione.getNomeCliente() + " la prentazione é andata a buon fine");
+            } else if ((prenotazione.getNumeroPosti() > 6) && (prenotazione.getNumeroPosti() <= 8) && tavoloDaOtto > 0) {
+                prenotazione.equals(TavoliEnum.TAVOLI_8);
+                tavoloDaOtto -= 1;
+                System.out.println("Singor  " + prenotazione.getNomeCliente() + " la prentazione é andata a buon fine");
+            }
+        }
+            System.out.println("Spiacente Signor" + prenotazione.getNomeCliente() +" il nostro ristorante non dispone di area vip");
+}
+public void liberaTavolaDallaCassa(Prenotazione prenotazione ) {
+        if (prenotazione.getNumeroPosti() <= 4 && tavoloDaQuattro >= 0) {
+            prenotazione.equals(TavoliEnum.TAVOLO_4);
+            tavoloDaQuattro += 1;}
+    if (prenotazione.getNumeroPosti()<=6&&tavoloDaSei>0) {
+        prenotazione.equals(TavoliEnum.TAVOLI_6);
+        tavoloDaQuattro += 1;
+    }
+    if(prenotazione.getNumeroPosti()<=8&&tavoloDaOtto>0) {
+        prenotazione.equals(TavoliEnum.TAVOLI_8);
+        tavoloDaQuattro += 1;
+    }
+}
 
     public void printMenuCliente(TipologiaEnum tipologiaEnum) {
         for (Menu menu : menuList)
