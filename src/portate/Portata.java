@@ -99,34 +99,6 @@ public abstract class Portata {
         System.out.println(stringBuilder);
     }
 
-    public void sqlSalva(String nomeTabella, String parametroUno, String parametroDue) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-        DataBaseRisto passUser = new DataBaseRisto();
 
 
-        try (Connection conn = DriverManager.getConnection(
-                passUser.getDB_URL(),
-                passUser.getUSERNAME(),
-                passUser.getPASSWORD());
-             Statement stmt = conn.createStatement();
-        ) {
-            String tabella = "CREATE TABLE IF NOT EXISTS " + nomeTabella + "(" +
-                    "id_portata INTEGER AUTO_INCREMENT, " +
-                    " nome VARCHAR(255) , " +
-                    " prezzo DOUBLE, " +
-                    " descrizione VARCHAR(255)" +
-                    " lista_allergeni VARCHAR(255)" +
-                    " PRIMARY KEY (id)" +
-                    parametroUno + ", " +
-                    parametroDue + ", " +
-                    ");";
-
-
-            stmt.executeUpdate(tabella);
-            conn.close();
-            System.out.println("Tabella creata!");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        System.out.println();
-    }
 }
