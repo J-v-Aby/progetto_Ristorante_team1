@@ -1,9 +1,11 @@
 import enumPackage.*;
 import portate.*;
+
+import java.sql.SQLException;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE, 50.00, ChefStellatiEnum.MARCUS_SAMUELSSON);
 
@@ -107,7 +109,7 @@ public class Main {
                 "morbido arrosto di maiale avvolto in una vellutata di latte e aromi",
                 "Patate al forno", CotturaEnum.COTTA);
         Portata manzo = new SecondiPiatti("Manzo alla Stroganoff", 14.0,
-                "straccetti di manzo cotti in una salsa di panna acida, senape e funghi",
+                "straccetti di manzo",
                 "Verdure", CotturaEnum.MEDIA);
         Portata pollo = new SecondiPiatti("Pollo al curry", 9.0,
                 "bocconcini di pollo in una salsa esotica di yogurt, curry e pomodoro",
@@ -227,13 +229,19 @@ ristorante.prenotaTavolo(p);
         ristorante.prenotaTavolo(p7);
         ristorante.liberaTavolaDallaCassa(p4);
 
-        ristorante.prenotaTavoloVip(cr7);
+        PrimiPiatti primiPiatti11 = (PrimiPiatti) primiPiatti1;
+        primiPiatti11.print();
 
-        ristorante.prenotaTavolo(p);
+//        ristorante.prenotaTavoloVip(cr7);
+//
+//        ristorante.prenotaTavolo(p);
+//
+//        Cliente cliente1 = new Cliente("Mario", "Rossi",  "320", TipologiaEnum.CARNE);
+//        cliente1.printInfo();
+//        ristorante.printGlobale();
+//        ristorante.printMenuCliente(cliente1.getMenuPreferito());
 
-        Cliente cliente1 = new Cliente("Mario", "Rossi",  "320", TipologiaEnum.CARNE);
-        cliente1.printInfo();
-        ristorante.printGlobale();
-        ristorante.printMenuCliente(cliente1.getMenuPreferito());
+
+
     }
 }

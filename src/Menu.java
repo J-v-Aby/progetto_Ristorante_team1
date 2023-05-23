@@ -113,15 +113,15 @@ public class Menu {
         }
 
         System.out.println("\n" + stagione.getColore() + "ANTIPASTI\n" + UtilityColorEnum.ANSI_RESET.getCodice());
-        portate.stream().filter(antipasto -> antipasto instanceof Antipasti).forEach(antipasto -> antipasto.print());
+        portate.stream().filter(antipasto -> antipasto instanceof Antipasti).forEach(antipasto -> antipasto.printTot());
         System.out.println("\n" + stagione.getColore() + "PRIMI PIATTI\n" + UtilityColorEnum.ANSI_RESET.getCodice());
-        portate.stream().filter(primo -> primo instanceof PrimiPiatti).forEach(primo -> primo.print());
+        portate.stream().filter(primo -> primo instanceof PrimiPiatti).forEach(primo -> primo.printTot());
         System.out.println("\n" + stagione.getColore() + "SECONDI PIATTI\n" + UtilityColorEnum.ANSI_RESET.getCodice());
-        portate.stream().filter(secondo -> secondo instanceof SecondiPiatti).forEach(secondo -> secondo.print());
+        portate.stream().filter(secondo -> secondo instanceof SecondiPiatti).forEach(secondo -> secondo.printTot());
         System.out.println("\n" + stagione.getColore() + "DESSERT\n" + UtilityColorEnum.ANSI_RESET.getCodice());
-        portate.stream().filter(dessert -> dessert instanceof Dessert).forEach(dessert -> dessert.print());
+        portate.stream().filter(dessert -> dessert instanceof Dessert).forEach(dessert -> dessert.printTot());
         System.out.println("\n" + stagione.getColore() + "BEVANDE\n" + UtilityColorEnum.ANSI_RESET.getCodice());
-        portate.stream().filter(bevanda -> bevanda instanceof Bevande).forEach(bevanda -> bevanda.print());
+        portate.stream().filter(bevanda -> bevanda instanceof Bevande).forEach(bevanda -> bevanda.printTot());
     }
 
 
