@@ -1,6 +1,13 @@
 package portate;
 
 import enumPackage.CotturaEnum;
+import services.DataBaseRisto;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Objects;
 
 public class SecondiPiatti extends Portata {
     private String contorno;
@@ -32,5 +39,10 @@ public class SecondiPiatti extends Portata {
     public void print() {
         super.print();
         System.out.println("Contorno: " + contorno + "\tTipo cottura: " + cotturaEnum);
+    }
+
+    @Override
+    public void sqlSalva(String nomeTabella, String parametroUno, String parametroDue) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+        super.sqlSalva(nomeTabella, parametroUno, parametroDue);
     }
 }
