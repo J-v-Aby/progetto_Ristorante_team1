@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class SecondiPiatti extends Portata implements Sql{
+public class SecondiPiatti extends Portata {
     private String contorno;
     private CotturaEnum cotturaEnum;
 
@@ -32,7 +32,7 @@ public class SecondiPiatti extends Portata implements Sql{
     public void setCottura(CotturaEnum cotturaEnum) {
         this.cotturaEnum = cotturaEnum;
     }
-    public void insert() {
+    public void insertSQL() {
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ristorante_team_1", "progettoAdmin", "root");
              Statement stmt = conn.createStatement();
         ) {
@@ -48,26 +48,10 @@ public class SecondiPiatti extends Portata implements Sql{
     }
 
     @Override
-    public void printTot() {
-
-
-    }
-
-    @Override
-    public void delete() {
-
-    }
-
-    @Override
-    public void update() {
-
-    }
-
-
-    @Override
-    public void print() {
-        super.printTot();
+    public void printPadre() {
+        super.printPadre();
         System.out.println("Contorno: " + contorno + "\tTipo cottura: " + cotturaEnum);
+
     }
 
 

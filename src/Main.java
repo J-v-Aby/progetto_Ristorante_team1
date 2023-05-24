@@ -7,6 +7,12 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws SQLException {
 
+        //TODO sono Claudio, secondo me bisognerebbe rifattorizzare tutto e creare dei cicli che ti prendano i dati dal database
+        // e li inseriscano nel programma come oggetti, in modo tale da pulire il main da tutta questa roba
+        // si potrebbe fare una cosa del tipo un ciclo che prendere i dati dal db, li trasforma nel tipo di dato appropriato,
+        // crea un istanza della classe giusta e li inserisce nell'oggetto corrispondente e dopo di ché li mette nella lista del ristorante
+        //
+
         Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE, 50.00, ChefStellatiEnum.MARCUS_SAMUELSSON);
 
 
@@ -230,7 +236,7 @@ ristorante.prenotaTavolo(p);
         ristorante.liberaTavolaDallaCassa(p4);
 
         PrimiPiatti primiPiatti11 = (PrimiPiatti) primiPiatti1;
-        primiPiatti11.print();
+        primiPiatti11.printSQL();
 
 //        ristorante.prenotaTavoloVip(cr7);
 //

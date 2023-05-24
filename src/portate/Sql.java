@@ -3,11 +3,12 @@ package portate;
 import java.sql.SQLException;
 
 public interface Sql {
-   void insert() throws SQLException;
+   void createTable () throws SQLException;
+   void insertSQL() throws SQLException;
 
-   void print();
-   void delete();
-   void update();
+   void printSQL();
+   void deleteSQL();
+   void updateSQL() throws SQLException;
 
 
 

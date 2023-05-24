@@ -17,8 +17,8 @@ public class Bevande extends Portata {
     }
 
     @Override
-    public void printTot() {
-        super.printTot();
+    public void printPadre() {
+        super.printPadre();
         if (gradazioneAlcolica > 0.01) {
             System.out.println("Bevanda alcolica al " + gradazioneAlcolica + "%");
         }

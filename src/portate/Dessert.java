@@ -41,8 +41,8 @@ public class Dessert extends Portata {
     }
 
     @Override
-    public void printTot() {
-        super.printTot();
+    public void printPadre() {
+        super.printPadre();
         System.out.println("A base di " + tipoDessert + "\n" + "Chef: " + chef.getNomeChef() + "\n" + "Ingredienti: " + "\n" + ingredienti);
     }
 }

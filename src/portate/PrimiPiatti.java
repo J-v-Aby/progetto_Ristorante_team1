@@ -1,13 +1,14 @@
 package portate;
 
+import enumPackage.ConnectionSQLEnum;
+
 import java.sql.*;
 
 public class PrimiPiatti extends Portata implements Sql{
-    private static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/ristorante_team_1?user=progettoAdmin&password=root";
-    private boolean consigliatoPerBimbi;
+    private Boolean consigliatoPerBimbi;
     private Integer tempoCottura;
 
-    public PrimiPiatti(String nome, Double prezzo, String descrizione, boolean consigliatoPerBimbi, int tempoCottura) {
+    public PrimiPiatti(String nome, Double prezzo, String descrizione, Boolean consigliatoPerBimbi, Integer tempoCottura) {
         super(nome, prezzo, descrizione);
         this.consigliatoPerBimbi = consigliatoPerBimbi;
         this.tempoCottura = tempoCottura;
@@ -30,8 +31,8 @@ public class PrimiPiatti extends Portata implements Sql{
     }
 
     @Override
-    public void printTot() {
-        super.printTot();
+    public void printPadre() {
+        super.printPadre();
         System.out.println("Teampo cottura: " + tempoCottura + " minuti");
         if (isConsigliatoPerBimbi()) {
             System.out.println("Consigliato per bimbi");
@@ -39,18 +40,44 @@ public class PrimiPiatti extends Portata implements Sql{
 }
 
 
-
     @Override
-    public void insert() throws SQLException {
-            Connection conn = DriverManager.getConnection(CONNECTION_STRING);
+    public void createTable() throws SQLException {
+
+            Connection conn = DriverManager.getConnection(ConnectionSQLEnum.ACCESS_STRING.getValue());
+
+            Statement statement = conn.createStatement();
+
+
+            String createQuery = """
+                CREATE TABLE IF NOT EXISTS superHeroes
+                ( heroes_id INTEGER(10) NOT NULL AUTO_INCREMENT,
+                  name VARCHAR(30),
+                  power VARCHAR(30),
+                  team VARCHAR(25),
+                  CONSTRAINT superHeroes_pk PRIMARY KEY (heroes_id)
+                );
+                """;
+            statement.executeUpdate(createQuery);
+
+            conn.close();
+
+            System.out.println("Tabella dei primi piatti creata");
+        }
+
+
+
+
+    /**
+     * method to insert records into the table primi_piatti
+     */
+    @Override
+    public void insertSQL() throws SQLException {
+            Connection conn = DriverManager.getConnection(ConnectionSQLEnum.ACCESS_STRING.getValue());
 
             Statement statement = conn.createStatement();
 
             String insertQuery = "INSERT INTO primi_piatti (nome, prezzo, descrizione, lista_allergeni, tempo_cottura) " +
                     "VALUES ('" + getNome()+ "', '" + getPrezzo()+ "', '" + getDescrizione() + "', '" + getListaAllergeni().toString() + "', '" + getTempoCottura() + "'" + ");";
-        System.out.println(insertQuery);
-
-            // String nome, Double prezzo, String descrizione, boolean consigliatoPerBimbi, int tempoCottura
 
             statement.executeUpdate(insertQuery);
 
@@ -59,10 +86,12 @@ public class PrimiPiatti extends Portata implements Sql{
             System.out.println("Tabella popolata");
     }
 
-
+    /**
+     * method that retrieves data from the db with a select statement and prints them in console
+     */
     @Override
-    public void print() {
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ristorante_team_1", "progettoAdmin", "root");
+    public void printSQL() {
+        try (Connection conn = DriverManager.getConnection(ConnectionSQLEnum.ACCESS_STRING.getValue());
              Statement stmt = conn.createStatement();
         ) {
             String printQuery = """
@@ -71,10 +100,9 @@ public class PrimiPiatti extends Portata implements Sql{
 
             ResultSet resultSet = stmt.executeQuery(printQuery);
 
-            int i = 0;
+
 
             while (resultSet.next()) {
-                i = i +1;
                 System.out.println(" nome: " + resultSet.getString("nome") );
                 System.out.println(" prezzo: " + resultSet.getString("prezzo") );
                 System.out.println(" descrizione: " + resultSet.getString("descrizione") );
@@ -88,12 +116,41 @@ public class PrimiPiatti extends Portata implements Sql{
     }
 
         @Override
-    public void delete() {
+    public void deleteSQL() {
 
     }
 
+    /**
+     * method that retrieves records filtered by the field 'nome' of the object
+     * and updates them based on the query contained in updateTable,
+     * the settings can be changed to search for other fields
+     */
     @Override
-    public void update() {
+    public void updateSQL() throws SQLException {
+        Connection conn = DriverManager.getConnection(ConnectionSQLEnum.ACCESS_STRING.getValue());
+        Statement statement = conn.createStatement();
+        String printQuery = """
+                  SELECT * from primi_piatti;
+
+                """;
+        ResultSet resultSet = statement.executeQuery(printQuery);
+
+        String findName = null;
+        while (resultSet.next()) {
+            String name = resultSet.getString("nome");
+            if (name.equals(getNome())) {
+                findName = name;
+            }
+        }
+        String updateTable = """
+                UPDATE primi_piatti
+                SET prezzo = 3.50
+                WHERE nome = '""" + findName + "';";
+
+        statement.executeUpdate(updateTable);
+
+        conn.close();
+        System.out.println("Primo piatto: " + findName + "aggiornato" );
 
     }
 }

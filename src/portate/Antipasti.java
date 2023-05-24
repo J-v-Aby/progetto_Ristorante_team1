@@ -30,8 +30,8 @@ public class Antipasti extends Portata {
     }
 
     @Override
-    public void printTot() {
-        super.printTot();
+    public void printPadre() {
+        super.printPadre();
         System.out.println(descrizioneInInglese + "\n" + tipoPiatto.getDescrizioneTipoPiatto());
     }
 }
