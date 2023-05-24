@@ -49,14 +49,16 @@ public class PrimiPiatti extends Portata implements Sql{
 
 
             String createQuery = """
-                CREATE TABLE IF NOT EXISTS superHeroes
-                ( heroes_id INTEGER(10) NOT NULL AUTO_INCREMENT,
-                  name VARCHAR(30),
-                  power VARCHAR(30),
-                  team VARCHAR(25),
-                  CONSTRAINT superHeroes_pk PRIMARY KEY (heroes_id)
-                );
-                """;
+                        CREATE TABLE IF NOT EXISTS `primi_piatti` (
+                          `id` int NOT NULL AUTO_INCREMENT,
+                          `nome` varchar(100) DEFAULT NULL,
+                          `prezzo` double DEFAULT NULL,
+                          `descrizione` varchar(100) DEFAULT NULL,
+                          `lista_allergeni` varchar(100) DEFAULT NULL,
+                          `tempo_cottura` varchar(100) DEFAULT NULL,
+                          PRIMARY KEY (`id`)
+                        ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+                    """;
             statement.executeUpdate(createQuery);
 
             conn.close();

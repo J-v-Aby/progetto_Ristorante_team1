@@ -236,7 +236,7 @@ ristorante.prenotaTavolo(p);
         ristorante.liberaTavolaDallaCassa(p4);
 
         PrimiPiatti primiPiatti11 = (PrimiPiatti) primiPiatti1;
-        primiPiatti11.printSQL();
+        primiPiatti11.createTable();
 
 //        ristorante.prenotaTavoloVip(cr7);
 //
