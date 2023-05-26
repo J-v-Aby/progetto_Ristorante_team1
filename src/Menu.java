@@ -15,12 +15,10 @@ public class Menu {
     private String nome;
     private ArrayList<Portata> portate;
     private TipologiaEnum tipoMenu;
-
-    //TODO rifattorizzare con oggetti :double
-    private double prezzoMedio;
+    private Double prezzoMedio;
     private ChefStellatiEnum chef;
 
-    public Menu(String nome, TipologiaEnum tipoMenu, double prezzoMedio, ChefStellatiEnum chef) {
+    public Menu(String nome, TipologiaEnum tipoMenu, Double prezzoMedio, ChefStellatiEnum chef) {
         this.nome = nome;
         this.tipoMenu = tipoMenu;
         this.portate = new ArrayList<>();
@@ -52,11 +50,11 @@ public class Menu {
         this.tipoMenu = tipoMenu;
     }
 
-    public double getPrezzoMedio() {
+    public Double getPrezzoMedio() {
         return prezzoMedio;
     }
 
-    public void setPrezzoMedio(double prezzoMedio) {
+    public void setPrezzoMedio(Double prezzoMedio) {
         this.prezzoMedio = prezzoMedio;
     }
 
