@@ -12,6 +12,8 @@ public class Main {
         // e li inseriscano nel programma come oggetti, in modo tale da pulire il main da tutta questa roba
         // si potrebbe fare una cosa del tipo un ciclo che prendere i dati dal db, li trasforma nel tipo di dato appropriato,
         // crea un istanza della classe giusta e li inserisce nell'oggetto corrispondente e dopo di ché li mette nella lista del ristorante
+        // .
+        // COMMENTO Davide: 👍👍👍👍👍 bellissimo! Facciamolo
         //
 
         Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE, 50.00, ChefStellatiEnum.MARCUS_SAMUELSSON);
@@ -214,19 +216,19 @@ public class Main {
                 + "\n" + " Danzatori silenziosi si muovono intorno a te per regalarti lo spettacolo di un servizio impeccabile,"
                 + "\n" + " in una cornice di dettagli moreschi che parlano di storie antiche: signore e signori, " +
                 "benvenuti nel Ristorante di Coppa Cicuti." + "\n\t", 50.0, "⭐⭐⭐⭐⭐",
-                5,3,2,true);
+                5, 3, 2, true);
 
         ristorante.getMenuList().add(menuCarne);
-        Prenotazione p= new Prenotazione(2,"mario rossi");
-ristorante.prenotaTavolo(p);
-        Prenotazione p1= new Prenotazione(4," v");
-        Prenotazione p2= new Prenotazione(1," f");
-        Prenotazione p3= new Prenotazione(2," s");
-        Prenotazione p4= new Prenotazione(4," a");
-        Prenotazione p5= new Prenotazione(2," t");
-        Prenotazione p6= new Prenotazione(5,"Flavio f");
-        Prenotazione p7= new Prenotazione(8,"bob f");
-        Prenotazione cr7= new Prenotazione(8,"cristiano ronaldo");
+        Prenotazione p = new Prenotazione(2, "mario rossi");
+        ristorante.prenotaTavolo(p);
+        Prenotazione p1 = new Prenotazione(4, " v");
+        Prenotazione p2 = new Prenotazione(1, " f");
+        Prenotazione p3 = new Prenotazione(2, " s");
+        Prenotazione p4 = new Prenotazione(4, " a");
+        Prenotazione p5 = new Prenotazione(2, " t");
+        Prenotazione p6 = new Prenotazione(5, "Flavio f");
+        Prenotazione p7 = new Prenotazione(8, "bob f");
+        Prenotazione cr7 = new Prenotazione(8, "cristiano ronaldo");
         ristorante.prenotaTavolo(p2);
         ristorante.prenotaTavolo(p3);
         ristorante.prenotaTavolo(p4);
@@ -249,7 +251,6 @@ ristorante.prenotaTavolo(p);
 //        cliente1.printInfo();
 //        ristorante.printGlobale();
 //        ristorante.printMenuCliente(cliente1.getMenuPreferito());
-
 
 
     }
