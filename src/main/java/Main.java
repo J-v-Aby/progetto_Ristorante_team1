@@ -1,3 +1,4 @@
+import Dao.PrimiPiattiDao;
 import enumPackage.*;
 import portate.*;
 
@@ -234,9 +235,11 @@ ristorante.prenotaTavolo(p);
         ristorante.prenotaTavolo(p1);
         ristorante.prenotaTavolo(p7);
         ristorante.liberaTavolaDallaCassa(p4);
+        PrimiPiattiDao dao = new PrimiPiattiDao();
+        dao.updateSQLByName("Cannelloni alla genovese e sedano", "SET nome = 'Cannelloni alla genovese e sedano' ");
 
-        PrimiPiatti primiPiatti11 = (PrimiPiatti) primiPiatti1;
-        primiPiatti11.createTable();
+
+
 
 //        ristorante.prenotaTavoloVip(cr7);
 //

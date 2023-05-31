@@ -48,6 +48,13 @@ public abstract class Portata {
         return listaAllergeni;
     }
 
+//    public String listaAllergeniConvertedString() {
+//        String writtenAllergeni = "";
+//        listaAllergeni.iterator().forEachRemaining(x -> x.getNomeAllergene());
+//
+//        return listaAllergeni;
+//    }
+
     public void addAllergeni(AllergeniEnum allergenico) {
         listaAllergeni.add(allergenico);
     }
