@@ -2,10 +2,11 @@ import Dao.AntipastiDao;
 import enumPackage.*;
 import portate.*;
 
+import java.sql.SQLException;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, SQLException {
 
         Menu menuCarne = new Menu("Carne", TipologiaEnum.CARNE, 50.00, ChefStellatiEnum.MARCUS_SAMUELSSON);
 
@@ -238,7 +239,6 @@ public class Main {
         ristorante.printGlobale();
         ristorante.printMenuCliente(cliente1.getMenuPreferito());
 
-        SecondiPiatti arrostoSQL = (SecondiPiatti) arrosto;
-        AntipastiDao dao = new AntipastiDao();
-    dao.printSQL();}
+        AntipastiDao antipastiDao = new AntipastiDao();
+    antipastiDao.createTable();}
 }
