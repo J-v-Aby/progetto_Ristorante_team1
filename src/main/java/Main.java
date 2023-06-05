@@ -237,6 +237,7 @@ public class Main {
         ristorante.printMenuCliente(cliente1.getMenuPreferito());
 
         AntipastiDao antipastiDao = new AntipastiDao();
-        antipastiDao.insertSQL(anti1);
+//        antipastiDao.insertSQL(anti1);ù
+        antipastiDao.printSQL();
     }
 }

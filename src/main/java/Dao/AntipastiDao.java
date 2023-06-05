@@ -70,7 +70,7 @@ public class AntipastiDao implements Sql {
                 System.out.println(" descrizione: " + resultSet.getString("descrizione"));
                 System.out.println(" lista allergeni: " + resultSet.getString("lista_allergeni"));
                 System.out.println(" description: " + resultSet.getString("descrizione_in_inglese"));
-                System.out.println(" " + resultSet.getString("tipo_piatto"));
+                System.out.println(" caratteristiche: " + resultSet.getString("tipo_piatto"));
             }
 
         } catch (SQLException e) {
