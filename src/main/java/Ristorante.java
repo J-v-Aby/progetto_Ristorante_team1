@@ -19,21 +19,17 @@ public class Ristorante {
 
     private Calendar date;
 
-    //TODO bisogna inserire la prenotazione usando una struttura dati mappa che mette in relazione cliente e tavolo che saranno due classi
-    //nel main chiamare ristorante.prenota(cliente,tavolo) stampare la prenotazione e poi il menù in base al tipo di cliente(vegano,carn ecc ecc)
-
-
     public Ristorante(String nome, String indirizzo, String descrizione, Double prezzoMedio, String recensioni,
-                      Integer tavoloDaQuattro,Integer tavoloDaSei,Integer tavoloDaOtto,boolean tavoloVip) {
+                      Integer tavoloDaQuattro, Integer tavoloDaSei, Integer tavoloDaOtto, boolean tavoloVip) {
         this.nome = nome;
         this.indirizzo = indirizzo;
         this.descrizione = descrizione;
         this.prezzoMedio = prezzoMedio;
         this.recensioni = recensioni;
         this.tavoloDaQuattro = tavoloDaQuattro;
-        this.tavoloDaSei=tavoloDaSei;
-        this.tavoloDaOtto=tavoloDaOtto;
-        this.tavoloVip=tavoloVip;
+        this.tavoloDaSei = tavoloDaSei;
+        this.tavoloDaOtto = tavoloDaOtto;
+        this.tavoloVip = tavoloVip;
         this.menuList = new ArrayList<>();
         this.date = Calendar.getInstance();
     }
@@ -167,26 +163,30 @@ public class Ristorante {
      */
     public void printGlobale() {
         System.out.print(descrizione);
+        System.out.println(prezzoMedio);
         printMessaggioFestivita();
     }
 
     public void prenotaTavolo(Prenotazione prenotazione) {
-        if(prenotazione.getNumeroPosti()<=4&&tavoloDaQuattro>0){
+        if (prenotazione.getNumeroPosti() <= 4 && tavoloDaQuattro > 0) {
             prenotazione.equals(TavoliEnum.TAVOLO_4);
-            tavoloDaQuattro-=1;
-            System.out.println( "Singor " + prenotazione.getNomeCliente()+" la prentazione é andata a buon fine");
-        } else if((prenotazione.getNumeroPosti()>4)&&(prenotazione.getNumeroPosti()<=6)&&tavoloDaSei>0){
+            tavoloDaQuattro -= 1;
+            System.out.println("Singor " + prenotazione.getNomeCliente() + " la prentazione é andata a buon fine");
+        } else if ((prenotazione.getNumeroPosti() > 4) && (prenotazione.getNumeroPosti() <= 6) && tavoloDaSei > 0) {
             prenotazione.equals(TavoliEnum.TAVOLI_6);
-            tavoloDaSei-=1;
-            System.out.println( "Singor " + prenotazione.getNomeCliente()+" la prentazione é andata a buon fine");
-        } else if((prenotazione.getNumeroPosti()>6)&&(prenotazione.getNumeroPosti()<=8)&&tavoloDaOtto>0){
+            tavoloDaSei -= 1;
+            System.out.println("Singor " + prenotazione.getNomeCliente() + " la prentazione é andata a buon fine");
+        } else if ((prenotazione.getNumeroPosti() > 6) && (prenotazione.getNumeroPosti() <= 8) && tavoloDaOtto > 0) {
             prenotazione.equals(TavoliEnum.TAVOLI_8);
-            tavoloDaOtto-=1;
-            System.out.println( "Singor " + prenotazione.getNomeCliente()+" la prentazione é andata a buon fine");
-        }else {System.out.println( "Singor  "+prenotazione.getNomeCliente()+ "  non ci sono tavoli disponibili al momento ");}
+            tavoloDaOtto -= 1;
+            System.out.println("Singor " + prenotazione.getNomeCliente() + " la prentazione é andata a buon fine");
+        } else {
+            System.out.println("Singor  " + prenotazione.getNomeCliente() + "  non ci sono tavoli disponibili al momento ");
+        }
     }
-    public void prenotaTavoloVip(Prenotazione prenotazione){
-        if(tavoloVip==true) {
+
+    public void prenotaTavoloVip(Prenotazione prenotazione) {
+        if (tavoloVip == true) {
             if (prenotazione.getNumeroPosti() <= 4 && tavoloDaQuattro > 0) {
                 prenotazione.equals(TavoliEnum.TAVOLO_4);
                 tavoloDaQuattro -= 1;
@@ -201,21 +201,23 @@ public class Ristorante {
                 System.out.println("Singor  " + prenotazione.getNomeCliente() + " la prentazione é andata a buon fine");
             }
         }
-            System.out.println("Spiacente Signor" + prenotazione.getNomeCliente() +" il nostro ristorante non dispone di area vip");
-}
-public void liberaTavolaDallaCassa(Prenotazione prenotazione ) {
+        System.out.println("Spiacente Signor" + prenotazione.getNomeCliente() + " il nostro ristorante non dispone di area vip");
+    }
+
+    public void liberaTavolaDallaCassa(Prenotazione prenotazione) {
         if (prenotazione.getNumeroPosti() <= 4 && tavoloDaQuattro >= 0) {
             prenotazione.equals(TavoliEnum.TAVOLO_4);
-            tavoloDaQuattro += 1;}
-    if (prenotazione.getNumeroPosti()<=6&&tavoloDaSei>0) {
-        prenotazione.equals(TavoliEnum.TAVOLI_6);
-        tavoloDaQuattro += 1;
+            tavoloDaQuattro += 1;
+        }
+        if (prenotazione.getNumeroPosti() <= 6 && tavoloDaSei > 0) {
+            prenotazione.equals(TavoliEnum.TAVOLI_6);
+            tavoloDaQuattro += 1;
+        }
+        if (prenotazione.getNumeroPosti() <= 8 && tavoloDaOtto > 0) {
+            prenotazione.equals(TavoliEnum.TAVOLI_8);
+            tavoloDaQuattro += 1;
+        }
     }
-    if(prenotazione.getNumeroPosti()<=8&&tavoloDaOtto>0) {
-        prenotazione.equals(TavoliEnum.TAVOLI_8);
-        tavoloDaQuattro += 1;
-    }
-}
 
     public void printMenuCliente(TipologiaEnum tipologiaEnum) {
         for (Menu menu : menuList)

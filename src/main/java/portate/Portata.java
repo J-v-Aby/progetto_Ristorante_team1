@@ -53,6 +53,13 @@ public abstract class Portata {
         return listaAllergeni;
     }
 
+//    public String listaAllergeniConvertedString() {
+//        String writtenAllergeni = "";
+//        listaAllergeni.iterator().forEachRemaining(x -> x.getNomeAllergene());
+//
+//        return listaAllergeni;
+//    }
+
     public void addAllergeni(AllergeniEnum allergenico) {
         listaAllergeni.add(allergenico);
     }
@@ -86,7 +93,7 @@ public abstract class Portata {
     /**
      * Metodo della classe Padre Portata da Overridare nelle classi che estendono la stessa; permette anche di standardizzare la formattazione.
      */
-    public void print() {
+    public void printPadre() {
         String prima = "\n" + UtilityColorEnum.ANSI_BOLD.getCodice() + nome + UtilityColorEnum.ANSI_RESET.getCodice();
         StringBuilder stringBuilder = new StringBuilder(prima);
 
