@@ -2,7 +2,6 @@ package portate;
 
 import enumPackage.AllergeniEnum;
 import enumPackage.UtilityColorEnum;
-import services.DataBaseRisto;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

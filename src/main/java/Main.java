@@ -1,3 +1,4 @@
+import Dao.AntipastiDao;
 import enumPackage.*;
 import portate.*;
 
@@ -238,6 +239,6 @@ public class Main {
         ristorante.printMenuCliente(cliente1.getMenuPreferito());
 
         SecondiPiatti arrostoSQL = (SecondiPiatti) arrosto;
-        arrostoSQL.insertSecondi();
-    }
+        AntipastiDao dao = new AntipastiDao();
+    dao.printSQL();}
 }
