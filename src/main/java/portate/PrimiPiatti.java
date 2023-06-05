@@ -9,8 +9,8 @@ public class PrimiPiatti extends Portata  {
     private Boolean consigliatoPerBimbi;
     private Integer tempoCottura;
 
-    public PrimiPiatti(String nome, Double prezzo, String descrizione, Boolean consigliatoPerBimbi, Integer tempoCottura) {
-        super(nome, prezzo, descrizione);
+    public PrimiPiatti(String nome, Double prezzo, String descrizione, Integer idMenu, Boolean consigliatoPerBimbi, Integer tempoCottura) {
+        super(nome, prezzo, descrizione, idMenu);
         this.consigliatoPerBimbi = consigliatoPerBimbi;
         this.tempoCottura = tempoCottura;
     }

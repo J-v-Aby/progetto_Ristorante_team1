@@ -9,8 +9,8 @@ public class Dessert extends Portata {
     private ChefStellatiEnum chef;
     private String ingredienti;
 
-    public Dessert(String nome, Double prezzo, String descrizione, TipoDessertEnum tipoDessertEnum, ChefStellatiEnum chef, String ingredienti) {
-        super(nome, prezzo, descrizione);
+    public Dessert(String nome, Double prezzo, String descrizione, Integer idMenu, TipoDessertEnum tipoDessertEnum, ChefStellatiEnum chef, String ingredienti) {
+        super(nome, prezzo, descrizione, idMenu);
         this.tipoDessert = tipoDessertEnum;
         this.chef = chef;
         this.ingredienti = ingredienti;

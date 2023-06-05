@@ -42,8 +42,8 @@ public class AntipastiDao implements Sql {
 
         Statement statement = conn.createStatement();
 
-        String insertQuery = "INSERT INTO antipasti (nome, prezzo, descrizione, lista_allergeni, descrizione_in_inglese, tipo_piatto) " +
-                "VALUES ('" + antipasti.getNome() + "', '" + antipasti.getPrezzo() + "', '" + antipasti.getDescrizione() + "', '" + antipasti.getListaAllergeni() + "', '" + antipasti.getDescrizioneInInglese() +"', '" +antipasti.getTipoPiatto() +  "'" + ");";
+        String insertQuery = "INSERT INTO antipasti (nome, prezzo, descrizione, lista_allergeni, descrizione_in_inglese, tipo_piatto, id_menu) " +
+                "VALUES ('" + antipasti.getNome() + "', '" + antipasti.getPrezzo() + "', '" + antipasti.getDescrizione() + "', '" + antipasti.getListaAllergeni() + "', '" + antipasti.getDescrizioneInInglese() +"', '" +antipasti.getTipoPiatto() +"', '" + antipasti.getIdMenu() + "'" + ");";
 
         statement.executeUpdate(insertQuery);
 

@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e98ee44e-e1c6-4001-b64e-4f5886c63a4f" name="Changes" comment="Feat: aggiunti dao altre portate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/AntipastiDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/AntipastiDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/BevandeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/BevandeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/portate/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portate/Antipasti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/portate/Bevande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portate/Bevande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/portate/Dessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portate/Dessert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/portate/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portate/Portata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/portate/PrimiPiatti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portate/PrimiPiatti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/portate/SecondiPiatti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portate/SecondiPiatti.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685972969971</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Feat: aggiunti dao altre portate">
+      <created>1685973433869</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685973433869</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

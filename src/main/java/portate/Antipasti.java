@@ -7,8 +7,8 @@ public class Antipasti extends Portata {
     private String descrizioneInInglese;
     private TipoPiattoEnum tipoPiatto;
 
-    public Antipasti(String nome, Double prezzo, String descrizione, String descrizioneInInglese, TipoPiattoEnum tipoPiatto) {
-        super(nome, prezzo, descrizione);
+    public Antipasti(String nome, Double prezzo, String descrizione, Integer idMenu, String descrizioneInInglese, TipoPiattoEnum tipoPiatto) {
+        super(nome, prezzo, descrizione, idMenu);
         this.descrizioneInInglese = descrizioneInInglese;
         this.tipoPiatto = tipoPiatto;
     }

@@ -9,8 +9,8 @@ public class SecondiPiatti extends Portata{
     private String contorno;
     private CotturaEnum cotturaEnum;
 
-    public SecondiPiatti(String nome, Double prezzo, String descrizione, String contorno, CotturaEnum cotturaEnum) {
-        super(nome, prezzo, descrizione);
+    public SecondiPiatti(String nome, Double prezzo, String descrizione,Integer idMenu, String contorno, CotturaEnum cotturaEnum) {
+        super(nome, prezzo, descrizione, idMenu);
         this.contorno = contorno;
         this.cotturaEnum = cotturaEnum;
     }

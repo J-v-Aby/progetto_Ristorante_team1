@@ -16,12 +16,15 @@ public abstract class Portata {
     private Double prezzo;
     private String descrizione;
     private Set<AllergeniEnum> listaAllergeni;
+    private Integer idMenu;
 
-    public Portata(String nome, Double prezzo, String descrizione) {
+    public Portata(String nome, Double prezzo, String descrizione, Integer idMenu) {
         this.nome = nome;
         this.prezzo = prezzo;
         this.descrizione = descrizione;
         this.listaAllergeni = new HashSet<>();
+        this.idMenu = idMenu;
+
     }
 
     public String getNome() {
@@ -65,6 +68,14 @@ public abstract class Portata {
 
     public void setListaAllergeni(Set<AllergeniEnum> listaAllergeni) {
         this.listaAllergeni = listaAllergeni;
+    }
+
+    public Integer getIdMenu() {
+        return idMenu;
+    }
+
+    public void setIdMenu(Integer idMenu) {
+        this.idMenu = idMenu;
     }
 
     /**
