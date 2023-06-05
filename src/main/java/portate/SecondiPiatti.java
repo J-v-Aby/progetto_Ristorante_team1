@@ -5,7 +5,7 @@ import enumPackage.CotturaEnum;
 
 import java.sql.*;
 
-public class SecondiPiatti extends Portata implements Sql {
+public class SecondiPiatti extends Portata{
     private String contorno;
     private CotturaEnum cotturaEnum;
 
@@ -38,7 +38,7 @@ public class SecondiPiatti extends Portata implements Sql {
 
     }
 
-    @Override
+    
     public void createTable() throws SQLException {
 
         Connection conn = DriverManager.getConnection(ConnectionSQLEnum.ACCESS_STRING.getValue());
@@ -63,91 +63,5 @@ public class SecondiPiatti extends Portata implements Sql {
         conn.close();
 
         System.out.println("Tabella dei secondi piatti creata");
-    }
-
-    /**
-     * method to insert records into the table secondi_piatti
-     */
-    @Override
-    public void insertSQL() throws SQLException {
-        Connection conn = DriverManager.getConnection(ConnectionSQLEnum.ACCESS_STRING.getValue());
-
-        Statement statement = conn.createStatement();
-
-        String insertQuery = "INSERT INTO secondi_piatti (nome, prezzo, descrizione, contorno, cotturaEnum) " +
-                "VALUES ('" + getNome() + "', '" + getPrezzo() + "', '" + getDescrizione() + "', '" + getListaAllergeni().toString() + "', '" + getContorno() + "', '" + getCottura() + "'" + ");";
-
-        statement.executeUpdate(insertQuery);
-
-        conn.close();
-
-        System.out.println("Tabella popolata");
-    }
-
-    /**
-     * method that retrieves data from the db with a select statement and prints them in console
-     */
-    @Override
-    public void printSQL() {
-        try (Connection conn = DriverManager.getConnection(ConnectionSQLEnum.ACCESS_STRING.getValue());
-             Statement stmt = conn.createStatement();
-        ) {
-            String printQuery = """
-                    SELECT * from secondi_piatti;
-                    """;
-
-            ResultSet resultSet = stmt.executeQuery(printQuery);
-
-
-            while (resultSet.next()) {
-                System.out.println(" nome: " + resultSet.getString("nome"));
-                System.out.println(" prezzo: " + resultSet.getString("prezzo"));
-                System.out.println(" descrizione: " + resultSet.getString("descrizione"));
-                System.out.println(" lista allergeni: " + resultSet.getString("lista_allergeni"));
-                System.out.println(" contorno: " + resultSet.getString("contorno"));
-                System.out.println(" cotturaEnum: " + resultSet.getString("cotturaEnum"));
-            }
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @Override
-    public void deleteSQL() {
-
-    }
-
-    /**
-     * method that retrieves records filtered by the field 'nome' of the object
-     * and updates them based on the query contained in updateTable,
-     * the settings can be changed to search for other fields
-     */
-    @Override
-    public void updateSQL() throws SQLException {
-        Connection conn = DriverManager.getConnection(ConnectionSQLEnum.ACCESS_STRING.getValue());
-        Statement statement = conn.createStatement();
-        String printQuery = """
-                  SELECT * from secondi_piatti;
-
-                """;
-        ResultSet resultSet = statement.executeQuery(printQuery);
-
-        String findName = null;
-        while (resultSet.next()) {
-            String name = resultSet.getString("nome");
-            if (name.equals(getNome())) {
-                findName = name;
-            }
-        }
-        String updateTable = """
-                UPDATE secondi_piatti
-                SET prezzo = 3.50
-                WHERE nome = '""" + findName + "';";
-
-        statement.executeUpdate(updateTable);
-
-        conn.close();
-        System.out.println("Secondo piatto: " + findName + "aggiornato");
     }
 }

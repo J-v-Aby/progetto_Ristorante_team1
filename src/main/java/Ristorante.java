@@ -163,6 +163,7 @@ public class Ristorante {
      */
     public void printGlobale() {
         System.out.print(descrizione);
+        System.out.println(prezzoMedio);
         printMessaggioFestivita();
     }
 

@@ -17,7 +17,7 @@ public class Menu {
     private TipologiaEnum tipoMenu;
 
     //TODO rifattorizzare con oggetti :double
-    private double prezzoMedio;
+    private Double prezzoMedio;
     private ChefStellatiEnum chef;
 
     public Menu(String nome, TipologiaEnum tipoMenu, double prezzoMedio, ChefStellatiEnum chef) {
