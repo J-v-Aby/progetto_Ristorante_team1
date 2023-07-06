@@ -1,4 +1,5 @@
 # ristorante_team1_java12
+Repository di un applicazione CRUD che gestisce un sistema di ristoranti, portate e prenotazioni
 
 ## Developers:
 
